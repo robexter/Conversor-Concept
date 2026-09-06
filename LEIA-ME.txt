@@ -1,0 +1,26 @@
+CONVERSOR CONCEPT — PWA
+
+Arquivos incluídos:
+- index.html
+- manifest.json
+- sw.js
+- icons/icon-180.png
+- icons/icon-192.png
+- icons/icon-512.png
+
+Recursos:
+- nome do app no celular: Conversor concept
+- botão “📲 Instalar app”
+- ícone do app configurado no manifest
+- service worker para instalação PWA
+- manutenção da one page interativa do conversor
+
+Publicação no GitHub Pages:
+1. Envie todos os arquivos para a raiz do repositório, mantendo a pasta /icons.
+2. Faça commit/push.
+3. Abra a URL no celular ou no Chrome/Edge.
+4. Toque em “📲 Instalar app”.
+
+Atualização v2:
+- Incluídos tópicos interativos Afterburning e Behind-burning no regenerador D-3904.
+- Adicionados sintomas, causas, reação química e impacto operacional.
