@@ -152,12 +152,13 @@ body{padding:14px}
 
 <section class="hero">
   <div class="card hero-main">
-    <span class="chip">PWA INTERATIVO • U-39</span>
+    <span class="chip">PWA INTERATIVO • U-39</span> <span class="chip" style="border-color:#7a5b23;color:#ffe09b">B-3901 • V4</span>
     <h1>Conversor concept</h1>
     <p>Clique nas lâmpadas sobre a tela do conversor para abrir a função de cada equipamento, a lógica de controle e os principais objetivos operacionais. Ao selecionar outro ponto, o conteúdo anterior é minimizado automaticamente e a nova informação é exibida.</p>
     <div class="actions">
       <button class="btn primary" id="summaryBtn">Resumo geral</button>
       <button class="btn" id="trainingB3901Btn">🔥 Treinamento B-3901</button>
+      <button class="btn" id="forceUpdateBtn">🔄 Atualizar versão</button>
       <button class="btn" id="editBtn">Modo edição</button>
       <button class="btn" id="resetHotspotsBtn">↺ Restaurar posições das lâmpadas</button>
       <button class="btn primary" id="installBtn" hidden>📲 Instalar app</button>
@@ -239,7 +240,7 @@ body{padding:14px}
       <h2>🔥 Partida do B-3901 e Aquecimento do Conversor</h2>
       <p>Treinamento interativo com visão de operador de painel/CIC: entender a sequência, memorizar os valores-chave, reconhecer permissivos, responder a desvios e executar uma avaliação situacional.</p>
     </div>
-    <div class="training-badge">MÓDULO OPERACIONAL • U-39</div>
+    <div class="training-badge">MÓDULO OPERACIONAL • U-39 • V4</div>
   </div>
 
   <div class="training-nav">
@@ -1166,6 +1167,35 @@ if ('serviceWorker' in navigator) {
   }
   try{const saved=JSON.parse(localStorage.getItem('b3901EvalAnswers')||'null'); if(Array.isArray(saved)&&saved.length===evalCases.length)evalAnswers=saved;}catch(e){}
   renderEval();
+})();
+</script>
+<script>
+/* ===== Atualização forçada do PWA ===== */
+(function(){
+  const btn = document.getElementById('forceUpdateBtn');
+  if (!btn) return;
+  btn.addEventListener('click', async () => {
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '🔄 Atualizando...';
+    try {
+      if ('serviceWorker' in navigator) {
+        const regs = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(regs.map(r => r.update().catch(()=>{})));
+      }
+      if ('caches' in window) {
+        const names = await caches.keys();
+        await Promise.all(names.filter(n => n.startsWith('conversor-concept-')).map(n => caches.delete(n)));
+      }
+      const u = new URL(location.href);
+      u.searchParams.set('v','4-b3901');
+      location.replace(u.toString());
+    } catch (e) {
+      btn.disabled = false;
+      btn.textContent = original;
+      alert('Não foi possível limpar o cache automaticamente. Atualize a página pelo navegador.');
+    }
+  });
 })();
 </script>
 <script src="./cloud-sync.js"></script>

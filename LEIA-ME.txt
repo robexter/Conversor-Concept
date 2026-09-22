@@ -28,3 +28,10 @@ ATUALIZAÇÃO B-3901 — V3
 
 PUBLICAÇÃO
 Substitua os arquivos do repositório do Conversor-Concept pelos arquivos deste ZIP, preservando a estrutura da pasta icons/.
+
+
+CORREÇÃO V4 — CACHE/PWA
+- Incluído icons/icon-180.png, que estava referenciado pelo Service Worker mas ausente no pacote anterior.
+- Service Worker alterado para NETWORK-FIRST nas páginas HTML, evitando carregar index antigo após uma nova publicação.
+- Novo botão "🔄 Atualizar versão" no topo do app para limpar caches do Conversor Concept e recarregar a publicação atual.
+- Identificação visual "B-3901 • V4" no cabeçalho para confirmar imediatamente que a versão nova foi carregada.
