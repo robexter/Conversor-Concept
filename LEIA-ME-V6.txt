@@ -1,0 +1,21 @@
+CONVERSOR CONCEPT — V6
+
+Novo módulo: 🛑 Parada do J-3901 para Manutenção
+
+Abordagem: ESTADO → INTERPRETAÇÃO → DECISÃO → CONFIRMAÇÃO → AVANÇAR
+
+Acessos adicionados:
+- topo da página
+- grid rápido
+- Manobras Integradas do Conversor
+- painel Entenda melhor do J-3901
+
+O C-3954 foi mantido como gate obrigatório porque a sequência detalhada de isolamento não foi fornecida. Nenhuma válvula foi inventada.
+
+Para atualizar o GitHub:
+1. substituir index.html
+2. substituir sw.js
+3. adicionar parada-j3901-manutencao.html
+
+Depois abra:
+https://robexter.github.io/Conversor-Concept/?v=6

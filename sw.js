@@ -1,7 +1,8 @@
-const CACHE_NAME = 'conversor-concept-v5-j3901';
+const CACHE_NAME = 'conversor-concept-v6-j3901-manutencao';
 const CORE_ASSETS = [
   './index.html',
   './partida-j3901.html',
+  './parada-j3901-manutencao.html',
   './manifest.json',
   './cloud-sync.js',
   './icons/icon-180.png',
