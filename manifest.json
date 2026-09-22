@@ -1,7 +1,7 @@
 {
   "name": "Conversor concept",
-  "short_name": "Conversor",
-  "description": "PWA interativo do Conversor U-39 com hotspots, conteúdo editável, malhas e vídeo.",
+  "short_name": "Conversor concept",
+  "description": "PWA interativo do sistema conversor U-39 com módulo de treinamento da partida do B-3901 e aquecimento do conversor.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -107,6 +107,44 @@ body{padding:14px}
 @media(max-width:960px){.hero{grid-template-columns:1fr}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.media-grid{grid-template-columns:1fr}.media-placeholder{min-height:190px}}
 @media(max-width:640px){body{padding:8px}.quick-grid{grid-template-columns:1fr}.hotspot .label{display:none}.hotspot .lamp{font-size:16px}.stats{grid-template-columns:1fr 1fr}}
+
+
+/* ===== Treinamento B-3901 / Aquecimento do Conversor ===== */
+.training-card{overflow:hidden}
+.training-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.training-head h2{margin:0 0 5px;font-size:clamp(22px,3vw,30px)}
+.training-head p{margin:0;color:var(--muted);max-width:880px;line-height:1.5}
+.training-badge{padding:7px 10px;border-radius:999px;border:1px solid #7a5f23;background:#251d08;color:#ffe5a1;font-size:11px;font-weight:900;white-space:nowrap}
+.training-nav{display:flex;gap:8px;flex-wrap:wrap;padding:13px 18px;border-bottom:1px solid var(--line);background:#08141e}
+.train-tab{border:1px solid #34536b;background:#0d2230;color:#dfefff;border-radius:12px;padding:9px 12px;font-weight:850;cursor:pointer}
+.train-tab.active{background:#18415c;border-color:#6ac8ff;color:#fff;box-shadow:0 0 0 2px #68c7ff22}
+.train-view{display:none;padding:18px}.train-view.active{display:block}
+.training-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+@media(max-width:880px){.training-grid{grid-template-columns:1fr}}
+.sequence-spine{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;margin:12px 0}
+@media(max-width:900px){.sequence-spine{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.sequence-spine{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.seq-node{border:1px solid #31516a;background:#0a1a26;border-radius:13px;padding:10px 8px;text-align:center;min-height:70px;display:flex;flex-direction:column;justify-content:center}
+.seq-node strong{font-size:15px}.seq-node small{color:var(--muted);font-size:10px;margin-top:3px}
+.train-box{border:1px solid #29485f;background:#081722;border-radius:17px;padding:15px}
+.train-box h3{margin:0 0 9px}.train-box p{color:#d9e9f6;line-height:1.48}
+.kpi-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0}
+@media(max-width:640px){.kpi-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{border:1px solid #2b4d66;background:#0b1c29;border-radius:13px;padding:10px}.kpi b{display:block;font-size:19px}.kpi small{color:var(--muted)}
+.step-progress{height:8px;background:#071019;border:1px solid #29485f;border-radius:999px;overflow:hidden;margin:10px 0 14px}.step-progress>span{display:block;height:100%;background:linear-gradient(90deg,#3b95cb,#75d7ff);width:0;transition:.25s}
+.step-card{border:1px solid #365873;background:#0b1c28;border-radius:17px;padding:16px;min-height:245px}.step-card .step-index{font-size:11px;color:#90b9d4;font-weight:900;letter-spacing:.08em}.step-card h3{font-size:22px;margin:6px 0 10px}.step-card .action{font-size:15px;line-height:1.55}.step-card .why{border-left:3px solid #68c7ff;padding-left:11px;color:#bcd3e3;margin-top:13px}.step-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+.logic-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}.logic-grid label{border:1px solid #2d4c63;background:#091923;border-radius:12px;padding:10px;font-size:12px}.logic-grid input,.logic-grid select{width:100%;margin-top:7px}.logic-result{margin-top:10px;padding:12px;border-radius:13px;font-weight:900}.logic-result.ok{background:#12351c;border:1px solid #3f8d4c;color:#c8ffd1}.logic-result.no{background:#3a1818;border:1px solid #8b4242;color:#ffd0d0}
+.thermal-line{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:10px}.thermal-point{border:1px solid #35546b;background:#0a1a25;border-radius:13px;padding:11px;text-align:center}.thermal-point b{font-size:19px;display:block}.thermal-point small{color:var(--muted)}
+@media(max-width:640px){.logic-grid,.thermal-line{grid-template-columns:1fr}}
+.order-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.order-card{border:1px solid #34546b;background:#0b1d2a;color:#fff;border-radius:13px;padding:11px;text-align:left;cursor:pointer;min-height:68px}.order-card:hover{border-color:#6ac8ff}.order-card.used{opacity:.38;pointer-events:none}.order-card.wrong{border-color:#b75b5b;background:#34191d}.order-picked{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.picked-chip{border:1px solid #3a6a86;background:#0d2939;border-radius:999px;padding:6px 9px;font-size:11px}
+@media(max-width:640px){.order-board{grid-template-columns:1fr 1fr}}
+.scenario{border:1px solid #2f4f66;background:#091923;border-radius:16px;padding:14px;margin-bottom:10px}.scenario h4{margin:0 0 6px}.scenario-state{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:9px 0}.scenario-state span{background:#06111b;border:1px solid #29465a;border-radius:10px;padding:8px;font-size:11px}.scenario-options{display:grid;gap:7px}.scenario-options button{border:1px solid #35556c;background:#0c2130;color:#fff;border-radius:11px;padding:10px;text-align:left;cursor:pointer}.scenario-options button.correct{background:#153c20;border-color:#4b9758}.scenario-options button.incorrect{background:#3b1919;border-color:#a14b4b}.feedback{margin-top:8px;font-size:12px;color:#c7d9e7}
+.cic-panel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}.instrument{border:1px solid #35566e;background:#06131d;border-radius:13px;padding:10px}.instrument small{display:block;color:#8daabe;font-weight:800}.instrument b{display:block;font-size:18px;margin-top:3px}.instrument .trend{font-size:11px;color:#8fd6ff}.instrument.off b{color:#ffb0b0}.instrument.on b{color:#afffbd}
+@media(max-width:700px){.cic-panel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.eval-card{border:1px solid #31516a;background:#0a1b27;border-radius:16px;padding:15px}.eval-card h3{margin-top:0}.eval-options{display:grid;gap:8px}.eval-options button{border:1px solid #385b73;background:#102432;color:#fff;border-radius:12px;padding:11px;text-align:left;cursor:pointer}.eval-options button:hover{border-color:#72d0ff}.score-card{margin-top:12px;border:1px solid #36617c;background:#0b2030;border-radius:15px;padding:13px}.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.score-grid div{background:#07131d;border-radius:10px;padding:8px;text-align:center}.score-grid b{display:block;font-size:18px}.score-grid small{color:var(--muted);font-size:10px}
+@media(max-width:600px){.score-grid{grid-template-columns:repeat(2,1fr)}}
+.study-note{margin-top:12px;padding:11px 12px;border:1px solid #675a2a;background:#251f0e;border-radius:12px;color:#ffe9a8;font-size:12px;line-height:1.45}
+
 </style>
 </head>
 <body>
@@ -119,6 +157,7 @@ body{padding:14px}
     <p>Clique nas lâmpadas sobre a tela do conversor para abrir a função de cada equipamento, a lógica de controle e os principais objetivos operacionais. Ao selecionar outro ponto, o conteúdo anterior é minimizado automaticamente e a nova informação é exibida.</p>
     <div class="actions">
       <button class="btn primary" id="summaryBtn">Resumo geral</button>
+      <button class="btn" id="trainingB3901Btn">🔥 Treinamento B-3901</button>
       <button class="btn" id="editBtn">Modo edição</button>
       <button class="btn" id="resetHotspotsBtn">↺ Restaurar posições das lâmpadas</button>
       <button class="btn primary" id="installBtn" hidden>📲 Instalar app</button>
@@ -182,6 +221,7 @@ body{padding:14px}
   <button class="quick" data-id="pdi39018"><strong>PDI-39018 A/B/C</strong><small>ΔP na L-39001</small></button>
   <button class="quick" data-id="pdi39022"><strong>PDI-39022 A/B/C</strong><small>ΔP na L-39002</small></button>
   <button class="quick" data-id="b3901"><strong>B-3901</strong><small>forno</small></button>
+  <button class="quick" id="trainingB3901Quick" type="button"><strong>Treinamento B-3901</strong><small>partida + rampa de aquecimento</small></button>
   <button class="quick" data-id="ci3905"><strong>CI-3905</strong><small>análise / composição</small></button>
   <button class="quick" data-id="velocidades"><strong>Velocidades</strong><small>ciclones, leito e pseudo</small></button>
   <button class="quick" data-id="nivel_d3903"><strong>Nível do D-3903</strong><small>override PDIC-39017</small></button>
@@ -190,6 +230,96 @@ body{padding:14px}
   <button class="quick" data-id="pdic39029_pic39028"><strong>PDIC-39029 / PIC-39028</strong><small>override de pressão</small></button>
   <button class="quick" data-id="j3901"><strong>J-3901</strong><small>ar / turbo</small></button>
   <button class="quick" data-id="intertravamentos"><strong>Intertravamentos</strong><small>proteção do conversor</small></button>
+</section>
+
+
+<section class="card training-card" id="b3901Training">
+  <div class="training-head">
+    <div>
+      <h2>🔥 Partida do B-3901 e Aquecimento do Conversor</h2>
+      <p>Treinamento interativo com visão de operador de painel/CIC: entender a sequência, memorizar os valores-chave, reconhecer permissivos, responder a desvios e executar uma avaliação situacional.</p>
+    </div>
+    <div class="training-badge">MÓDULO OPERACIONAL • U-39</div>
+  </div>
+
+  <div class="training-nav">
+    <button class="train-tab active" data-view="guided">1. Estudo guiado</button>
+    <button class="train-tab" data-view="order">2. Monte a sequência</button>
+    <button class="train-tab" data-view="failures">3. Modo falhas</button>
+    <button class="train-tab" data-view="cic">4. Avaliação CIC</button>
+  </div>
+
+  <div class="train-view active" data-train-view="guided">
+    <div class="sequence-spine" aria-label="sequência resumida">
+      <div class="seq-node"><strong>7000</strong><small>t/d • sopragem 2 h</small></div>
+      <div class="seq-node"><strong>1500</strong><small>t/d • preparar piloto</small></div>
+      <div class="seq-node"><strong>2500</strong><small>t/d • purga 120 s</small></div>
+      <div class="seq-node"><strong>BI-39001</strong><small>confirmar piloto</small></div>
+      <div class="seq-node"><strong>15%</strong><small>PDIC-39036</small></div>
+      <div class="seq-node"><strong>2000</strong><small>t/d • após acendimento</small></div>
+    </div>
+    <div class="training-grid">
+      <div class="train-box">
+        <div class="step-progress"><span id="b3901StepBar"></span></div>
+        <div class="step-card" id="b3901StepCard"></div>
+        <div class="step-actions">
+          <button class="btn" id="b3901PrevStep">← Anterior</button>
+          <button class="btn primary" id="b3901NextStep">Próxima etapa →</button>
+          <button class="btn" id="b3901ResetStudy">Reiniciar</button>
+        </div>
+      </div>
+      <div>
+        <div class="train-box">
+          <h3>🧠 Teste da lógica de rearme</h3>
+          <p>Condição informada: <strong>(T &gt; 400 °C OU B-3901 aceso) E vazão de ar &gt; 3500 t/d</strong>.</p>
+          <div class="logic-grid">
+            <label>Temperatura D-3904 (°C)<input id="logicTemp" type="number" value="380" min="0" max="800"></label>
+            <label>B-3901<select id="logicFurnace"><option value="on">ACESO</option><option value="off">APAGADO</option></select></label>
+            <label>Ar total (t/d)<input id="logicAir" type="number" value="3700" min="0" max="10000"></label>
+          </div>
+          <div class="logic-result" id="logicResult"></div>
+        </div>
+        <div class="train-box" style="margin-top:10px">
+          <h3>🌡️ Linha térmica 400 / 650 / 670</h3>
+          <div class="thermal-line">
+            <div class="thermal-point"><b>&lt; 400 °C</b><small>fase densa: B-3901 necessário na partida</small></div>
+            <div class="thermal-point"><b>650 °C</b><small>máximo de controle no TIC-39043</small></div>
+            <div class="thermal-point"><b>&gt; 670 °C</b><small>D-3904 estável + unidade com carga: condição indicada para retirada</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="study-note">Material de fixação. Para execução real da manobra, prevalecem o procedimento operacional vigente, permissivos/intertravamentos ativos e orientação da operação.</div>
+  </div>
+
+  <div class="train-view" data-train-view="order">
+    <div class="train-box">
+      <h3>Monte a sequência operacional</h3>
+      <p>Clique nos cartões na ordem em que as etapas devem ocorrer. Um erro não encerra o exercício: o objetivo é reforçar a sequência mental.</p>
+      <div class="order-picked" id="orderPicked"></div>
+      <div class="order-board" id="orderBoard"></div>
+      <div class="feedback" id="orderFeedback"></div>
+      <div class="step-actions"><button class="btn" id="orderReset">Embaralhar novamente</button></div>
+    </div>
+  </div>
+
+  <div class="train-view" data-train-view="failures">
+    <div class="train-box">
+      <h3>Modo falhas — reconhecer antes de agir</h3>
+      <p>Escolha a resposta mais coerente com as condições apresentadas. O foco é identificar quando <strong>não prosseguir</strong> e qual indicação precisa ser confirmada.</p>
+      <div id="failureScenarios"></div>
+    </div>
+  </div>
+
+  <div class="train-view" data-train-view="cic">
+    <div class="train-box">
+      <h3>🎛️ Avaliação CIC</h3>
+      <p>A tela apresenta o estado do processo. Interprete as indicações e escolha a próxima ação/decisão.</p>
+      <div class="cic-panel" id="cicPanel"></div>
+      <div class="eval-card" id="evalCard"></div>
+      <div class="score-card" id="scoreCard"></div>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -304,6 +434,17 @@ body{padding:14px}
 <div id="toast" class="toast">Salvo</div>
 
 <script>
+
+/* ===== Persistência compartilhada: local + Supabase ===== */
+function cloudLocalSet(key,value){
+  Storage.prototype.setItem.call(localStorage,key,value);
+  if(window.U39Cloud?.isAdmin) window.U39Cloud.setLocal(key,value).catch(err=>console.warn('Falha ao publicar alteração',err));
+}
+function cloudLocalRemove(key){
+  Storage.prototype.removeItem.call(localStorage,key);
+  if(window.U39Cloud?.isAdmin) window.U39Cloud.removeLocal(key).catch(err=>console.warn('Falha ao remover alteração',err));
+}
+
 const DATA = {
 summary: {
   title:"Sistema de conversão — visão geral",
@@ -484,15 +625,16 @@ pdi39022: {
 },
 
 b3901: {
-  title:"B-3901 — forno",
-  subtitle:"Aquecimento e suporte térmico em condições específicas da operação.",
-  html:`<h3>Função</h3>
-  <p>O B-3901 fornece aquecimento à corrente associada ao sistema quando é necessário elevar ou sustentar temperatura, especialmente em partidas, transições operacionais ou condições em que o balanço térmico do sistema ainda não esteja autossustentado.</p>
-  <h3>Quando usar</h3>
-  <ul><li>na partida do sistema, conforme procedimento;</li><li>quando a temperatura do circuito exigir suporte térmico;</li><li>em condições autorizadas pela rotina operacional da unidade.</li></ul>
-  <h3>Temperatura máxima em condição de controle</h3>
-  <div class="setbox">Preencher o valor máximo oficial permitido para o B-3901 em modo controle, conforme procedimento / projeto da unidade.</div>
-  <div class="caution">Não foi inserido valor numérico sem confirmação documental, para evitar erro operacional.</div>`
+  title:"B-3901 — forno de aquecimento do conversor",
+  subtitle:"Partida, purga, acendimento e suporte térmico durante o aquecimento do D-3904.",
+  html:`<h3>Função na partida</h3>
+  <p>O B-3901 fornece o suporte térmico necessário enquanto o regenerador ainda não apresenta condição térmica autossustentada. Com temperatura inferior a <strong>400 °C na fase densa do D-3904</strong>, o forno é necessário na fase de partida conforme a condição operacional informada.</p>
+  <h3>Sequência-chave para estudo</h3>
+  <div class="flow"><strong>7000 t/d por 2 h</strong> → 1500 t/d → 2500 t/d + purga 120 s → BI-39001 → XV-39012 → PDIC-39036 em 15% → BI-39002 + visor → 2000 t/d → D-3904 em 0,300 kgf/cm² → rampa de aquecimento</div>
+  <h3>Limites e referências</h3>
+  <ul><li>TIC-39043: máximo de controle informado de <strong>650 °C</strong>;</li><li>após o acendimento: reduzir o ar para aproximadamente <strong>2000 t/d</strong>, mantendo FI-39003 acima de <strong>1000 t/d</strong> e acompanhando TI-39042;</li><li>rearme do trip por vazão: <strong>(T &gt; 400 °C OU B-3901 aceso) + ar &gt; 3500 t/d</strong>;</li><li>retirada do B-3901: unidade já com carga e D-3904 estável acima de <strong>670 °C</strong>, conforme a condição informada.</li></ul>
+  <div class="setbox">Use o botão <strong>🔥 Treinamento B-3901</strong> no topo para praticar a sequência completa e resolver cenários de CIC.</div>
+  <div class="caution">Material de treinamento: a execução real deve seguir o procedimento vigente e os permissivos/intertravamentos do sistema.</div>`
 },
 
 velocidades: {
@@ -615,7 +757,7 @@ function getSaved(id){
 function saveCurrent(silent=false){
   if(!currentId || !editMode) return;
   const payload = { title: panelTitle.innerHTML, subtitle: panelSubtitle.innerHTML, html: panelBody.innerHTML };
-  localStorage.setItem(contentKey(currentId), JSON.stringify(payload));
+  cloudLocalSet(contentKey(currentId), JSON.stringify(payload));
   if(!silent) showToast('Alterações salvas');
 }
 function highlight(id){ document.querySelectorAll('.hotspot,.quick').forEach(el=>el.classList.toggle('active',el.dataset.id===id)); }
@@ -655,7 +797,7 @@ const mediaNoteEls = document.querySelectorAll('.media-notes');
 function saveMediaNotes(){
   const notes = {};
   mediaNoteEls.forEach(el=>notes[el.id]=el.innerHTML);
-  localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+  cloudLocalSet(NOTES_KEY, JSON.stringify(notes));
 }
 function loadMediaNotes(){
   try{
@@ -666,6 +808,7 @@ function loadMediaNotes(){
 loadMediaNotes();
 
 editBtn.addEventListener('click',()=>{
+  if(!window.U39Cloud?.isAdmin){ window.U39Cloud?.openLogin(); showToast('Entre como administrador para editar'); return; }
   editMode=!editMode;
   document.body.classList.toggle('editmode',editMode);
   editBtn.classList.toggle('active',editMode);
@@ -678,7 +821,7 @@ editBtn.addEventListener('click',()=>{
 saveBtn.addEventListener('click',()=>saveCurrent(false));
 resetBtn.addEventListener('click',()=>{
   if(!currentId || !confirm('Restaurar o conteúdo original deste item?')) return;
-  localStorage.removeItem(contentKey(currentId));
+  cloudLocalRemove(contentKey(currentId));
   render(currentId);
   showToast('Conteúdo original restaurado');
 });
@@ -710,7 +853,7 @@ function loadHotspots(){
 function saveHotspots(){
   const p={};
   document.querySelectorAll('.hotspot').forEach(el=>p[el.dataset.id]={left:parseFloat(el.style.left),top:parseFloat(el.style.top)});
-  localStorage.setItem(HOTSPOT_POS_KEY,JSON.stringify(p));
+  cloudLocalSet(HOTSPOT_POS_KEY,JSON.stringify(p));
 }
 let dragState=null;
 document.querySelectorAll('.hotspot').forEach(el=>{
@@ -738,7 +881,7 @@ function finishDrag(ev){
 window.addEventListener('pointerup',finishDrag); window.addEventListener('pointercancel',finishDrag);
 resetHotspotsBtn.addEventListener('click',()=>{
   if(!confirm('Restaurar todas as lâmpadas para as posições originais?')) return;
-  localStorage.removeItem(HOTSPOT_POS_KEY);
+  cloudLocalRemove(HOTSPOT_POS_KEY);
   document.querySelectorAll('.hotspot').forEach(el=>{ const p=DEFAULT_HOTSPOT_POSITIONS[el.dataset.id]; el.style.left=p.left+'%'; el.style.top=p.top+'%'; });
   showToast('Posições restauradas');
 });
@@ -782,8 +925,11 @@ function emptyMediaHtml(item){
   return '<div class="empty-media">'+item.icon+'<br><strong>Inserir desenho da malha</strong><br>'+item.label+'.</div>';
 }
 async function renderMediaItem(item){
-  const blob = await dbGet(item.key).catch(()=>null);
   const preview = document.getElementById(item.preview);
+  const cloudUrl = await window.U39Cloud?.getMediaUrl(item.key).catch(()=>null);
+  if(cloudUrl===false){ preview.innerHTML=emptyMediaHtml(item); return; }
+  if(cloudUrl){ preview.innerHTML = '<img src="'+cloudUrl+'" alt="'+item.label+'">'; return; }
+  const blob = await dbGet(item.key).catch(()=>null);
   if(mediaUrls[item.key]) URL.revokeObjectURL(mediaUrls[item.key]);
   if(blob){
     mediaUrls[item.key] = URL.createObjectURL(blob);
@@ -795,9 +941,10 @@ async function renderMediaItem(item){
 MEDIA_MAP.forEach(item=>{
   document.getElementById(item.input).addEventListener('change', async ()=>{
     const f=document.getElementById(item.input).files?.[0]; if(!f) return;
+    if(window.U39Cloud?.isAdmin) await window.U39Cloud.uploadMedia(item.key,f);
     await dbPut(item.key,f); await renderMediaItem(item); document.getElementById(item.input).value=''; showToast('Imagem da malha salva');
   });
-  document.getElementById(item.remove).addEventListener('click', async ()=>{ await dbDelete(item.key); await renderMediaItem(item); showToast('Imagem removida'); });
+  document.getElementById(item.remove).addEventListener('click', async ()=>{ if(window.U39Cloud?.isAdmin) await window.U39Cloud.deleteMedia(item.key); await dbDelete(item.key); await renderMediaItem(item); showToast('Imagem removida'); });
 });
 
 
@@ -805,6 +952,9 @@ MEDIA_MAP.forEach(item=>{
 let conversorVideoUrl = null;
 async function renderConversorVideo(){
   const preview = document.getElementById('media_conversor_video_preview');
+  const cloudUrl = await window.U39Cloud?.getMediaUrl('conversor_video').catch(()=>null);
+  if(cloudUrl===false){ preview.innerHTML = '<div class="empty-media">🎬<br><strong>Inserir vídeo do sistema conversor</strong><br>Ative o modo edição e clique em “Adicionar / alterar vídeo”.</div>'; return; }
+  if(cloudUrl){ preview.innerHTML = '<video controls playsinline preload="metadata" src="'+cloudUrl+'"></video>'; return; }
   const blob = await dbGet('conversor_video').catch(()=>null);
   if(conversorVideoUrl) URL.revokeObjectURL(conversorVideoUrl);
   if(blob){
@@ -819,6 +969,7 @@ document.getElementById('media_conversor_video_input').addEventListener('change'
   const input = document.getElementById('media_conversor_video_input');
   const file = input.files?.[0];
   if(!file) return;
+  if(window.U39Cloud?.isAdmin) await window.U39Cloud.uploadMedia('conversor_video',file);
   await dbPut('conversor_video', file);
   await renderConversorVideo();
   input.value = '';
@@ -826,6 +977,7 @@ document.getElementById('media_conversor_video_input').addEventListener('change'
 });
 
 document.getElementById('media_conversor_video_remove').addEventListener('click', async ()=>{
+  if(window.U39Cloud?.isAdmin) await window.U39Cloud.deleteMedia('conversor_video');
   await dbDelete('conversor_video');
   await renderConversorVideo();
   showToast('Vídeo removido');
@@ -834,6 +986,9 @@ document.getElementById('media_conversor_video_remove').addEventListener('click'
 renderConversorVideo();
 
 Promise.all(MEDIA_MAP.map(renderMediaItem));
+window.addEventListener('u39-cloud-ready',()=>{ Promise.all(MEDIA_MAP.map(renderMediaItem)); renderConversorVideo(); });
+window.addEventListener('u39-cloud-media-changed',()=>{ Promise.all(MEDIA_MAP.map(renderMediaItem)); renderConversorVideo(); });
+
 
 
 /* ===== PWA / instalação ===== */
@@ -875,5 +1030,144 @@ if ('serviceWorker' in navigator) {
 }
 
 </script>
+<script>window.U39_CLOUD_CONFIG={"supabaseUrl": "https://bbfpyoatpdqlwxhmcdaq.supabase.co", "publishableKey": "sb_publishable_YBcxaMOnCrk4FroZgrJRnQ_MxbthrDu", "appSlug": "conversor-concept", "bucket": "u39-app-media", "localPrefixes": ["u39-conversao-content-v1-", "u39-conversao-hotspots-v1", "u39-conversao-media-notes-v1"]};</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+
+/* ===== Treinamento interativo B-3901 ===== */
+(() => {
+  const root = document.getElementById('b3901Training');
+  if (!root) return;
+
+  const scrollTraining = () => root.scrollIntoView({behavior:'smooth', block:'start'});
+  document.getElementById('trainingB3901Btn')?.addEventListener('click', scrollTraining);
+  document.getElementById('trainingB3901Quick')?.addEventListener('click', scrollTraining);
+
+  const tabs=[...root.querySelectorAll('.train-tab')];
+  const views=[...root.querySelectorAll('[data-train-view]')];
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.toggle('active',x===t));
+    views.forEach(v=>v.classList.toggle('active',v.dataset.trainView===t.dataset.view));
+  }));
+
+  const steps=[
+    {title:'Preparar o conjunto D-3904 / D-3902', action:'Ajustar a condição de pressão entre o regenerador D-3904 e o vaso separador D-3902 antes da sequência de acendimento.', why:'Esta é a condição inicial do treinamento. O valor de equalização não foi inventado no módulo: deve ser confirmado pelo procedimento vigente.'},
+    {title:'Soprar o B-3901', action:'Ajustar a vazão de ar total para o regenerador em <strong>7000 t/d por 2 horas</strong>, através do HIC-39200 e FIC-39004, para realizar a sopragem do forno.', why:'Fixação: 7000 → 2 h.'},
+    {title:'Preparar a inserção do piloto', action:'Após a sopragem, reduzir a vazão de ar para <strong>1500 t/d</strong>.', why:'Este valor marca a transição entre a sopragem e a preparação do piloto.'},
+    {title:'Confirmar a purga', action:'Elevar a vazão de ar para <strong>2500 t/d</strong> e confirmar a sinalização de purga completa após <strong>120 s</strong>.', why:'No treinamento, “ter vazão” e “ter purga completa” são condições diferentes. A temporização precisa ser cumprida.'},
+    {title:'Acender e confirmar o piloto', action:'Acionar a tecla de acendimento no painel local do B-3901 e confirmar a chama pelo <strong>BI-39001</strong>.', why:'Sem confirmação do piloto, não avance para a entrada do queimador principal.'},
+    {title:'Admitir o queimador principal', action:'Com o piloto confirmado, abrir a <strong>XV-39012</strong> e em seguida levar o <strong>PDIC-39036 para 15%</strong>.', why:'Memorização: XV primeiro → 15% depois.'},
+    {title:'Confirmar a chama principal', action:'Verificar o acendimento do queimador principal pelo <strong>BI-39002</strong> e pelo <strong>visor de chama</strong> no costado do B-3901.', why:'A confirmação combina indicação instrumental e verificação visual conforme a condição informada.'},
+    {title:'Estabilizar o ar após o acendimento', action:'Reduzir a vazão de ar para aproximadamente <strong>2000 t/d</strong>, mantendo o <strong>FI-39003 acima de 1000 t/d</strong> e acompanhando o <strong>TI-39042</strong>.', why:'O operador deve observar simultaneamente vazão mínima e resposta térmica.'},
+    {title:'Preparar a rampa do conversor', action:'Reduzir a pressão do regenerador D-3904 para <strong>0,300 kgf/cm²</strong> e iniciar a rampa de aquecimento do conversor.', why:'A partir daqui o foco passa a ser a evolução térmica controlada do conjunto.'},
+    {title:'Conhecer o limite de controle', action:'Durante o aquecimento, reconhecer que o <strong>TIC-39043 tem temperatura máxima de controle de 650 °C</strong>.', why:'650 °C é limite do controle informado para o forno; não é a temperatura de retirada do B-3901.'},
+    {title:'Reconhecer a retirada do forno', action:'A condição indicada para retirada do B-3901 é a unidade já <strong>com carga</strong> e o regenerador <strong>estável acima de 670 °C</strong>.', why:'Fixação: 400 → necessidade na partida; 650 → máximo TIC-39043; 670 → condição de retirada.'}
+  ];
+  let stepIndex=Number(localStorage.getItem('b3901StudyStep')||0);
+  if(stepIndex<0||stepIndex>=steps.length) stepIndex=0;
+  const stepCard=document.getElementById('b3901StepCard');
+  const stepBar=document.getElementById('b3901StepBar');
+  function renderStep(){
+    const st=steps[stepIndex];
+    stepCard.innerHTML=`<div class="step-index">ETAPA ${stepIndex+1} DE ${steps.length}</div><h3>${st.title}</h3><div class="action">${st.action}</div><div class="why"><strong>Por que memorizar:</strong> ${st.why}</div>`;
+    stepBar.style.width=((stepIndex+1)/steps.length*100)+'%';
+    localStorage.setItem('b3901StudyStep',String(stepIndex));
+  }
+  document.getElementById('b3901PrevStep')?.addEventListener('click',()=>{stepIndex=Math.max(0,stepIndex-1);renderStep()});
+  document.getElementById('b3901NextStep')?.addEventListener('click',()=>{stepIndex=Math.min(steps.length-1,stepIndex+1);renderStep()});
+  document.getElementById('b3901ResetStudy')?.addEventListener('click',()=>{stepIndex=0;renderStep()});
+  renderStep();
+
+  const logicTemp=document.getElementById('logicTemp');
+  const logicFurnace=document.getElementById('logicFurnace');
+  const logicAir=document.getElementById('logicAir');
+  const logicResult=document.getElementById('logicResult');
+  function updateLogic(){
+    const t=Number(logicTemp.value||0), air=Number(logicAir.value||0), on=logicFurnace.value==='on';
+    const thermal=(t>400)||on, flow=air>3500, ok=thermal&&flow;
+    logicResult.className='logic-result '+(ok?'ok':'no');
+    logicResult.innerHTML=(ok?'✅ REARME DISPONÍVEL':'❌ REARME NÃO DISPONÍVEL')+`<br><small>Bloco térmico/forno: ${thermal?'OK':'NÃO'} • ar &gt; 3500: ${flow?'OK':'NÃO'}</small>`;
+  }
+  [logicTemp,logicFurnace,logicAir].forEach(el=>el?.addEventListener('input',updateLogic)); updateLogic();
+
+  const orderItems=[
+    ['soprar','7000 t/d por 2 h'],['reduzir1500','Reduzir para 1500 t/d'],['elevar2500','Elevar para 2500 t/d'],['purga','Confirmar purga 120 s'],['piloto','Acender piloto'],['bi1','Confirmar BI-39001'],['xv','Abrir XV-39012'],['pdic','PDIC-39036 → 15%'],['bi2','BI-39002 + visor'],['ar2000','Ar → 2000 t/d'],['pregen','D-3904 → 0,300 kgf/cm²'],['rampa','Iniciar rampa de aquecimento']
+  ];
+  let orderPos=0, orderErrors=0;
+  const board=document.getElementById('orderBoard'), picked=document.getElementById('orderPicked'), orderFeedback=document.getElementById('orderFeedback');
+  const shuffle=a=>[...a].sort(()=>Math.random()-.5);
+  function resetOrder(){
+    orderPos=0;orderErrors=0;picked.innerHTML='';orderFeedback.textContent='';board.innerHTML='';
+    shuffle(orderItems).forEach(([id,label])=>{
+      const b=document.createElement('button');b.className='order-card';b.dataset.id=id;b.innerHTML=`<strong>${label}</strong>`;
+      b.onclick=()=>{
+        const expected=orderItems[orderPos][0];
+        if(id===expected){
+          b.classList.add('used'); picked.insertAdjacentHTML('beforeend',`<span class="picked-chip">${orderPos+1}. ${label}</span>`); orderPos++;
+          if(orderPos===orderItems.length){ orderFeedback.innerHTML=`✅ Sequência concluída. Erros durante a tentativa: <strong>${orderErrors}</strong>.`; localStorage.setItem('b3901OrderBest',String(Math.min(Number(localStorage.getItem('b3901OrderBest')||999),orderErrors))); }
+          else orderFeedback.textContent='Correto. Continue.';
+        } else {orderErrors++;b.classList.add('wrong');setTimeout(()=>b.classList.remove('wrong'),450);orderFeedback.textContent='Ainda não. Relembre a etapa imediatamente anterior.';}
+      };
+      board.appendChild(b);
+    });
+  }
+  document.getElementById('orderReset')?.addEventListener('click',resetOrder); resetOrder();
+
+  const failureData=[
+    {title:'Piloto sem confirmação',state:['Ar: 2500 t/d','Purga: COMPLETA','BI-39001: OFF'],q:'Após o comando de acendimento, BI-39001 não confirma chama. O que fazer?',options:['Abrir XV-39012 para tentar sustentar a chama','Não prosseguir para o queimador principal enquanto o piloto não estiver confirmado','Levar PDIC-39036 diretamente a 30%'],correct:1,exp:'A sequência exige confirmação do piloto pelo BI-39001 antes da admissão do queimador principal.'},
+    {title:'Rearme com ar insuficiente',state:['D-3904: 380 °C','B-3901: ACESO','Ar: 3200 t/d'],q:'A condição informada de rearme está satisfeita?',options:['Sim, porque o forno está aceso','Não, porque falta ar acima de 3500 t/d','Sim, porque a temperatura está próxima de 400 °C'],correct:1,exp:'O forno aceso satisfaz o bloco “T>400 OU forno aceso”, mas a vazão ainda precisa ser >3500 t/d.'},
+    {title:'Aproximação do limite térmico',state:['TIC-39043: 642 °C ↑','B-3901: ACESO','D-3904: aquecendo'],q:'Qual referência exige atenção imediata?',options:['Limite máximo de controle informado de 650 °C no TIC-39043','Condição de retirada em 400 °C','Vazão mínima de 3500 t/d para operação contínua do forno'],correct:0,exp:'650 °C é o máximo de controle informado para o TIC-39043.'},
+    {title:'Retirada prematura',state:['Unidade: COM CARGA','D-3904: 630 °C','Temperatura: estável'],q:'Essa é a condição indicada para retirada do B-3901?',options:['Sim, porque a unidade já está com carga','Não, a condição informada é estabilidade acima de 670 °C com a unidade em carga','Sim, porque 630 °C está abaixo do máximo de 650 °C'],correct:1,exp:'650 °C e 670 °C são referências diferentes: 650 é o máximo de controle do TIC-39043; >670 °C estável + carga é a condição informada para retirada.'}
+  ];
+  const fwrap=document.getElementById('failureScenarios');
+  failureData.forEach((sc,si)=>{
+    const el=document.createElement('div'); el.className='scenario';
+    el.innerHTML=`<h4>${si+1}. ${sc.title}</h4><div class="scenario-state">${sc.state.map(x=>`<span>${x}</span>`).join('')}</div><p>${sc.q}</p><div class="scenario-options">${sc.options.map((o,i)=>`<button data-i="${i}">${o}</button>`).join('')}</div><div class="feedback"></div>`;
+    el.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{
+      if(el.dataset.done) return; el.dataset.done='1'; const i=Number(btn.dataset.i); const ok=i===sc.correct;
+      btn.classList.add(ok?'correct':'incorrect'); if(!ok) el.querySelectorAll('button')[sc.correct].classList.add('correct');
+      el.querySelector('.feedback').textContent=(ok?'✅ Correto. ':'❌ Revise. ')+sc.exp;
+    });
+    fwrap.appendChild(el);
+  });
+
+  const evalCases=[
+    {cat:'sequencia',state:{'D-3904 TEMP':'382 °C ↑','D-3904 PRESS':'0,48 kgf/cm²','FIC-39004':'1500 t/d','BI-39001':'OFF','BI-39002':'OFF','XV-39012':'FECHADA'},q:'A sopragem já foi concluída e o ar foi reduzido para 1500 t/d. Qual é a próxima ação do treinamento?',opts:['Abrir XV-39012','Elevar para 2500 t/d e aguardar purga completa de 120 s','Reduzir imediatamente para 1000 t/d','Levar PDIC-39036 a 15%'],correct:1,exp:'A etapa seguinte é 2500 t/d + confirmação da purga de 120 s.'},
+    {cat:'permissivos',state:{'D-3904 TEMP':'390 °C','B-3901':'APAGADO','AR TOTAL':'3900 t/d','REARME':'?'},q:'O rearme está disponível?',opts:['Sim, porque o ar está >3500 t/d','Não, porque T<400 °C e o B-3901 está apagado','Sim, porque 390 °C está dentro da faixa'],correct:1,exp:'O bloco (T>400 OU forno aceso) não está satisfeito.'},
+    {cat:'permissivos',state:{'D-3904 TEMP':'380 °C','B-3901':'ACESO','AR TOTAL':'3700 t/d','REARME':'?'},q:'O rearme está disponível?',opts:['Sim','Não, porque T<400 °C','Não, porque o ar deveria ser 7000 t/d'],correct:0,exp:'Forno aceso satisfaz o bloco OR e o ar está >3500 t/d.'},
+    {cat:'instrumentos',state:{'PURGA':'COMPLETA','BI-39001':'ON','XV-39012':'ABERTA','PDIC-39036':'15%','BI-39002':'OFF'},q:'O que ainda precisa ser confirmado antes de considerar o queimador principal aceso?',opts:['Somente FI-39003 >1000 t/d','BI-39002 e visor de chama','TIC-39043 em 650 °C','D-3904 acima de 670 °C'],correct:1,exp:'A chama principal deve ser confirmada pelo BI-39002 e pelo visor.'},
+    {cat:'limites',state:{'TIC-39043':'646 °C ↑','D-3904':'620 °C','B-3901':'ACESO'},q:'Qual valor de referência está sendo aproximado?',opts:['400 °C para retirada do forno','650 °C máximo de controle no TIC-39043','670 °C mínimo do TIC-39043'],correct:1,exp:'O TIC-39043 está próximo do máximo de controle informado de 650 °C.'},
+    {cat:'decisao',state:{'UNIDADE':'COM CARGA','D-3904':'674 °C','TENDÊNCIA':'ESTÁVEL','B-3901':'ACESO'},q:'Qual interpretação corresponde à condição informada?',opts:['Há condição indicada para retirada do B-3901, seguindo o procedimento vigente','O forno deve permanecer obrigatoriamente porque passou de 650 °C','É necessário retornar a sopragem por 2 h'],correct:0,exp:'Unidade com carga + D-3904 estável >670 °C corresponde à condição indicada para retirada.'}
+  ];
+  let evalIndex=0, evalAnswers=Array(evalCases.length).fill(null);
+  const cicPanel=document.getElementById('cicPanel'), evalCard=document.getElementById('evalCard'), scoreCard=document.getElementById('scoreCard');
+  function renderEval(){
+    const c=evalCases[evalIndex];
+    cicPanel.innerHTML=Object.entries(c.state).map(([k,v])=>`<div class="instrument ${String(v).includes('ACESO')||String(v).includes('ON')?'on':String(v).includes('APAGADO')||String(v).includes('OFF')?'off':''}"><small>${k}</small><b>${v}</b><span class="trend">CENÁRIO ${evalIndex+1}/${evalCases.length}</span></div>`).join('');
+    evalCard.innerHTML=`<h3>${c.q}</h3><div class="eval-options">${c.opts.map((o,i)=>`<button data-i="${i}">${String.fromCharCode(65+i)}) ${o}</button>`).join('')}</div><div class="feedback" id="evalFeedback"></div><div class="step-actions"><button class="btn" id="evalPrev">← Anterior</button><button class="btn primary" id="evalNext">Próximo →</button><button class="btn" id="evalReset">Reiniciar avaliação</button></div>`;
+    evalCard.querySelectorAll('.eval-options button').forEach(btn=>btn.onclick=()=>{
+      const i=Number(btn.dataset.i); evalAnswers[evalIndex]=i; const ok=i===c.correct;
+      evalCard.querySelectorAll('.eval-options button').forEach((b,j)=>{b.classList.remove('correct','incorrect'); if(j===c.correct)b.classList.add('correct')});
+      if(!ok) btn.classList.add('incorrect');
+      document.getElementById('evalFeedback').textContent=(ok?'✅ Correto. ':'❌ Revise. ')+c.exp;
+      localStorage.setItem('b3901EvalAnswers',JSON.stringify(evalAnswers)); renderScore();
+    });
+    document.getElementById('evalPrev').onclick=()=>{evalIndex=Math.max(0,evalIndex-1);renderEval()};
+    document.getElementById('evalNext').onclick=()=>{evalIndex=Math.min(evalCases.length-1,evalIndex+1);renderEval()};
+    document.getElementById('evalReset').onclick=()=>{evalIndex=0;evalAnswers=Array(evalCases.length).fill(null);localStorage.removeItem('b3901EvalAnswers');renderEval()};
+    const prev=evalAnswers[evalIndex]; if(prev!==null){const b=evalCard.querySelectorAll('.eval-options button')[prev]; if(b)b.click();}
+    renderScore();
+  }
+  function renderScore(){
+    const cats={sequencia:[0,0],permissivos:[0,0],instrumentos:[0,0],limites:[0,0],decisao:[0,0]}; let answered=0,correct=0;
+    evalCases.forEach((c,i)=>{cats[c.cat][1]++; if(evalAnswers[i]!==null){answered++; if(evalAnswers[i]===c.correct){correct++;cats[c.cat][0]++;}}});
+    const pct=answered?Math.round(correct/answered*100):0;
+    scoreCard.innerHTML=`<strong>Desempenho: ${correct}/${answered} corretas (${pct}%)</strong><div class="score-grid" style="margin-top:9px">${Object.entries(cats).map(([k,[a,t]])=>`<div><b>${a}/${t}</b><small>${k}</small></div>`).join('')}</div><div class="feedback" style="margin-top:8px">O objetivo é identificar onde revisar: sequência, permissivos, instrumentos, limites e decisão operacional.</div>`;
+  }
+  try{const saved=JSON.parse(localStorage.getItem('b3901EvalAnswers')||'null'); if(Array.isArray(saved)&&saved.length===evalCases.length)evalAnswers=saved;}catch(e){}
+  renderEval();
+})();
+</script>
+<script src="./cloud-sync.js"></script>
 </body>
 </html>

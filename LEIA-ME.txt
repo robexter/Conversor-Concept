@@ -1,26 +1,30 @@
-CONVERSOR CONCEPT — PWA
+CONVERSOR-CONCEPT — EDIÇÃO GLOBAL COM SUPABASE
 
-Arquivos incluídos:
-- index.html
-- manifest.json
-- sw.js
-- icons/icon-180.png
-- icons/icon-192.png
-- icons/icon-512.png
+1. No Supabase SQL Editor, abra supabase-setup.sql.
+2. Troque SEU_EMAIL_ADMIN@EXEMPLO.COM pelo e-mail real do administrador.
+3. Execute o SQL.
+4. Publique index.html, cloud-sync.js, manifest.json, sw.js e a pasta icons no GitHub.
+5. Abra a página e use o botão Administrador.
+6. No primeiro acesso, use Criar conta se ainda não existir um usuário Supabase Auth com esse e-mail.
+7. Depois do login, Modo edição fica liberado. Alterações de texto, lâmpadas, imagens e vídeos são publicadas para todos.
 
-Recursos:
-- nome do app no celular: Conversor concept
-- botão “📲 Instalar app”
-- ícone do app configurado no manifest
-- service worker para instalação PWA
-- manutenção da one page interativa do conversor
+Importante: o publishable key pode ficar no front-end; NÃO use service_role key no navegador.
 
-Publicação no GitHub Pages:
-1. Envie todos os arquivos para a raiz do repositório, mantendo a pasta /icons.
-2. Faça commit/push.
-3. Abra a URL no celular ou no Chrome/Edge.
-4. Toque em “📲 Instalar app”.
+MIGRAÇÃO DAS EDIÇÕES QUE JÁ ESTÃO NO SEU CELULAR/PC:
+- Entre como Administrador no aparelho que contém as posições/textos corretos.
+- Clique em “☁️ Publicar edição deste aparelho”.
+- Isso envia os textos e posições já salvos localmente para todos os usuários.
+- Imagens e vídeos antigos devem ser selecionados novamente uma vez para serem enviados ao Storage do Supabase.
 
-Atualização v2:
-- Incluídos tópicos interativos Afterburning e Behind-burning no regenerador D-3904.
-- Adicionados sintomas, causas, reação química e impacto operacional.
+ATUALIZAÇÃO B-3901 — V3
+- Novo botão: "Treinamento B-3901".
+- 4 modos: Estudo guiado, Monte a sequência, Modo falhas e Avaliação CIC.
+- Lógica interativa de rearme: (T > 400 °C OU B-3901 aceso) E ar > 3500 t/d.
+- Linha térmica de estudo: 400 / 650 / 670 °C.
+- Sequência de estudo: 7000 t/d por 2 h → 1500 → 2500 + purga 120 s → BI-39001 → XV-39012 → PDIC-39036 15% → BI-39002 + visor → 2000 → D-3904 0,300 kgf/cm² → rampa.
+- Progresso do treinamento fica no navegador do aparelho (localStorage).
+- A edição compartilhada existente via cloud-sync.js / Supabase foi preservada.
+- Cache do PWA atualizado para conversor-concept-v3-b3901 para facilitar a troca da versão instalada.
+
+PUBLICAÇÃO
+Substitua os arquivos do repositório do Conversor-Concept pelos arquivos deste ZIP, preservando a estrutura da pasta icons/.

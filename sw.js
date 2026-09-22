@@ -1,8 +1,9 @@
-const CACHE_NAME = 'conversor-concept-v2';
+const CACHE_NAME = 'conversor-concept-v3-b3901';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
+  './cloud-sync.js',
   './sw.js',
   './icons/icon-180.png',
   './icons/icon-192.png',
