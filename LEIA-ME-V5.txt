@@ -1,0 +1,14 @@
+CONVERSOR CONCEPT — V5 • MANOBRAS INTEGRADAS
+
+Alterações:
+- Nova área “Manobras Integradas do Conversor”.
+- Card “Partida B-3901” apontando para o treinamento existente.
+- Novo módulo “Partida J-3901” em partida-j3901.html.
+- Atalho no topo, na grade rápida e dentro do painel Entenda melhor do J-3901.
+- Service Worker atualizado para conversor-concept-v5-j3901 e cache do novo módulo.
+
+Para GitHub Pages:
+Substitua os arquivos da raiz pelo conteúdo deste pacote, mantendo a estrutura icons/.
+O nome do PWA permanece “Conversor concept”.
+
+Material de treinamento: para operação real, prevalecem procedimento vigente, permissivos/intertravamentos ativos e orientação operacional.

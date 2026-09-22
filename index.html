@@ -109,6 +109,20 @@ body{padding:14px}
 @media(max-width:640px){body{padding:8px}.quick-grid{grid-template-columns:1fr}.hotspot .label{display:none}.hotspot .lamp{font-size:16px}.stats{grid-template-columns:1fr 1fr}}
 
 
+/* ===== Manobras Integradas do Conversor ===== */
+.integrated-card{overflow:hidden}
+.integrated-head{padding:18px 20px;border-bottom:1px solid var(--line)}
+.integrated-head h2{margin:0 0 5px;font-size:clamp(21px,3vw,29px)}
+.integrated-head p{margin:0;color:var(--muted);line-height:1.5}
+.integrated-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px}
+.integrated-item{border:1px solid #31516a;background:linear-gradient(180deg,#0d2637,#081722);border-radius:17px;padding:15px;display:flex;flex-direction:column;gap:9px;min-height:175px}
+.integrated-item .kind{font-size:10px;color:#ffd56b;font-weight:900;letter-spacing:.08em}
+.integrated-item h3{margin:0;font-size:20px}
+.integrated-item p{margin:0;color:#b9cfde;line-height:1.45;font-size:12px;flex:1}
+.integrated-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:4px}
+.quick-link{text-decoration:none;display:block}
+@media(max-width:700px){.integrated-grid{grid-template-columns:1fr}}
+
 /* ===== Treinamento B-3901 / Aquecimento do Conversor ===== */
 .training-card{overflow:hidden}
 .training-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -152,12 +166,13 @@ body{padding:14px}
 
 <section class="hero">
   <div class="card hero-main">
-    <span class="chip">PWA INTERATIVO • U-39</span> <span class="chip" style="border-color:#7a5b23;color:#ffe09b">B-3901 • V4</span>
+    <span class="chip">PWA INTERATIVO • U-39</span> <span class="chip" style="border-color:#7a5b23;color:#ffe09b">MANOBRAS • V5</span>
     <h1>Conversor concept</h1>
     <p>Clique nas lâmpadas sobre a tela do conversor para abrir a função de cada equipamento, a lógica de controle e os principais objetivos operacionais. Ao selecionar outro ponto, o conteúdo anterior é minimizado automaticamente e a nova informação é exibida.</p>
     <div class="actions">
       <button class="btn primary" id="summaryBtn">Resumo geral</button>
       <button class="btn" id="trainingB3901Btn">🔥 Treinamento B-3901</button>
+      <a class="btn" href="./partida-j3901.html">⚙️ Treinamento J-3901</a>
       <button class="btn" id="forceUpdateBtn">🔄 Atualizar versão</button>
       <button class="btn" id="editBtn">Modo edição</button>
       <button class="btn" id="resetHotspotsBtn">↺ Restaurar posições das lâmpadas</button>
@@ -230,9 +245,31 @@ body{padding:14px}
   <button class="quick" data-id="tic39031"><strong>TIC-39031</strong><small>fase densa do regenerador</small></button>
   <button class="quick" data-id="pdic39029_pic39028"><strong>PDIC-39029 / PIC-39028</strong><small>override de pressão</small></button>
   <button class="quick" data-id="j3901"><strong>J-3901</strong><small>ar / turbo</small></button>
+  <a class="quick quick-link" href="./partida-j3901.html"><strong>Partida J-3901</strong><small>auxiliares + vácuo + turbina + CIC</small></a>
   <button class="quick" data-id="intertravamentos"><strong>Intertravamentos</strong><small>proteção do conversor</small></button>
 </section>
 
+
+<section class="card integrated-card" id="manobras-integradas">
+  <div class="integrated-head">
+    <h2>🧭 Manobras Integradas do Conversor</h2>
+    <p>Treinamentos operacionais que conectam equipamentos, permissivos, resposta do processo e coordenação Campo × CIC. Use esta área para revisar a sequência completa antes de entrar nos detalhes de cada equipamento.</p>
+  </div>
+  <div class="integrated-grid">
+    <article class="integrated-item">
+      <div class="kind">AQUECIMENTO DO CONVERSOR • B-3901</div>
+      <h3>🔥 Partida B-3901</h3>
+      <p>Sopragem, piloto, purga, queimador principal, rearme por ar, linha térmica 400 / 650 / 670 e avaliação CIC.</p>
+      <div class="integrated-actions"><button class="btn primary" id="integratedB3901Btn" type="button">▶ Abrir treinamento</button></div>
+    </article>
+    <article class="integrated-item">
+      <div class="kind">COMPRESSOR DE AR • TURBINA • J-3901</div>
+      <h3>⚙️ Partida J-3901</h3>
+      <p>J-3992, jacking, giro lento, C-3954, J-3947, ejetores, vapor ativo, permissivos, óleo de trip, WW-505, Safe Run, CCC e transferência para CIC.</p>
+      <div class="integrated-actions"><a class="btn primary" href="./partida-j3901.html">▶ Abrir treinamento</a></div>
+    </article>
+  </div>
+</section>
 
 <section class="card training-card" id="b3901Training">
   <div class="training-head">
@@ -708,7 +745,8 @@ j3901: {
   <p>A J-3901 fornece o ar necessário ao sistema do conversor/regenerador, sustentando a combustão do coque e a fluidização adequada no regenerador. Seu desempenho influencia diretamente a temperatura do regenerador, a queima de coque e a disponibilidade de catalisador regenerado quente ao riser.</p>
   <h3>Impacto operacional</h3>
   <ul><li>mais ar → maior suporte à combustão;</li><li>menos ar → risco de combustão incompleta / queda de temperatura / instabilidade;</li><li>falha ou trip → afeta imediatamente a regeneração e pode levar a intertravamentos do sistema.</li></ul>
-  <div class="flow">J-3901 é crítica para manter o lado de regeneração do FCC ativo e estável.</div>`
+  <div class="flow">J-3901 é crítica para manter o lado de regeneração do FCC ativo e estável.</div>
+  <div class="note"><strong>Treinamento operacional:</strong> partida completa do J-3901 com auxiliares, vácuo, permissivos, óleo de trip, WW-505, CCC e transferência Campo → CIC.<br><br><a class="btn primary" href="./partida-j3901.html">⚙️ Iniciar treinamento Partida J-3901</a></div>`
 },
 
 intertravamentos: {
@@ -1043,6 +1081,7 @@ if ('serviceWorker' in navigator) {
   const scrollTraining = () => root.scrollIntoView({behavior:'smooth', block:'start'});
   document.getElementById('trainingB3901Btn')?.addEventListener('click', scrollTraining);
   document.getElementById('trainingB3901Quick')?.addEventListener('click', scrollTraining);
+  document.getElementById('integratedB3901Btn')?.addEventListener('click', scrollTraining);
 
   const tabs=[...root.querySelectorAll('.train-tab')];
   const views=[...root.querySelectorAll('[data-train-view]')];

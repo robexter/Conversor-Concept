@@ -1,5 +1,7 @@
-const CACHE_NAME = 'conversor-concept-v4-b3901';
+const CACHE_NAME = 'conversor-concept-v5-j3901';
 const CORE_ASSETS = [
+  './index.html',
+  './partida-j3901.html',
   './manifest.json',
   './cloud-sync.js',
   './icons/icon-180.png',
@@ -34,10 +36,10 @@ self.addEventListener('fetch', event => {
       fetch(req)
         .then(response => {
           const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put('./index.html', copy)).catch(()=>{});
+          caches.open(CACHE_NAME).then(cache => cache.put(req, copy)).catch(()=>{});
           return response;
         })
-        .catch(() => caches.match('./index.html'))
+        .catch(() => caches.match(req).then(cached => cached || caches.match('./index.html')))
     );
     return;
   }
