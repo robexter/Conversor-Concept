@@ -1,0 +1,12 @@
+V15.1 — CORREÇÃO DO TESTE DE LÓGICA
+
+Problema encontrado:
+O simulador existia no HTML, mas não havia botão/aba data-tab="logic" na barra de navegação.
+Por isso o usuário não conseguia abrir a tela.
+
+Correção:
+- nova aba visível: “5. 🧪 Teste de lógica”
+- botão “Abrir teste de lógica” na Sala CIC
+- link do index atualizado para ?v=151
+- cache do service worker atualizado
+- simulador e regras técnicas mantidos
