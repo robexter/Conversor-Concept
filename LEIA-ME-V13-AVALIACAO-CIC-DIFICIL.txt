@@ -1,0 +1,24 @@
+CONVERSOR CONCEPT — V13
+TRIP TOTAL U-39 — REFINAMENTO DA AVALIAÇÃO CIC ÀS CEGAS
+
+Problema corrigido:
+Na V12 algumas respostas erradas pertenciam a fases/equipamentos muito diferentes,
+permitindo acerto por eliminação.
+
+Critério V13:
+- 4 alternativas por questão;
+- todas as alternativas ficam no mesmo contexto operacional;
+- distratores usam os mesmos equipamentos/tags ou decisões vizinhas;
+- diferença está em pré-requisito, ordem, confirmação, destino ou associação correta;
+- não foram inventados novos limites;
+- PE.REF.OPE.CCF.089 Rev.02 e M01 Rev.02 permanecem como base;
+- 14 cenários;
+- explicação após a resposta.
+
+Exemplos de aumento de dificuldade:
+- L-3901/L-3902: alternativas diferem sobre quando liberar ΔP;
+- purga: mínimo 10 min x recomendável 30 min;
+- corte de carga: diferentes origens reais;
+- E-3906: alternativas usam FFV-39177 / MCV-39390 / MCV-39391 / FV-39178;
+- E-3910: alternativas usam as mesmas válvulas da etapa;
+- tratamentos: alternativas trocam associações reais de tags E-3911/E-3912.
