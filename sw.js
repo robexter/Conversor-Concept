@@ -1,10 +1,11 @@
-const CACHE_NAME = 'conversor-concept-v13-avaliacao-dificil';
+const CACHE_NAME = 'conversor-concept-v15-trip-parcial-gates';
 const CORE_ASSETS = [
   './index.html',
   './partida-j3901.html',
   './parada-j3901-manutencao.html',
   './parada-gv3901-manutencao.html?v=10',
   './trip-total-conversor-u39.html?v=13',
+  './trip-parcial-conversor-u39.html?v=15',
   './manifest.json',
   './cloud-sync.js',
   './icons/icon-180.png',

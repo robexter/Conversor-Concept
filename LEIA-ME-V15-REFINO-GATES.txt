@@ -1,0 +1,33 @@
+CONVERSOR CONCEPT — V15
+TRIP PARCIAL DO CONVERSOR — REFINAMENTO COM SIMULADOR DE GATES
+
+NOVO:
+- aba “Simulador de Gates”
+- usuário insere valores reais de treinamento
+- status muda entre HABILITADO / NÃO HABILITADO / AGUARDANDO
+- presets de cenários
+- gate didático para pequena circulação
+
+GATES AUTOMÁTICOS:
+1. Sangria N2
+   - durante manobra: PI > 4 kgf/cm²
+   - final: PI = 6 kgf/cm²
+2. ΔP L-3902
+   - habilitado se > 300 gf/cm²
+3. Pequena circulação
+   - L-3902 <= 5%
+4. Retificador
+   - referência: nível 80%, LIC-39001 AUTO, SP 80%
+5. ΔP regenerador x vaso separador
+   - referência: +0,7 kgf/cm²
+6. Temperaturas
+   - referências ~690 °C regenerador e ~570 °C riser
+   - sem gate binário porque o PE usa “em torno de” e não define tolerância
+
+IMPORTANTE:
+O “status habilitado” é lógica DIDÁTICA construída a partir das condições do PE.
+NÃO é apresentado como permissivo/intertravamento real de SDCD.
+
+Base:
+PE.REF.OPE.CCF.089 Rev.02, seção 5.2.5
+PE.REF.OPE.CCF.089.M05 Rev.02
