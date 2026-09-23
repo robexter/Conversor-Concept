@@ -1,8 +1,9 @@
-const CACHE_NAME = 'conversor-concept-v6-j3901-manutencao';
+const CACHE_NAME = 'conversor-concept-v10-gv3901-refino-loto';
 const CORE_ASSETS = [
   './index.html',
   './partida-j3901.html',
   './parada-j3901-manutencao.html',
+  './parada-gv3901-manutencao.html?v=10',
   './manifest.json',
   './cloud-sync.js',
   './icons/icon-180.png',

@@ -1,0 +1,29 @@
+CONVERSOR CONCEPT — V10
+REFINAMENTO: PARADA DA GV-3901 PARA MANUTENÇÃO
+
+Alterações:
+- termo de treinamento alterado de LIBRA para LOTO;
+- reforço de PARADO ≠ ISOLADO ≠ LOTO ≠ LIBERADO;
+- visão CIC refinada com matriz de estado;
+- ramo "intervenção sem adentramento / GV abafada" separado do ramo "manutenção geral / drenagem";
+- decisão passa a exigir confirmação e análise de impedimento antes do avanço;
+- LOTO permanece como gate final antes da liberação para manutenção geral;
+- preservados os valores e tags do procedimento:
+  LIC-39016 = 90%
+  F-3981 = 30% durante redução
+  F-3981 = 50% após parada
+  TI-392274 = 40°C
+  PI-392212A = 2,0 kgf/cm²
+  VEs-3992 A/B = 5 min de purga após último queimador
+
+Nota:
+O documento-fonte PE.REF.OPE.CCF.052 Rev.00 utiliza a expressão original do procedimento.
+No treinamento V10 a nomenclatura exibida foi atualizada para LOTO conforme solicitação.
+
+Para atualizar o GitHub Conversor-Concept:
+1. substituir index.html
+2. substituir sw.js
+3. substituir parada-gv3901-manutencao.html
+
+Abrir:
+https://robexter.github.io/Conversor-Concept/?v=10
