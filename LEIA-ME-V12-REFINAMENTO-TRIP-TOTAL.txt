@@ -1,0 +1,23 @@
+CONVERSOR CONCEPT — V12
+REFINAMENTO: TRIP TOTAL DO CONVERSOR U-39
+
+Base técnica preservada:
+PE.REF.OPE.CCF.089 Rev.02
+PE.REF.OPE.CCF.089.M01 Rev.02
+
+Refinamentos:
+- painel CIC mais orientado a estado;
+- matriz de evolução da unidade;
+- painel com 6 gates explícitos;
+- árvores J-3901 e J-3903 preservadas;
+- purga com confirmação antes do cronômetro;
+- Área Fria/C3C4 tratadas por inventário + pressão;
+- handshake Campo × CIC;
+- 7 macrofases;
+- PE detalhado (19 etapas) e M01 (18 itens) mantidos separadamente;
+- avaliação CIC às cegas ampliada para 14 cenários;
+- nenhuma inclusão de novo limite numérico.
+
+Uso real:
+Procedimento vigente, permissivos/intertravamentos, condições reais da unidade,
+orientações da supervisão e confirmações de campo prevalecem.

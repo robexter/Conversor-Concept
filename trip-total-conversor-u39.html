@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#081018">
+<title>Trip Total do Conversor U-39 • V12 Refinada CIC</title>
+<style>
+:root{--panel:#0b1b28;--panel2:#10293a;--line:#31536a;--txt:#eef7ff;--muted:#9eb4c5;--yellow:#ffd267;--blue:#71d0ff;--red:#ff9292;--green:#8ee59b}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at top,#431820,#111b24 31%,#050a0e 75%);color:var(--txt)}body{padding:7px}
+.app{max-width:1540px;margin:auto;display:grid;gap:12px}.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 36px #0006}
+.hero{padding:18px;display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.alarm{display:inline-flex;border:1px solid #a44b52;background:#351217;color:#ffd2d5;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:950;letter-spacing:.08em}
+h1{font-size:clamp(28px,4vw,44px);margin:8px 0 7px}.hero p{margin:0;color:var(--muted);line-height:1.5}.hero-side{border:1px solid #74434a;background:#1d1116;border-radius:17px;padding:13px}.memory{font-size:clamp(15px,2vw,20px);font-weight:950;line-height:1.55}.memory span{color:var(--yellow)}.back{display:inline-flex;text-decoration:none;color:#fff;border:1px solid #3b6078;background:#102838;border-radius:11px;padding:8px 10px;font-weight:850;margin-top:12px}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:11px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#09131bf2;backdrop-filter:blur(8px);z-index:5}.tab{border:1px solid #365970;background:#0b2230;color:#fff;border-radius:12px;padding:9px 11px;font-weight:850;cursor:pointer}.tab.active{background:#742b2f;border-color:#cb6b72}
+.view{display:none;padding:14px}.view.active{display:block}.grid2{display:grid;grid-template-columns:1.08fr .92fr;gap:12px}.box,.dcs{border:1px solid #315169;background:#081923;border-radius:17px;padding:14px}.dcs{background:#06141e;border-color:#41627a}
+.phase{font-size:10px;color:#ffc889;font-weight:900;letter-spacing:.08em}.subtle{color:var(--muted);font-size:12px}.stategrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.state{border:1px solid #31536a;background:#071824;border-radius:13px;padding:10px;min-height:76px}.state small{display:block;color:var(--muted);font-weight:800}.state b{display:block;margin-top:4px}.ok{color:var(--green)}.warn{color:#ffd36f}.bad{color:#ff9b9b}.info{color:#86d8ff}
+.gate{border:1px solid #655727;background:#211e0f;border-radius:13px;padding:11px;margin-top:10px}.gate strong{color:#ffe0a0}.critical{border:1px solid #87464a;background:#2a1116;border-radius:13px;padding:11px;margin:10px 0}.critical strong{color:#ffb9b9}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.gatecard{border:1px solid #3d596e;background:#071824;border-radius:15px;padding:12px}.gatecard h3{margin:4px 0 8px}.gatecard .id{display:inline-block;padding:3px 8px;border-radius:999px;background:#31161a;border:1px solid #704047;color:#ffb7bd;font-size:10px;font-weight:950}
+.macrogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.macro{border:1px solid #31536a;background:#071824;border-radius:14px;padding:11px}.macro b{display:block;margin:4px 0 5px}.macro small{color:var(--muted);line-height:1.4}.pill{display:inline-block;padding:3px 7px;background:#13293a;border-radius:999px;font-size:10px;font-weight:900}
+.route{display:flex;gap:7px;flex-wrap:wrap;align-items:center;padding:12px;border:1px solid #31536a;background:#071824;border-radius:14px;margin:8px 0}.node{padding:9px 10px;border:1px solid #3b6078;background:#0b2230;border-radius:11px;font-weight:900;font-size:12px}.arrow{font-weight:950;color:var(--blue)}.off{border-color:#875454!important;background:#2c1616!important}
+.tree{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}.branch{border:1px solid #31536a;background:#071824;border-radius:15px;padding:12px}.diamond{padding:12px;border:1px solid #7b6740;background:#211d10;border-radius:16px;text-align:center;font-weight:950}
+.timerbox{border:1px solid #6d5c2d;background:#211e10;border-radius:16px;padding:14px}.clock{font-size:30px;font-weight:950;color:#ffe1a0;margin:8px 0}.timer-actions{display:flex;gap:8px;flex-wrap:wrap}
+.scenario{border:1px solid #315169;background:#081923;border-radius:15px;padding:13px;margin:10px 0}.options{display:grid;gap:7px}.btn{border:1px solid #3b6079;background:#102838;color:#fff;border-radius:11px;padding:9px 11px;font-weight:850;cursor:pointer;text-align:left}.feedback{display:none;margin-top:10px;border-radius:11px;padding:10px}.feedback.show{display:block}.feedback.yes{background:#12351c;border:1px solid #428a55}.feedback.no{background:#351718;border:1px solid #8f4949}
+.stepnav{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:10px 0}.stepbtn{border:1px solid #31536a;background:#071824;color:#fff;border-radius:10px;padding:8px;font-weight:900;cursor:pointer}.stepbtn.active{border-color:#e0a462;background:#3a2814}.stepbtn.done{box-shadow:inset 0 0 0 1px #559565}
+.actionlist{display:grid;gap:6px;margin:10px 0}.action{display:grid;grid-template-columns:auto 1fr;gap:8px;border:1px solid #2e4e63;background:#06141e;border-radius:10px;padding:9px}.action.checked{border-color:#4f8c5a;background:#0d2716}.action input{margin-top:3px;transform:scale(1.15)}
+.matrixwrap{overflow:auto;border:1px solid #31536a;border-radius:15px}table{border-collapse:collapse;width:100%;min-width:1000px;background:#06141e}th,td{padding:9px;border-bottom:1px solid #20394b;border-right:1px solid #20394b;font-size:12px;text-align:left}th{background:#102536;position:sticky;top:0}td:first-child{font-weight:900;color:#ffd89b}
+.rolegrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.role{border:1px solid #31536a;background:#071824;border-radius:14px;padding:11px}.checkgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.checkitem{border:1px solid #31536a;background:#071824;border-radius:13px;padding:10px}.checkitem b{display:block;color:#ffd79b;margin-bottom:4px}
+.scorebar{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;position:sticky;bottom:5px;background:#07131ee8;border:1px solid #31536a;border-radius:14px;padding:7px}.scorebar div{text-align:center;border:1px solid #2d4d62;background:#06131b;border-radius:10px;padding:7px}.scorebar b{display:block;font-size:20px}
+.level{display:inline-block;padding:3px 7px;border-radius:999px;font-size:10px;font-weight:950;background:#14283a;color:#d9ecff}.level.crit{background:#35171a;color:#ffc1c1}.level.press{background:#162d34;color:#bff4ff}
+@media(max-width:1150px){.stategrid,.macrogrid,.board{grid-template-columns:1fr 1fr}.stepnav{grid-template-columns:repeat(5,1fr)}}@media(max-width:820px){.hero,.grid2,.rolegrid,.tree,.checkgrid{grid-template-columns:1fr}.tree{display:grid}}@media(max-width:600px){body{padding:4px}.view{padding:8px}.stategrid,.macrogrid,.board,.stepnav,.scorebar{grid-template-columns:1fr}.tab{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="app">
+<section class="card hero">
+<div>
+<span class="alarm">🚨 V12 • REFINAMENTO CIC • TRIP TOTAL U-39</span>
+<h1>Trip Total do Conversor</h1>
+<p>Treinamento refinado com o olhar do operador de painel. A sequência documental continua preservada, mas a navegação principal trabalha por <b>estado, dependência, gate, decisão e confirmação</b>. Nenhum novo limite foi criado.</p>
+<a class="back" href="./index.html">← Conversor Concept</a>
+</div>
+<div class="hero-side">
+<b>Regra operacional de aprendizagem</b>
+<div class="memory"><span>COMANDO ≠ CONFIRMAÇÃO ≠ GATE FECHADO</span><br>Trip atuado ≠ sistema condicionado ≠ U-39 em estado seguro.</div>
+<p class="subtle">O procedimento vigente e as condições reais da unidade prevalecem sobre o treinamento.</p>
+</div>
+</section>
+
+<section class="card">
+<div class="tabs">
+<button class="tab active" data-tab="cic">1. Painel CIC</button>
+<button class="tab" data-tab="state">2. Evolução de estado</button>
+<button class="tab" data-tab="gates">3. Painel de gates</button>
+<button class="tab" data-tab="branches">4. Árvores de decisão</button>
+<button class="tab" data-tab="purge">5. Purga / ΔP</button>
+<button class="tab" data-tab="area">6. Área Fria / C3C4</button>
+<button class="tab" data-tab="roles">7. Campo × CIC</button>
+<button class="tab" data-tab="macro">8. 7 macrofases</button>
+<button class="tab" data-tab="journey">9. PE detalhado • 19</button>
+<button class="tab" data-tab="m01">10. M01 • 18</button>
+<button class="tab" data-tab="eval">11. Avaliação CIC às cegas</button>
+</div>
+
+<div class="view active" data-view="cic">
+<div class="grid2">
+<div class="dcs">
+<div class="phase">ESTADO APÓS RECONHECIMENTO DO TRIP TOTAL</div>
+<div class="stategrid">
+<div class="state"><small>Trip Total</small><b class="bad">ATUADO</b></div>
+<div class="state"><small>L-3901 / L-3902</small><b class="warn">CONFIRMAR FECHAMENTO</b></div>
+<div class="state"><small>Sangria conversor</small><b class="warn">N₂ / CONFIRMAR</b></div>
+<div class="state"><small>PI-39035</small><b class="info">5 kgf/cm² NA MANOBRA</b></div>
+<div class="state"><small>ΔP Reg. × V. Sep.</small><b class="warn">BLOQUEADO PELO GATE</b></div>
+<div class="state"><small>Purga</small><b class="warn">10 min mín. / 30 rec.</b></div>
+<div class="state"><small>J-3901</small><b class="info">INTERPRETAR CAUSA/ESTADO</b></div>
+<div class="state"><small>J-3902 / TG</small><b class="warn">CONDICIONAR</b></div>
+<div class="state"><small>Regenerador</small><b class="warn">ABAFAR</b></div>
+<div class="state"><small>Carga F-3905</small><b class="warn">CORTAR TODAS AS ORIGENS</b></div>
+<div class="state"><small>Fracionadora</small><b class="warn">ESCOLHER RAMO J-3903</b></div>
+<div class="state"><small>Área Fria / C3C4</small><b class="warn">INVENTÁRIO + PRESSÃO</b></div>
+</div>
+</div>
+<div class="box">
+<h3>Prioridade cognitiva do CIC</h3>
+<div class="gate"><strong>1. Confirmar:</strong> o que realmente fechou/atuou e o que ainda é apenas expectativa do Trip.</div>
+<div class="gate"><strong>2. Bloquear avanço:</strong> quando um gate crítico não está confirmado.</div>
+<div class="gate"><strong>3. Escolher ramo:</strong> J-3901 e J-3903 mudam a resposta operacional.</div>
+<div class="gate"><strong>4. Ler tendência:</strong> depois do núcleo do conversor, controlar inventários e pressões.</div>
+<div class="gate"><strong>5. Encerrar corretamente:</strong> tratamentos também fazem parte do estado seguro do PE.</div>
+</div>
+</div>
+</div>
+
+<div class="view" data-view="state">
+<div class="box">
+<h2>Evolução da unidade — matriz de estado</h2>
+<p>Visão didática qualitativa. Ela não substitui a sequência do PE e não impõe paralelismo/ordem além das dependências explicitamente descritas pela fonte.</p>
+<div class="matrixwrap"><table id="stateTable"></table></div>
+<div class="critical"><strong>Fixação:</strong> o operador deve enxergar a mudança de estado da unidade inteira, e não somente “etapa concluída”.</div>
+</div>
+</div>
+
+<div class="view" data-view="gates">
+<div class="box"><h2>Painel de gates críticos</h2><div class="board" id="gateBoard"></div></div>
+</div>
+
+<div class="view" data-view="branches">
+<div class="box">
+<h2>Árvore J-3901</h2>
+<div class="tree">
+<div class="branch"><b>SIM — J-3901 foi a causa/condição do Trip</b><p>Executar o condicionamento específico do J-3901 e depois seguir o condicionamento previsto.</p></div>
+<div class="diamond">J-3901 FOI A CAUSA / PAROU?</div>
+<div class="branch"><b>NÃO</b><p>Prosseguir para o condicionamento do J-3902/TG conforme nota do PE.</p></div>
+</div>
+</div>
+<div class="box" style="margin-top:12px">
+<h2>Árvore da fracionadora</h2>
+<div class="tree">
+<div class="branch"><b>J-3903 continua operando</b><p>Executar circulação de fundo e os cuidados do ramo correspondente.</p></div>
+<div class="diamond">J-3903 DISPONÍVEL?</div>
+<div class="branch"><b>J-3903 A/B pararam</b><p>Parar circulação de óleo e seguir o ramo previsto para bombas paradas.</p></div>
+</div>
+</div>
+<div class="critical"><strong>Princípio:</strong> o treinamento não transforma bifurcações reais em uma sequência única.</div>
+</div>
+
+<div class="view" data-view="purge">
+<div class="grid2">
+<div class="box">
+<h2>Gate L-3901 / L-3902 → ΔP</h2>
+<div class="route"><span class="node">L-3901 CLOSED ✓</span><span class="arrow">+</span><span class="node">L-3902 CLOSED ✓</span><span class="arrow">→</span><span class="node">AJUSTAR ΔP</span></div>
+<div class="critical"><strong>Item crítico do PE:</strong> evitar passagem de ar para o vaso separador.</div>
+<div class="gate"><strong>Durante a manobra:</strong> PI-39035 = 5 kgf/cm².</div>
+</div>
+<div class="box">
+<h2>Purga do conjunto</h2>
+<div class="timerbox">
+<div class="phase">CRONÔMETRO DIDÁTICO CONDICIONADO</div>
+<div class="clock" id="purgeClock">AGUARDANDO</div>
+<p id="purgeState" class="subtle">Primeiro confirme os vapores do riser, vaso separador e retificador.</p>
+<div class="timer-actions">
+<button class="btn" id="vaporOk">✓ Vapores confirmados</button>
+<button class="btn" id="min10" disabled>10 min — mínimo</button>
+<button class="btn" id="rec30" disabled>30 min — recomendável</button>
+</div>
+</div>
+<div class="gate"><strong>Aprendizado:</strong> abrir/mandar vapor não significa automaticamente que o tempo de purga está validado.</div>
+</div>
+</div>
+</div>
+
+<div class="view" data-view="area">
+<div class="grid2">
+<div class="box">
+<h2>Área Fria — mudança de prioridade</h2>
+<div class="route"><span class="node">E-3902/E-3903</span><span class="arrow">→</span><span class="node">F-3910/E-3905</span><span class="arrow">→</span><span class="node">E-3906/E-3904</span></div>
+<div class="gate"><strong>Agora o CIC precisa preservar:</strong> inventários, destinos de produto e confirmação de retirada de bombas/rotas.</div>
+</div>
+<div class="box">
+<h2>C3/C4 — nível não basta</h2>
+<div class="route"><span class="node">E-3907</span><span class="arrow">→</span><span class="node">E-3908</span><span class="arrow">→</span><span class="node">E-3909</span><span class="arrow">→</span><span class="node">E-3910</span></div>
+<div class="critical"><strong>Visão de painel:</strong> manter inventário e continuar acompanhando as pressões explicitamente destacadas no PE.</div>
+</div>
+</div>
+<div class="box" style="margin-top:12px">
+<h2>Estado final esperado no treinamento</h2>
+<div class="stategrid">
+<div class="state"><small>Conversor</small><b class="ok">CONDICIONADO</b></div>
+<div class="state"><small>Máquinas</small><b class="ok">CONDICIONADAS</b></div>
+<div class="state"><small>Regenerador</small><b class="ok">CONDICIONADO</b></div>
+<div class="state"><small>Carga</small><b class="ok">CORTADA</b></div>
+<div class="state"><small>Fracionadora</small><b class="ok">CONDICIONADA</b></div>
+<div class="state"><small>Área Fria/C3C4</small><b class="ok">CONDICIONADA</b></div>
+<div class="state"><small>Tratamentos</small><b class="ok">CONDICIONADOS</b></div>
+<div class="state"><small>Resposta PE</small><b class="ok">ESTADO SEGURO</b></div>
+</div>
+</div>
+</div>
+
+<div class="view" data-view="roles">
+<div class="rolegrid">
+<div class="role"><h3>🖥️ CIC — decisão / coordenação</h3><ul><li>interpretar causa e estados confirmados do Trip;</li><li>segurar ΔP até confirmação L-3901/L-3902;</li><li>acompanhar PI-39035 e validar purga;</li><li>selecionar ramos J-3901 e J-3903;</li><li>atuar/controlar posições pelo ICS/SDCD quando previsto;</li><li>acompanhar corte de todas as origens de carga;</li><li>preservar níveis e vigiar pressão E-3907 → E-3910;</li><li>confirmar condição final dos tratamentos.</li></ul></div>
+<div class="role"><h3>🧰 Campo — confirmação física</h3><ul><li>confirmar slides, bloqueios e posições locais;</li><li>executar alinhamentos N₂/vapor/ar e bloqueios previstos;</li><li>condicionar auxiliares das grandes máquinas;</li><li>confirmar cat-coolers/distribuidores/regenerador;</li><li>apoiar bombas, drenos, bloqueios e rotas;</li><li>reportar ao CIC qualquer divergência entre indicação e condição física.</li></ul></div>
+</div>
+<div class="critical"><strong>Handshake de treinamento:</strong> uma decisão de painel só fecha o gate quando a resposta necessária — indicação confiável e/ou confirmação de campo — estiver estabelecida.</div>
+</div>
+
+<div class="view" data-view="macro">
+<div class="box"><h2>7 macrofases — mapa mental</h2><div class="macrogrid" id="macroGrid"></div><div class="gate"><strong>Uso:</strong> as macrofases ajudam orientação global; a jornada PE mantém todos os detalhes.</div></div>
+</div>
+
+<div class="view" data-view="journey">
+<div class="box"><h2>PE.REF.OPE.CCF.089 — jornada detalhada • 19 etapas</h2><p>A sequência fonte permanece disponível para estudo/consulta. Marque apenas para fixação; o progresso é local.</p><div class="stepnav" id="stepNav"></div><div id="stepCard"></div></div>
+</div>
+
+<div class="view" data-view="m01">
+<div class="box"><h2>M01 Rev.02 — checklist Campo/Painel • 18 itens</h2>
+<div class="critical"><strong>Diferença documental mantida:</strong> o M01 agrupa Despropanização/Despropenização; o PE detalhado separa Despropanização = 17, Despropenização = 18 e Tratamentos = 19.</div>
+<div class="checkgrid" id="m01Grid"></div></div>
+</div>
+
+<div class="view" data-view="eval">
+<div class="box">
+<h2>Avaliação CIC às cegas</h2><p>Sem número de etapa. As alternativas são próximas e o foco é identificar o impedimento/gate aberto.</p>
+<div id="evalList"></div><div class="scorebar" id="scoreBar"></div>
+</div>
+</div>
+</section>
+</div>
+
+<script>
+const PE=[{"n": 1, "title": "Avisar interfaces sobre a parada total da U-39", "phase": "COMUNICAÇÃO", "actions": ["Avisar COTUR, CB/DE, CB/HDT, CB/HDS, TEU/TE, TEU/TN e TEU/AE.", "Informar redução na produção de vapor.", "Informar corte na geração de energia elétrica.", "Informar corte no fornecimento de gás combustível.", "Informar alteração na produção de água ácida.", "Informar corte no consumo de carga fria e quente.", "Informar corte na produção de GLP, gasolina, LCO e Nafta Pesada.", "Informar sobre o envio de resíduo no decorrer da parada."], "cic": "Transformar o Trip Total em uma resposta coordenada de unidade, não apenas do conversor.", "confirm": "Interfaces críticas informadas e consequências comunicadas."}, {"n": 2, "title": "Verificar fechamento das L-3901 e L-3902", "phase": "GATE CRÍTICO", "actions": ["Verificar fechamento total das slides do regenerador L-3901 e L-3902.", "Caso estejam abertas, fechá-las totalmente.", "Substituir a sangria do Conversor para Nitrogênio.", "Durante a manobra, manter PI-39035 em 5 kgf/cm²."], "cic": "Não inverter as pressões Regenerador × Vaso Separador sem confirmação do fechamento das duas slides.", "confirm": "L-3901 e L-3902 confirmadas fechadas; sangria em N₂; PI-39035 na condição prescrita."}, {"n": 3, "title": "Condicionar o Conversor e ajustar ΔP Regenerador / Vaso Separador", "phase": "CONVERSOR / PURGA", "actions": ["Manter vapores para riser, vaso separador e retificador na vazão de operação correspondente ao nível de carga anterior por período mínimo de 10 min e recomendável de 30 min.", "Reduzir imediatamente o vapor de dispersão para o valor de partida conforme Anexo 1 / Tabela de Ajustes e número de bicos disponíveis.", "Bloquear carga para os bicos dispersores no costado do Riser.", "Após os períodos de purga, ajustar vapores do riser, vaso separador e retificador conforme Anexo 1 para a fase de carregamento, correlacionando com o número de bicos disponíveis.", "Informar TEU/TE sobre fechamento da XV-39074 e FV-39240.", "Injetar gás in no F-3907 se necessário."], "cic": "A prioridade é purgar o conjunto e reduzir a possibilidade de formação de coque antes de avançar no condicionamento.", "confirm": "Purga cumprida, carga dos bicos bloqueada e vapores ajustados conforme a referência aplicável."}, {"n": 4, "title": "Condicionar J-3901, J-3902 e TG-3901", "phase": "GRANDES MÁQUINAS", "actions": ["Se o Trip Total foi ocasionado pelo Trip do J-3901, executar o condicionamento do J-3901; caso contrário, seguir para o condicionamento do J-3902.", "Condicionar o J-3901.", "Colocar J-3991 (bomba Jacking) em operação.", "Colocar L-3991 (giro lento) em operação.", "Abrir aproximadamente 5% na válvula de bloqueio de vapor SS para a mufla do J-3901 para manter temperatura de partida na turbina.", "Alinhar LBF para o C-3954.", "Controlar nível do C-3954.", "Automatizar controle de nível do C-3954 e manter J-3947 A/B operando.", "Condicionar o J-3902.", "Substituir a sangria do J-3902 para N₂ e condicionar vapor exausto / selagem da turbina / ejetor.", "Bloquear FV-39182.", "Fechar FFV-39224/225/226/227 (água de lavagem).", "Parar J-3913 A/B e isolar os equipamentos pelas válvulas de sucção e descarga.", "Condicionar TG-3901: colocar em giro lento e fechar HV-39046."], "cic": "Aplicar a árvore condicional correta: J-3901 só entra no ramo específico quando seu Trip foi a causa/condição prevista.", "confirm": "Grandes máquinas condicionadas e giro lento confirmado quando aplicável."}, {"n": 5, "title": "Abafar o regenerador", "phase": "REGENERADOR", "actions": ["Fechar vapor de emergência para o regenerador – reset RSXY39002 na ICS da U-39.", "Fechar XV-39002 pelo ICS da U-39 ou bloqueio de campo, buscando a condição que permita reset e fechamento.", "Alinhar ar de serviço para o distribuidor de catalisador e bloquear vapor de emergência para o mesmo.", "Atentar para condição operacional do J-3983.", "Fechar vapor de emergência para os cat-coolers.", "Bloquear C-3901A.", "Fechar válvula de bloqueio de 10\" para o distribuidor de ar, próximo ao costado do cat-cooler A.", "Fechar FV-392303.", "Fechar válvula de bloqueio a jusante da FV-392303.", "Fechar FV-392303 (redação repetida na fonte).", "Reset RS392310 na ICS da U-39 para acesso à HV-392301.", "Fechar HV-392301.", "Fechar HV-392311 e efetuar bloqueio das válvulas no costado logo após o FI.", "Bloquear C-3901B.", "Fechar válvula de bloqueio de 10\" para o distribuidor de ar, próximo ao costado do cat-cooler B.", "Fechar FV-392321.", "Fechar válvula de bloqueio a jusante da FV-392333.", "Fechar FV-392333.", "Reset RS392301 na ICS da U-39 para acesso à HV-2310 (redação conforme fonte).", "Fechar HV-392310.", "Fechar FV-392338 e efetuar bloqueio das válvulas no costado logo após o FI.", "Fechar L-3903 A/B: colocar ZIC-39001 em manual com MV = 0.", "Colocar PIC-39028 e PDIC-39029 em manual com MV = 0."], "cic": "Transformar o abafamento em matriz de estados: vapor emergência, ar/serviço, cat-coolers, L-3903 e controladores.", "confirm": "Regenerador e cat-coolers condicionados conforme os estados previstos."}, {"n": 6, "title": "Cortar carga para o F-3905", "phase": "CORTE DE CARGA", "actions": ["Avisar U-04, fechar FV-39302 (RAT U-04) e bloquear bypass.", "Avisar U-32 e fechar FV-39250 (gasóleo U-32).", "Avisar U-32 e fechar FV-39252 (RV U-32).", "Avisar U-09 e fechar FV-39251 (gasóleo U-09).", "Avisar U-09 e fechar FV-39253 (RV U-09).", "Fechar FV-17B051 e solicitar ao Setrae parar a bomba de RV frio."], "cic": "Confirmar todas as origens de carga cortadas; não tratar o corte como um único comando.", "confirm": "Carga fria/quente cortada nas fontes previstas e interfaces avisadas."}, {"n": 7, "title": "Condicionar a Fracionadora", "phase": "FRACIONADORA", "actions": ["Solicitar ao CB/HDT interrupção do envio de Nafta selvagem para E-3901.", "Colocar a J-3904 A/B que estiver operando.", "Fechar FV-39197.", "Iniciar controle de nível do F-3906 através da F-39180.", "Colocar J-3905 A/B de reserva em manual; parar a J-3905 A/B de reserva em manual.", "Parar J-3906 A/B que estiver operando.", "Se J-3903 continuar operando: fazer circulação de fundo da fracionadora; retirar uma caldeira de borra, injetar flushing oil, abrir bypass de vapor da caldeira que ficou operando e abrir com cuidado o dreno do casco.", "Verificar nível de nitrogênio no tambor e solicitar reposição se necessário.", "Se J-3903 A/B pararem: parar circulação de óleo na fracionadora.", "Colocar reservas em manual e parar as bombas em operação: J-3904, J-3905, J-3906, J-3910, J-3912 e J-3911.", "Fechar FV-39163 (refluxo inferior de borra).", "Fechar vapor do Quench do fundo da E-3901."], "cic": "Usar o estado real das J-3903 para escolher entre circulação de fundo e parada da circulação.", "confirm": "Fracionadora condicionada no ramo compatível com a disponibilidade das J-3903."}, {"n": 8, "title": "Retirar E-3902 de operação", "phase": "ÁREA FRIA", "actions": ["Avisar U-37.", "Colocar J-3908 A/B de reserva em manual.", "Parar J-3908 A/B em operação.", "Fechar FV-39172.", "Fechar LV-39161.", "Fechar FFV-39223 e seus bloqueios."], "cic": "Retirar o equipamento preservando coordenação com a unidade receptora/interligada.", "confirm": "E-3902 retirada e FFV-39223/bloqueios fechados."}, {"n": 9, "title": "Retirar E-3903 de operação", "phase": "ÁREA FRIA", "actions": ["Avisar U-35 sobre retirada de operação da E-3903.", "Colocar J-3909 A/B de reserva em manual.", "Parar J-3909 A/B em operação.", "Fechar FV-39170.", "Fechar LV-39154.", "Fechar FFV-39222 e seus bloqueios."], "cic": "Reduzir a área fria por blocos, mantendo inventários sob controle.", "confirm": "E-3903 retirada e FFV-39222/bloqueios fechados."}, {"n": 10, "title": "Manter nível no F-3910", "phase": "INVENTÁRIO", "actions": ["Fechar FV-39192 (saída de carga para E-3905).", "Colocar J-3916 A/B de reserva em manual.", "Parar J-3916 A/B em operação."], "cic": "A partir daqui, a resposta migra para preservação de inventários e estabilidade da área fria.", "confirm": "Carga para E-3905 cortada e F-3910 sob controle."}, {"n": 11, "title": "Manter nível na E-3905", "phase": "INVENTÁRIO", "actions": ["Fechar FV-39194 (carga para E-3907).", "Abrir FV-39173 (nafta para C-3913 A/B)."], "cic": "Preservar inventário e estabelecer a rota prevista de nafta.", "confirm": "Nível da E-3905 controlado e rota de nafta estabelecida."}, {"n": 12, "title": "Retirar E-3906 de operação", "phase": "ÁREA FRIA", "actions": ["Manter nível de fundo da torre.", "Colocar FFV-39177 em 5% de abertura.", "Colocar MCV-39390 em 5% de abertura.", "Abrir MCV-39391 em 100% de abertura.", "Fechar MCV-39390.", "Fechar e bloquear FV-39178.", "Colocar J-3907 A/B de reserva em manual.", "Parar J-3907 A/B em operação."], "cic": "Não retirar a E-3906 ignorando o inventário de fundo.", "confirm": "E-3906 retirada mantendo a condição de nível prevista."}, {"n": 13, "title": "Retirar E-3904 de operação", "phase": "ÁREA FRIA", "actions": ["Fechar LV-39175.", "Colocar J-3917 A/B de reserva em manual.", "Parar J-3917 A/B em operação.", "Colocar J-3919 A/B de reserva em manual.", "Parar J-3919 A/B em operação."], "cic": "Concluir retirada da absorção primária sem perder visão dos inventários remanescentes.", "confirm": "E-3904 retirada e bombas associadas condicionadas."}, {"n": 14, "title": "Desviar gasolina / Propano / Propeno para rotas previstas", "phase": "PRODUTOS", "actions": ["Estabelecer alinhamento de Nafta do F-3905 para F-3965 via J-3919.", "Fechar MCV-39370 (entrada líquido absorção topo E-3905).", "Fechar MCV-39365 (entrada líquido absorção meio E-3905).", "Abrir MCV-39364.", "Abrir totalmente FFV-39197.", "Fechar MCV-39419 a jusante do C-3930 A/B.", "Abrir bypass da descarga das J-3919 A/B.", "Manter aberta a válvula de Nafta na saída do tratamento FV-39706.", "Fechar FV-39730, bloqueio da válvula de Nafta para o HDS."], "cic": "Enxergar destino de produto e não somente posição de válvulas.", "confirm": "Rotas de produtos estabelecidas conforme PE detalhado."}, {"n": 15, "title": "Manter nível no sistema de Desbutanização", "phase": "C3/C4", "actions": ["Manter nível na E-3907.", "Fechar LV-39179.", "Fechar TV-39303.", "Abrir FV-39167 (HCO para C-3916 A/B).", "Manter nível do F-3911.", "Acompanhar pressão de topo da E-3907.", "Fechar FV-39196 (refluxo de topo E-3907).", "Fechar HV-39501 (carga para E-3912).", "Acompanhar pressão de topo da E-3912.", "Colocar J-3918 A/B e J-3920 A/B de reserva em manual e parar as bombas em operação.", "Fechar XV-39179 (carga para E-3908)."], "cic": "Nível preservado não elimina o risco de pressão; acompanhar as torres simultaneamente.", "confirm": "E-3907/F-3911 controlados e pressões acompanhadas."}, {"n": 16, "title": "Manter nível no sistema de Desetanização", "phase": "C3/C4", "actions": ["Manter nível da E-3908.", "Fechar XV-39201 (vapor para C-3920).", "Fechar LV-39196 (nível F-3918).", "Acompanhar pressão da E-3908.", "Fechar FV-39198 (carga para E-3908).", "Fechar FV-39201 (carga para E-3909).", "Manter nível do F-3912.", "Acompanhar pressão da E-3908.", "Colocar J-3921 A/B de reserva em manual e parar J-3921 A/B em operação."], "cic": "Retirar energia/carga mantendo inventário e pressão sob controle.", "confirm": "E-3908/F-3912 controlados e pressão monitorada."}, {"n": 17, "title": "Manter nível no sistema de Despropanização", "phase": "C3/C4", "actions": ["Manter nível da E-3909.", "Fechar XV-39203 (vapor para C-3922).", "Fechar LV-39197 (nível F-3919).", "Fechar FV-39203 (saída GLP).", "Manter nível do F-3913.", "Acompanhar pressão da E-3909.", "Fechar FFV-39202 (refluxo topo E-3909).", "Fechar FV-39207 (carga para E-3910).", "Colocar J-3922 A/B de reserva em manual e parar a bomba em operação."], "cic": "Manter inventário sem perder vigilância de pressão da E-3909.", "confirm": "E-3909/F-3913 controlados e carga da E-3910 interrompida."}, {"n": 18, "title": "Manter nível no sistema de Despropenização", "phase": "C3/C4", "actions": ["Manter nível da E-3910.", "Acompanhar possíveis vazamentos no C-3918/25.", "Fechar LV-39198 (controle nível F-3920).", "Fechar XV-39207 (vapor para C-3925).", "Fechar FV-39209 (saída de propano).", "Abrir XV-39204 (gasolina para C-3917).", "Fechar XV-39206 (gasolina para C-3918).", "Manter nível do F-3914.", "Acompanhar pressão da E-3910.", "Fechar FFV-39208 (refluxo topo E-3910).", "Fechar FV-39210 (saída de propeno).", "Colocar J-3923 A/B de reserva em manual e parar J-3923 A/B em operação."], "cic": "Preservar E-3910/F-3914 e acompanhar pressão enquanto energia e produtos são retirados.", "confirm": "Despropenização condicionada, níveis preservados e pressão acompanhada."}, {"n": 19, "title": "Condicionar os Tratamentos", "phase": "TRATAMENTOS", "actions": ["Manter nível na E-3911.", "Fechar e bloquear FFV-39522 (entrada de DEA da E-3911).", "Fechar e bloquear LV-39509 (saída de DEA da E-3911).", "Parar J-39100 e efetuar bloqueio de DEA para D-3901.", "Manter nível da E-3912.", "Fechar e bloquear FFV-39521 (entrada de DEA da E-3912).", "O item 19.7 repete na fonte a FFV-39521.", "Fechar e bloquear LV-39503 (saída de DEA da E-3912).", "Colocar J-3928 A/B de reserva em manual.", "Parar J-3928 A/B em operação."], "cic": "A emergência só termina quando também os tratamentos estiverem condicionados.", "confirm": "Tratamentos condicionados e inventários controlados."}];
+const M01=["Avisar interfaces sobre parada total e consequências.", "Verificar fechamento L-3901/L-3902 e substituir sangria do Conversor para N₂.", "Condicionar Conversor e ajustar diferencial Regenerador / Vaso Separador; purga 10 min mínimo / 30 min recomendável; reduzir vapor de dispersão; bloquear carga dos bicos; informar TEU/TE sobre XV-39074 e FV-39240.", "Condicionar J-3901, J-3902 e TG-3901; substituir sangria do J-3902 para N₂ e condicionar vapor exausto / selagem / ejetor.", "Abafar o regenerador.", "Cortar carga para F-3905.", "Condicionar a fracionadora.", "Retirar E-3902 de operação; fechar FV-39223 e bloqueios (redação do checklist).", "Retirar E-3903 de operação; fechar FV-39222 e bloqueios (redação do checklist).", "Manter nível no F-3910.", "Manter nível na E-3905.", "Retirar E-3906 de operação.", "Retirar E-3904 de operação.", "Desviar Gasolina, Propeno, Propano e GLP para produto fora de especificação (redação do checklist).", "Manter nível no sistema de Desbutanização.", "Manter nível no sistema de Desetanização.", "Manter nível no sistema de Despropanização / Despropenização.", "Condicionar os Tratamentos."];
+const MACROS=[{"id": "P1", "title": "Reconhecer / coordenar", "steps": "1", "goal": "Entender o impacto sistêmico e estabelecer comunicação da parada total."}, {"id": "P2", "title": "Separar reação × regeneração", "steps": "2–3", "goal": "Confirmar L-3901/L-3902, migrar sangria para N₂ e só então trabalhar ΔP/purga."}, {"id": "P3", "title": "Proteger máquinas / regenerador", "steps": "4–5", "goal": "Escolher o ramo correto do J-3901 e condicionar grandes máquinas/regenerador."}, {"id": "P4", "title": "Eliminar alimentação / estabilizar fracionadora", "steps": "6–7", "goal": "Cortar todas as origens previstas de carga e usar o ramo J-3903 compatível com o estado real."}, {"id": "P5", "title": "Conter inventários da Área Fria", "steps": "8–14", "goal": "Retirar equipamentos, preservar níveis e redirecionar produtos sem perder rastreabilidade."}, {"id": "P6", "title": "Estabilizar C3/C4", "steps": "15–18", "goal": "Manter inventários e acompanhar pressões E-3907 → E-3910 durante retirada de energia/carga."}, {"id": "P7", "title": "Concluir condicionamento dos tratamentos", "steps": "19", "goal": "Levar também os tratamentos ao estado seguro previsto no PE."}];
+const GATES=[{"id": "G1", "name": "Slides do regenerador", "before": "L-3901 e L-3902 ainda não confirmadas fechadas", "decision": "Não inverter/ajustar pressões Regenerador × Vaso Separador.", "confirm": "Confirmar fechamento total das duas slides; sangria em N₂; PI-39035 na condição prescrita.", "risk": "Passagem de ar para o vaso separador."}, {"id": "G2", "name": "Purga do conversor", "before": "Vapores ainda não confirmados / tempo ainda não válido", "decision": "Não considerar o conjunto purgado apenas por comando.", "confirm": "Vapores de riser, vaso separador e retificador mantidos; mínimo de 10 min, recomendável 30 min.", "risk": "Formação de coque / condicionamento incompleto."}, {"id": "G3", "name": "Ramo J-3901", "before": "Causa/estado do J-3901 ainda não interpretado", "decision": "Não executar automaticamente o mesmo ramo em todos os Trips Totais.", "confirm": "Se Trip Total foi ocasionado pelo J-3901, executar o ramo específico; caso contrário seguir J-3902/TG.", "risk": "Condicionamento inadequado das grandes máquinas."}, {"id": "G4", "name": "Fracionadora / J-3903", "before": "Disponibilidade das J-3903 ainda não definida", "decision": "Não aplicar a mesma estratégia de circulação aos dois estados.", "confirm": "J-3903 operando → circulação de fundo; J-3903 A/B paradas → parar circulação de óleo.", "risk": "Escolha incorreta do ramo de condicionamento da fracionadora."}, {"id": "G5", "name": "Área C3/C4", "before": "Nível preservado, mas pressão ainda requer vigilância", "decision": "Não tratar 'nível mantido' como estado suficiente.", "confirm": "Acompanhar as pressões indicadas no PE enquanto carga, energia e refluxos são retirados.", "risk": "Perder percepção do estado das torres durante o transiente."}, {"id": "G6", "name": "Fim da emergência", "before": "Conversor e C3/C4 condicionados, tratamentos ainda ativos", "decision": "Não encerrar a resposta operacional antes da etapa de tratamentos.", "confirm": "Condicionar E-3911/E-3912 e ações associadas conforme etapa 19.", "risk": "Unidade parcialmente condicionada."}];
+const STATES=[{"phase": "Trip reconhecido", "slides": "CONFIRMAR", "purga": "PENDENTE", "maq": "VERIFICAR", "regen": "A ABAFAR", "carga": "PRESENTE / CORTAR", "frac": "TRANSIENTE", "af": "INVENTÁRIOS", "final": "PENDENTE"}, {"phase": "Reação × regeneração isolada", "slides": "FECHADAS ✓", "purga": "EM CURSO", "maq": "VERIFICAR", "regen": "A ABAFAR", "carga": "CORTAR", "frac": "TRANSIENTE", "af": "INVENTÁRIOS", "final": "PENDENTE"}, {"phase": "Conversor condicionado", "slides": "FECHADAS ✓", "purga": "VALIDADA", "maq": "CONDICIONAR", "regen": "ABAFAR", "carga": "CORTAR", "frac": "TRANSIENTE", "af": "INVENTÁRIOS", "final": "PENDENTE"}, {"phase": "Núcleo estabilizado", "slides": "FECHADAS ✓", "purga": "VALIDADA", "maq": "CONDICIONADAS", "regen": "CONDICIONADO", "carga": "CORTADA", "frac": "CONDICIONAR", "af": "INVENTÁRIOS", "final": "PENDENTE"}, {"phase": "Área Fria / C3C4", "slides": "FECHADAS ✓", "purga": "VALIDADA", "maq": "CONDICIONADAS", "regen": "CONDICIONADO", "carga": "CORTADA", "frac": "CONDICIONADA", "af": "CONDICIONAR", "final": "PENDENTE"}, {"phase": "Tratamentos condicionados", "slides": "FECHADAS ✓", "purga": "VALIDADA", "maq": "CONDICIONADAS", "regen": "CONDICIONADO", "carga": "CORTADA", "frac": "CONDICIONADA", "af": "CONDICIONADA", "final": "ESTADO SEGURO PE"}];
+const CASES=[{"level": "CRÍTICO", "state": ["Trip Total atuado", "L-3901 = fechada confirmada", "L-3902 = indicação ainda não confirmada", "Operador quer ajustar ΔP Regenerador × Vaso Separador"], "q": "Qual deve ser a decisão do CIC?", "opts": ["Impedir o avanço até confirmar fechamento total da L-3902.", "Ajustar ΔP lentamente porque L-3901 já fechou.", "Ajustar ΔP se PI-39035 estiver em 5 kgf/cm²."], "ok": 0, "why": "A fonte define como item crítico só inverter as pressões depois da confirmação do fechamento das L-3901 e L-3902."}, {"level": "CRÍTICO", "state": ["L-3901/L-3902 fechadas", "Sangria do conversor em N₂", "Vapores de riser/vaso separador/retificador confirmados", "Cronômetro = 8 min"], "q": "O gate de purga já está fechado?", "opts": ["Não. O mínimo do PE é 10 min; 30 min é o período recomendável.", "Sim. As slides fechadas tornam o tempo secundário.", "Sim. O uso de N₂ elimina o tempo mínimo."], "ok": 0, "why": "O PE determina mínimo de 10 minutos e recomenda 30 minutos."}, {"level": "DECISÃO", "state": ["Trip Total causado por baixa vazão de ar", "J-3901 não foi a causa do Trip", "J-3901 permanece disponível"], "q": "Qual leitura evita executar um ramo desnecessário?", "opts": ["Prosseguir para o condicionamento do J-3902/TG-3901 conforme a nota do PE.", "Executar sempre o condicionamento completo do J-3901.", "Parar J-3901 para padronizar a resposta."], "ok": 0, "why": "O PE condiciona o ramo específico do J-3901 ao Trip Total ter sido ocasionado pelo próprio J-3901."}, {"level": "CRÍTICO", "state": ["Trip Total ocasionado pelo J-3901", "J-3901 parado", "Giro lento ainda não confirmado"], "q": "Qual é o impedimento operacional?", "opts": ["Falta concluir/confirmar o condicionamento de grande máquina, incluindo giro lento quando aplicável.", "Falta retirar E-3906.", "Falta cortar refluxo da E-3909."], "ok": 0, "why": "A tabela de itens críticos associa J-3901/TG-3901 ao risco de deformação do eixo e ao controle por giro lento/confirmação CIC."}, {"level": "DECISÃO", "state": ["Etapa de corte de carga", "FV-39302 fechada", "FV-39250/39252 fechadas", "FV-39251 ainda aberta", "FV-39253 ainda aberta"], "q": "Pode marcar 'carga F-3905 cortada'?", "opts": ["Não. Ainda existem origens previstas de carga a cortar.", "Sim. As cargas da U-04 e U-32 já foram cortadas.", "Sim. O corte da U-09 pode ocorrer depois da fracionadora."], "ok": 0, "why": "A etapa 6 lista separadamente as origens U-04, U-32, U-09 e RV frio."}, {"level": "DECISÃO", "state": ["Fracionadora em transiente", "J-3903 continua operando", "Operador propõe parar imediatamente a circulação de óleo"], "q": "A proposta está coerente com o ramo do PE?", "opts": ["Não. Com J-3903 operando, o PE prevê circulação de fundo e ações associadas.", "Sim. Trip Total exige parar toda circulação imediatamente.", "Sim. A circulação só é mantida quando J-3903 A/B param."], "ok": 0, "why": "O PE diferencia explicitamente o ramo com J-3903 operando."}, {"level": "DECISÃO", "state": ["J-3903 A/B pararam", "Fracionadora ainda com estratégia de circulação do ramo anterior"], "q": "Qual mudança de estado deve ocorrer?", "opts": ["Parar circulação de óleo na fracionadora e seguir o ramo correspondente.", "Manter circulação de fundo com outra bomba.", "Reiniciar uma J-3903 para preservar a estratégia anterior."], "ok": 0, "why": "Para J-3903 A/B paradas, o PE manda parar circulação de óleo na fracionadora."}, {"level": "INVENTÁRIO", "state": ["E-3906 sendo retirada", "Nível de fundo ainda precisa ser preservado", "Operador quer fechar tudo de uma vez"], "q": "Qual princípio do PE deve prevalecer?", "opts": ["Retirar a E-3906 mantendo o nível de fundo e executando a sequência prevista de FFV/MCV/FV/bombas.", "Fechar todos os caminhos imediatamente, independentemente do nível.", "Esvaziar completamente a torre antes de qualquer isolamento."], "ok": 0, "why": "A própria etapa 12 traz a observação 'Manter nível de fundo da torre'."}, {"level": "PRESSÃO", "state": ["E-3907 com nível mantido", "Refluxo/carga em retirada", "Pressão de topo requer acompanhamento"], "q": "Qual erro de interpretação deve ser evitado?", "opts": ["Confundir nível preservado com torre totalmente estabilizada; a pressão de topo continua sendo variável de vigilância.", "Manter pressão acompanhada após cortar carga.", "Manter nível no F-3911."], "ok": 0, "why": "O PE traz aviso explícito para acompanhar a pressão de topo da E-3907."}, {"level": "PRESSÃO", "state": ["E-3908 com nível mantido", "XV-39201 fechada", "Cargas sendo retiradas", "Pressão ainda em transiente"], "q": "Qual variável continua crítica para a leitura do operador?", "opts": ["Pressão da E-3908.", "Somente nível do F-3912.", "Somente estado da J-3921."], "ok": 0, "why": "O PE repete o aviso de acompanhamento da pressão da E-3908."}, {"level": "PRESSÃO", "state": ["E-3909 com nível mantido", "Vapor C-3922 cortado", "Carga E-3910 sendo fechada", "Pressão da E-3909 ainda não estabilizada"], "q": "A retirada de energia elimina a necessidade de vigiar pressão?", "opts": ["Não. O PE mantém aviso explícito para acompanhar a pressão da E-3909.", "Sim. Sem vapor, a pressão deixa de ser relevante.", "Sim, se F-3913 mantiver nível."], "ok": 0, "why": "O PE manda acompanhar a pressão da E-3909 durante esse condicionamento."}, {"level": "PRESSÃO", "state": ["E-3910 com nível mantido", "XV-39207 fechada", "Propano/propeno sendo isolados", "Pressão E-3910 em transiente"], "q": "Qual leitura é correta?", "opts": ["Continuar acompanhando pressão enquanto preserva E-3910/F-3914 e retira energia/produtos.", "Com vapor fechado, pressão deixa de ser prioridade.", "Parar J-3923 antes de qualquer outra ação independentemente do estado."], "ok": 0, "why": "O PE traz aviso explícito para acompanhar a pressão da E-3910."}, {"level": "FINAL", "state": ["Conversor condicionado", "Fracionadora condicionada", "E-3907 a E-3910 condicionadas", "Tratamentos ainda não condicionados"], "q": "A resposta ao Trip Total pode ser encerrada?", "opts": ["Não. Ainda falta a etapa de condicionamento dos tratamentos.", "Sim. O conversor e as torres C3/C4 já estão seguros.", "Sim, se a produção já foi totalmente cortada."], "ok": 0, "why": "O PE detalhado encerra o cenário com a etapa 19 — Condicionar os Tratamentos."}, {"level": "DOCUMENTO", "state": ["Aluno compara o M01 com o PE detalhado", "M01 tem 18 itens", "PE detalhado tem 19 etapas"], "q": "Como o treinamento deve tratar essa diferença?", "opts": ["Manter as duas estruturas separadas e explicitar a diferença documental.", "Fundir os dois e renumerar para 19 sem aviso.", "Usar apenas o M01 e descartar o detalhamento do PE."], "ok": 0, "why": "O M01 combina Despropanização/Despropenização; o PE detalhado separa Despropanização, Despropenização e Tratamentos."}];
+const CAUSES=["Vazão baixa de ar para o regenerador.", "Diferencial de pressão baixo nas L-3901/02.", "Pressão alta do regenerador.", "Nível baixo no retificador.", "Trip do J-3901.", "Trip por falta de energia elétrica.", "Falta de água salgada.", "Falta de Vapor SS (V-42).", "Falta de Ar de Instrumento."];
+
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.querySelector(`[data-view="${t.dataset.tab}"]`).classList.add('active');
+});
+
+macroGrid.innerHTML=MACROS.map(m=>`<div class="macro"><span class="pill">${m.id} • etapas ${m.steps}</span><b>${m.title}</b><small>${m.goal}</small></div>`).join('');
+
+gateBoard.innerHTML=GATES.map(g=>`<div class="gatecard"><span class="id">${g.id}</span><h3>${g.name}</h3><p><b>Estado:</b> ${g.before}</p><p><b>Decisão:</b> ${g.decision}</p><p><b>Confirmação:</b> ${g.confirm}</p><p class="subtle"><b>Por quê:</b> ${g.risk}</p></div>`).join('');
+
+stateTable.innerHTML=`<thead><tr><th>Fase</th><th>Slides</th><th>Purga</th><th>Máquinas</th><th>Regenerador</th><th>Carga</th><th>Fracionadora</th><th>Área Fria</th><th>Final</th></tr></thead><tbody>${STATES.map(s=>`<tr><td>${s.phase}</td><td>${s.slides}</td><td>${s.purga}</td><td>${s.maq}</td><td>${s.regen}</td><td>${s.carga}</td><td>${s.frac}</td><td>${s.af}</td><td>${s.final}</td></tr>`).join('')}</tbody>`;
+
+m01Grid.innerHTML=M01.map((x,i)=>`<div class="checkitem"><b>${i+1}.</b>${x}</div>`).join('');
+
+let vapor=false;
+vaporOk.onclick=()=>{vapor=true;vaporOk.disabled=true;min10.disabled=false;rec30.disabled=false;purgeClock.textContent='00 min';purgeState.textContent='Vapores confirmados. O tempo de purga agora é válido.'};
+min10.onclick=()=>{if(!vapor)return;purgeClock.textContent='10 min';purgeState.textContent='Mínimo do PE atingido. Período recomendável: 30 min.'};
+rec30.onclick=()=>{if(!vapor)return;purgeClock.textContent='30 min';purgeState.textContent='Período recomendável do PE simulado.'};
+
+const key='trip-total-conversor-u39-v12';let prog={};try{prog=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){};let current=0;
+function done(i){return PE[i].actions.every((_,j)=>prog[PE[i].n+'-'+j])}
+function nav(){
+ stepNav.innerHTML='';
+ PE.forEach((s,i)=>{const b=document.createElement('button');b.className='stepbtn '+(i===current?'active ':'')+(done(i)?'done':'');b.textContent=s.n;b.onclick=()=>{current=i;nav();renderStep()};stepNav.appendChild(b)})
+}
+function renderStep(){
+ const s=PE[current];
+ stepCard.innerHTML=`<div class="box"><div class="phase">ETAPA ${s.n} • ${s.phase}</div><h2>${s.title}</h2><div class="actionlist">${s.actions.map((a,j)=>`<label class="action ${prog[s.n+'-'+j]?'checked':''}"><input type="checkbox" data-k="${s.n+'-'+j}" ${prog[s.n+'-'+j]?'checked':''}><span>${a}</span></label>`).join('')}</div><div class="gate"><strong>Leitura CIC:</strong> ${s.cic}</div><div class="gate"><strong>Confirmação:</strong> ${s.confirm}</div></div>`;
+ document.querySelectorAll('#stepCard input').forEach(x=>x.onchange=()=>{prog[x.dataset.k]=x.checked;localStorage.setItem(key,JSON.stringify(prog));x.closest('.action').classList.toggle('checked',x.checked);nav()});
+}
+nav();renderStep();
+
+function shuffle(a){return a.map((v,i)=>({v,i})).sort(()=>Math.random()-.5)}
+let score={ok:0,err:0,n:0};
+function upd(){
+ const p=Math.round(score.ok/Math.max(1,score.n)*100);
+ scoreBar.innerHTML=`<div><b>${score.ok}</b><small>acertos</small></div><div><b>${score.err}</b><small>erros</small></div><div><b>${score.n}/${CASES.length}</b><small>respondidas</small></div><div><b>${p}%</b><small>precisão</small></div>`;
+}
+[...CASES].sort(()=>Math.random()-.5).forEach((s,i)=>{
+ const d=document.createElement('div');d.className='scenario';
+ const cls=s.level==='CRÍTICO'?'crit':(s.level==='PRESSÃO'?'press':'');
+ d.innerHTML=`<span class="level ${cls}">${s.level}</span><h3>${i+1}. Estado operacional</h3><ul>${s.state.map(x=>`<li>${x}</li>`).join('')}</ul><p><b>${s.q}</b></p><div class="options"></div><div class="feedback"></div>`;
+ shuffle(s.opts).forEach(o=>{const b=document.createElement('button');b.className='btn';b.textContent=o.v;b.onclick=()=>{if(d.dataset.done)return;d.dataset.done=1;score.n++;const good=o.i===s.ok;good?score.ok++:score.err++;const f=d.querySelector('.feedback');f.className='feedback show '+(good?'yes':'no');f.textContent=(good?'Leitura compatível. ':'Reavalie o gate. ')+s.why;upd()};d.querySelector('.options').appendChild(b)});
+ evalList.appendChild(d);
+});
+upd();
+</script>
+</body>
+</html>
