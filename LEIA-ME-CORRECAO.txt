@@ -1,0 +1,20 @@
+CORREÇÃO — LAVAGEM J-3901 NO CONVERSOR CONCEPT
+
+Diagnóstico confirmado:
+- O arquivo Lavagem-J3901-CIC-V2-Refinada.html já está na raiz do repositório.
+- Existe inclusive uma cópia duplicada com “(1)” no nome.
+- O index.html atual NÃO possui atalho para a lavagem J-3901.
+- O sw.js atual também NÃO injeta esse atalho.
+
+Como corrigir:
+1. No repositório robexter/Conversor-Concept, substitua somente o arquivo sw.js por este.
+2. Não é necessário reenviar o HTML da lavagem.
+3. Abra https://robexter.github.io/Conversor-Concept/
+4. Atualize a página. Se necessário, feche e abra novamente o PWA/navegador e atualize outra vez.
+
+O novo sw.js adiciona visualmente:
+- um atalho “🧼 Lavagem J-3901” junto às manobras do J-3901;
+- um card “🧼 Lavagem da Turbina J-3901” em Manobras Integradas do Conversor.
+
+Link usado:
+./Lavagem-J3901-CIC-V2-Refinada.html?v=2
