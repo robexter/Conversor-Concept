@@ -689,7 +689,14 @@ pdi39018: {
   title:"PDI-39018 A/B/C na L-39001",
   subtitle:"Medições de diferencial de pressão associadas à L-39001.",
   html:`<h3>Função</h3>
-  <p>Os PDI-39018 A/B/C indicam e permitem acompanhar o diferencial de pressão associado à região/linha da L-39001. Em grupos A/B/C, geralmente há redundância, comparação entre elementos ou leituras em diferentes tomadas.</p>
+  <p>Os PDI-39018 A/B/C monitoram o diferencial de pressão associado à região da L-39001, permitindo acompanhar se existem condições adequadas de pressão para a circulação de catalisador nesse trecho do sistema conversor.</p>
+  <h3>Papel no processo<h3>
+  <p>O acompanhamento desse diferencial de pressão é importante para garantir a estabilidade da circulação de catalisador e evitar condições hidráulicas inadequadas entre os equipamentos interligados pela L-39001.
+Uma redução excessiva ou condição crítica de diferencial de pressão pode indicar perda da margem necessária para manter o sentido correto de circulação, aumentando o risco de instabilidade operacional ou reversão de fluxo.<p>
+  <h3>Lógica de proteção<h3>
+  <p>Os três sinais PDI-39018 A/B/C trabalham com lógica de votação 2oo3 (dois de três).
+Quando pelo menos dois dos três sinais atingem o valor de 20 gramas, a lógica reconhece uma condição crítica de diferencial de pressão e provoca o intertravamento do sistema conversor.
+A votação 2oo3 aumenta a confiabilidade da proteção, evitando que uma falha isolada de apenas um instrumento seja suficiente para provocar uma atuação indevida do intertravamento.<p>
   <h3>Utilidade</h3>
   <ul><li>acompanhar a condição de fluxo/circulação;</li><li>verificar estabilidade do sistema;</li><li>dar suporte a permissivos, intertravamentos ou diagnóstico de obstrução/perda de selo.</li></ul>
   <div class="flow">ΔP fora do normal pode indicar restrição, desfluidização, perda de selo ou condição inadequada de circulação.</div>`
@@ -700,6 +707,13 @@ pdi39022: {
   subtitle:"Medições de diferencial de pressão associadas à L-39002.",
   html:`<h3>Função</h3>
   <p>Os PDI-39022 A/B/C monitoram o diferencial de pressão na região da L-39002. Esse conjunto é importante porque a L-39002 interfere diretamente no envio de catalisador regenerado ao riser.</p>
+  <h3>Papel no processo<h3>
+  <p>Esse diferencial de pressão é fundamental para garantir o sentido correto da circulação de catalisador entre o regenerador e o riser.
+A perda desse diferencial pode comprometer o fluxo de catalisador regenerado, provocar instabilidade na circulação e aumentar o risco de reversão de fluxo, afetando diretamente a estabilidade térmica e operacional do sistema conversor.<p>
+  <h3>Lógica de proteção<h3>
+  <p>Os três sinais PDI-39022 A/B/C trabalham com lógica de votação 2oo3 (dois de três).
+Quando pelo menos dois dos três sinais atingem o valor de atuação definido pela lógica, o sistema reconhece uma condição crítica de diferencial de pressão e provoca o intertravamento do sistema conversor.
+A lógica 2oo3 aumenta a confiabilidade da proteção, pois evita que a falha isolada de apenas um instrumento seja suficiente para provocar uma atuação indevida do intertravamento.<p>
   <h3>Objetivo operacional</h3>
   <p>Acompanhar a margem hidráulica da linha/standpipe e fornecer informação para proteção da circulação do catalisador, inclusive em malhas com override.</p>
   <div class="flow">ΔP adequado → circulação segura | ΔP baixo → risco de instabilidade / perda de selo</div>`
