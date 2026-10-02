@@ -543,12 +543,12 @@ l3903_zic39009: {
   title:"L-3903 e ZIC-39009",
   subtitle:"Função da válvula/equipamento e lógica de posicionamento associada ao ZIC-39009.",
   html:`<h3>Função da L-3903</h3>
-  <p>A L-3903 atua como elemento de controle/isolamento associado à circulação do conversor. Pela posição na tela, seu papel operacional é contribuir para o ajuste de uma variável crítica do sistema, normalmente relacionada a catalisador, pressão ou inventário, conforme a filosofia oficial da unidade.</p>
+  <p>A L-3903 atua como elemento de controle de pressao do sistema conversor, mantendo o diferencial de pressao entre o regenerador e vaso separador, atraves do PDIC -029,controlando a saida dos gases de combustao do regenerador para a caldeira.</p>
   <h3>Estratégia de controle</h3>
-  <p>O comportamento indicado na tela sugere atuação modulante com referência de posição/abertura. Em sistemas desse tipo, a estratégia costuma ser: controlador calcula a demanda, seletor/permissivos validam, e a L-3903 executa o posicionamento final.</p>
+  <p>O comportamento indicado sugere atuação modulante com referência de posição/abertura. Em sistemas desse tipo, a estratégia costuma ser: controlador calcula a demanda, seletor/permissivos validam, e a L-3903 executa o posicionamento final.</p>
   <h3>Função do ZIC-39009</h3>
-  <p>O ZIC-39009 é o controlador/indicador de posição exibido na tela. Sua função é monitorar e comandar a abertura da L-3903, garantindo que ela siga o valor solicitado pela estratégia de controle.</p>
-  <div class="setbox">Preencher, se desejado, a variável exatamente controlada pela L-3903 segundo o diagrama lógico oficial.</div>`
+  <p>O ZIC-39009 é o controlador/indicador de posição. Sua função é monitorar e comandar a abertura da L-3903, garantindo que ela siga o valor solicitado pela estratégia de controle.</p>
+  <div class="setbox">Preencher, se desejado, a variável exatamente controlada pela L-3903 segundo o diagrama lógico.</div>`
 },
 
 ci3905: {
@@ -617,7 +617,7 @@ d3901_riser: {
   title:"D-3901 — riser",
   subtitle:"Zona principal de reação do craqueamento catalítico.",
   html:`<h3>Função</h3>
-  <p>No riser ocorre o contato quase instantâneo entre a carga e o catalisador regenerado quente. A vaporização da carga e as reações de craqueamento acontecem em tempo muito curto, com a temperatura de reação sendo uma das variáveis mais importantes.</p>
+  <p>No riser ocorre o contato quase instantâneo entre a carga e o catalisador regenerado quente. A vaporização da carga e as reações de craqueamento acontecem entre 1,5s a 2,0s.</p>
   <h3>O que se busca</h3>
   <ul><li>boa mistura óleo/catalisador;</li><li>tempo de contato curto e controlado;</li><li>temperatura de reação estável;</li><li>evitar pós-craqueamento indesejado e formação excessiva de coque/gás seco.</li></ul>
   <div class="flow">Catalisador regenerado ↑ → temperatura de reação ↑ | Carga fria / menos catalisador → temperatura de reação ↓</div>`
@@ -645,27 +645,28 @@ d3903: {
 
 fvs: {
   title:"FV-39015 e FV-39016",
-  subtitle:"Válvulas de controle de vazão mostradas no lado da carga/arraste do conversor.",
+  subtitle:"Válvulas de vapor de arraste axial e radial.",
   html:`<h3>Função</h3>
-  <p>As FV-39015 e FV-39016 atuam como elementos finais de controle de vazão, modulando as correntes associadas às malhas FIC-39015 e FIC-39016 exibidas na tela.</p>
+  <p>As FV-39015 e FV-39016 controlam a vazão de vapor de 12 kgf/cm² utilizada para auxiliar o arraste e a fluidização do catalisador, conduzindo-o em direção ao ponto de encontro com a carga no riser.</p>
   <h3>Papel no processo</h3>
-  <p>Elas mantêm as vazões nos valores desejados para estabilidade do sistema, contribuindo para o equilíbrio hidráulico e operacional do conversor.</p>
+  <p>Esse vapor contribui para manter o catalisador em movimento e em condições adequadas de transporte até a região de contato com a carga. Dessa forma, favorece uma mistura mais rápida e uniforme entre catalisador e hidrocarboneto, etapa essencial para a vaporização da carga e para o início eficiente das reações de craqueamento catalítico.</p>
   <div class="flow">FIC calcula demanda → FV ajusta abertura → vazão acompanha SP</div>`
 },
 
 l39001: {
   title:"L-39001",
-  subtitle:"Elemento final associado ao controle/circulação no conversor.",
+  subtitle:"L-39001 — controla a retirada de catalisador do D-3903 e, consequentemente, participa diretamente do controle do nível de catalisador no retificador.",
   html:`<h3>Função</h3>
-  <p>A L-39001 atua como elemento importante para controlar uma variável de circulação/inventário do conversor. Na filosofia típica de FCC, válvulas desse tipo influenciam o fluxo de catalisador ou a estabilidade do sistema entre vasos interligados.</p>
+  <p>A L-39001 controla a saída de catalisador do D-3903 – retificador, modulando a passagem desse catalisador em direção ao circuito de regeneração. Sua abertura é comandada de forma a contribuir para a manutenção do nível de catalisador no D-3903 dentro da faixa desejada.</p>
   <h3>Objetivo</h3>
-  <p>Permitir ajuste operacional e resposta dos controladores sem perder segurança hidráulica e diferencial de pressão.</p>
+  <p>Quando o nível do D-3903 aumenta, a estratégia de controle tende a abrir mais a L-39001, aumentando a retirada de catalisador do vaso e ajudando a reduzir o inventário acumulado. Quando o nível diminui, a tendência é reduzir sua abertura, preservando o inventário de catalisador no retificador.
+Dessa forma, a L-39001 tem papel importante no balanço de catalisador do conversor, mantendo uma quantidade adequada de catalisador no D-3903 e contribuindo para a estabilidade da circulação entre reator/retificador e regenerador..</p>
   <div class="setbox">Se desejar, registre aqui no modo edição a identificação operacional exata da L-39001 na sua unidade.</div>`
 },
 
 l39002: {
   title:"L-39002",
-  subtitle:"Elemento final fortemente associado à temperatura de reação do riser.",
+  subtitle:"L-39002 — regula a entrada de catalisador regenerado no riser, sendo um dos principais elementos de controle da temperatura de reação e da circulação de catalisador no conversor.",
   html:`<h3>Função</h3>
   <p>A L-39002 é, conceitualmente, a válvula/equipamento que ajusta a circulação de catalisador regenerado para o riser, afetando diretamente a temperatura de reação do topo do riser.</p>
   <h3>Efeito operacional</h3>
