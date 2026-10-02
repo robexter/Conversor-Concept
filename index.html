@@ -543,9 +543,13 @@ l3903_zic39009: {
   title:"L-3903 e ZIC-39009",
   subtitle:"Função da válvula/equipamento e lógica de posicionamento associada ao ZIC-39009.",
   html:`<h3>Função da L-3903</h3>
-  <p>A L-3903 atua como elemento de controle de pressao do sistema conversor, mantendo o diferencial de pressao entre o regenerador e vaso separador, atraves do PDIC -029,controlando a saida dos gases de combustao do regenerador para a caldeira.</p>
+  <p>A L-3903 atua como elemento de controle de pressao do sistema conversor, mantendo o diferencial de pressao entre o regenerador e vaso separador, atraves do PDIC-029,controlando a saida dos gases de combustao do regenerador para a caldeira.</p>
   <h3>Estratégia de controle</h3>
-  <p>O comportamento indicado sugere atuação modulante com referência de posição/abertura. Em sistemas desse tipo, a estratégia costuma ser: controlador calcula a demanda, seletor/permissivos validam, e a L-3903 executa o posicionamento final.</p>
+  <p>O comportamento indicado sugere atuação modulante com referência de posição/abertura. Em sistemas desse tipo, a estratégia costuma ser: controlador calcula a demanda, seletor/permissivos validam, e a L-3903 executa o posicionamento final.Seu papel é manter uma diferença de pressão adequada entre o regenerador e o vaso separador, condição essencial para garantir o sentido correto da circulação de catalisador e evitar desequilíbrios hidráulicos entre os vasos do conversor.
+Ao variar sua abertura, a L-39003 altera a restrição à saída dos gases de combustão:
+- Maior abertura → facilita a saída dos gases e tende a reduzir a pressão do regenerador.
+- Menor abertura → aumenta a restrição e tende a elevar a pressão do regenerador.
+Dessa forma, a L-39003 contribui para a estabilidade da circulação de catalisador, manutenção do diferencial de pressão entre os vasos e prevenção de condições de reversão de fluxo.</p>
   <h3>Função do ZIC-39009</h3>
   <p>O ZIC-39009 é o controlador/indicador de posição. Sua função é monitorar e comandar a abertura da L-3903, garantindo que ela siga o valor solicitado pela estratégia de controle.</p>
   <div class="setbox">Preencher, se desejado, a variável exatamente controlada pela L-3903 segundo o diagrama lógico.</div>`
@@ -553,9 +557,15 @@ l3903_zic39009: {
 
 ci3905: {
   title:"CI-3905",
-  subtitle:"Indicador/analisador associado ao conversor no topo do regenerador.",
+  subtitle:"Terceiro Estágio de Separação de Finos de Catalisador.",
   html:`<h3>Função</h3>
-  <p>O CI-3905 aparece associado a leituras de composição. Sua função é indicar variáveis analíticas relevantes para o controle da combustão/regeneração, como componentes gasosos do regenerador.</p>
+  <p>O CI-3905 é o terceiro estágio de separação de catalisador dos gases de combustão provenientes do regenerador. Sua função é realizar uma separação final, removendo os finos de catalisador ainda arrastados pela corrente gasosa antes que os gases sigam para os equipamentos posteriores.</p>
+  <h3>Papel no processo</h3>
+  <p>O CI-3905 reduz a quantidade de sólidos presentes nos gases de combustão, protegendo os equipamentos a jusante contra erosão, acúmulo de catalisador e aumento de carga de sólidos.
+Após essa última etapa de separação:
+- os gases de combustão seguem para o pote de selagem e posteriormente para a caldeira;
+- os finos de catalisador separados são encaminhados para o F-3980.
+Assim, o CI-3905 tem papel importante tanto na recuperação de finos de catalisador quanto na proteção e confiabilidade do sistema de gases de combustão.<p>
   <h3>Leituras mostradas</h3>
   <div class="eq">CO₂ / CO / O₂</div>
   <p>Essas leituras ajudam a avaliar a eficiência de combustão do coque, a disponibilidade de oxigênio e a condição térmica/operacional do regenerador.</p>
