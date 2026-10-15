@@ -1,0 +1,13 @@
+CONVERSOR CONCEPT — J-3901 • V3.1
+Repositorio: https://github.com/robexter/Conversor-Concept
+
+A página Lavagem-J-3901-Concept-Interativo.html está incluída e deve ficar na RAIZ do repositório.
+Para fazer a página aparecer nos menus sem eliminar conteúdo recente do index.html:
+1. Abra uma cópia atualizada do repositório no computador (git clone / git pull).
+2. Copie este HTML e ATUALIZAR-CONVERSOR.py para a raiz dessa cópia.
+3. Execute: python ATUALIZAR-CONVERSOR.py (na pasta raiz do repositório).
+4. O script gera backups locais e altera index.html e sw.js, sem remover outros módulos.
+5. Envie ao GitHub: index.html, sw.js e Lavagem-J-3901-Concept-Interativo.html.
+
+ATENÇÃO: não envie ATUALIZAR-CONVERSOR.py como index.html e não exclua arquivos V2.
+URL depois da publicação: https://robexter.github.io/Conversor-Concept/Lavagem-J-3901-Concept-Interativo.html?v=31
