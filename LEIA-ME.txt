@@ -1,17 +1,14 @@
-PARTIDA J-3901 — CAMPO × CIC V2
+CONVERSOR CONCEPT — CORREÇÃO DO ATALHO DA LAVAGEM J-3901 V3.1
 
-Substituir somente partida-j3901.html.
+Arquivos deste pacote (enviar para a RAIZ de https://github.com/robexter/Conversor-Concept):
+1. sw.js — SOBRESCREVER o arquivo antigo; insere no menu o atalho V3.1, sem tocar nos demais cards.
+2. Lavagem-J-3901-Concept-Interativo.html — SOBRESCREVER/CONFIRMAR o arquivo integral V3.1 já existente.
 
-Correção principal:
-Nenhum distrator faz o CIC executar ação de campo ou o Campo operar o SDCD.
+Não exclua index.html, nem altere os arquivos V2; eles são preservados como histórico.
+Em GitHub: Add file > Upload files > selecionar os DOIS arquivos > Commit changes.
+O service worker é atualizado após a publicação, mas pode ser necessário fechar/reabrir a aba e atualizar a página para ativar o cache novo.
 
-Todas as alternativas respeitam:
-- CIC: painel, interpretação, coordenação, delegação, confirmação.
-- Campo: ação física/local, alinhamentos, comandos locais e retorno da execução.
+Endereço NOVO: https://robexter.github.io/Conversor-Concept/Lavagem-J-3901-Concept-Interativo.html?v=31
+Endereço ANTIGO (permanece V2): https://robexter.github.io/Conversor-Concept/Lavagem-J3901-CIC-V2-Refinada.html?v=2
 
-A dificuldade agora está em:
-- qual gate precisa fechar;
-- qual ação o CIC deve delegar;
-- em que momento delegar;
-- qual confirmação de Campo + painel permite avançar;
-- ordem correta entre ações próximas.
+Observação: o menu é enriquecido pelo próprio sw.js. Para eliminar essa dependência no futuro, a alternativa é gravar os links diretamente no index.html.
