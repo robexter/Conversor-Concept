@@ -1,0 +1,11 @@
+LAVAGEM DE TURBINAS J-3901 E J-3902 — CONCEPT V3.1 MOBILE
+
+Correção aplicada exclusivamente na responsividade da aba Conteúdo Integral.
+- Conteúdo técnico e capítulos preservados integralmente.
+- Grade interna sem largura mínima involuntária (minmax(0,1fr)).
+- Tabelas completas com rolagem horizontal interna, sem cortar a página.
+- Equações ajustadas ao celular; índice de capítulos navegável por deslizamento.
+- Sem alterações no procedimento operacional e na lógica de exercícios.
+
+Arquivos HTML individuais disponíveis no pacote. Para publicar um equipamento no
+GitHub Pages, usar o HTML correspondente como index.html no repositório dele.

@@ -1,0 +1,774 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#06111b"><title>Lavagem da Turbina J-3902 • Concept V3.1 — Conteúdo Integral Mobile</title><style>
+:root{--bg:#06111b;--p:#0d1d2a;--p2:#112638;--line:#31536a;--txt:#eef7ff;--muted:#9eb4c5;--blue:#72d0ff;--green:#8de7a0;--yellow:#ffd36f;--red:#ff9898}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at top,#153149,#07131d 48%,#04090d);color:var(--txt)}body{padding:8px}.app{max-width:1480px;margin:auto;display:grid;gap:12px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--p2),var(--p));border-radius:22px;box-shadow:0 14px 36px #0006}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;padding:18px}.chip{display:inline-flex;border:1px solid #487694;background:#0b2230;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:950;letter-spacing:.08em}.hero h1{font-size:clamp(27px,4vw,44px);margin:8px 0}.hero p{color:var(--muted);line-height:1.5}.hero-side{border:1px solid #3e6278;background:#071a26;border-radius:16px;padding:13px}.memory{font-weight:950;line-height:1.55;font-size:clamp(15px,2vw,20px)}.memory em{font-style:normal;color:var(--yellow)}.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:11px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#08131ded;z-index:5}.tab{border:1px solid #365970;background:#0b2230;color:#fff;border-radius:11px;padding:9px 11px;font-weight:850;cursor:pointer}.tab.active{background:#17415b;border-color:#72d0ff}.view{display:none;padding:14px}.view.active{display:block}.grid2{display:grid;grid-template-columns:1.08fr .92fr;gap:12px}.box{border:1px solid #315169;background:#081923;border-radius:17px;padding:14px}.phase{font-size:10px;color:#ffcf88;font-weight:950;letter-spacing:.08em}.stategrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.state{border:1px solid #31536a;background:#071824;border-radius:13px;padding:10px;min-height:78px}.state small{display:block;color:var(--muted);font-weight:800}.state b{display:block;margin-top:4px}.ok{color:var(--green)}.warn{color:var(--yellow)}.bad{color:var(--red)}.info{color:#91ddff}.gate{border:1px solid #6e5a28;background:#211d0f;border-radius:13px;padding:10px;margin:9px 0}.critical{border:1px solid #88474b;background:#291217;border-radius:13px;padding:10px;margin:9px 0}.route{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:8px 0}.node{border:1px solid #3b6078;background:#0a2230;border-radius:11px;padding:8px 10px;font-weight:900;font-size:12px}.arrow{font-weight:950;color:var(--blue)}.metricgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric{border:1px solid #31536a;background:#06141e;border-radius:12px;padding:9px;text-align:center}.metric small{display:block;color:var(--muted)}.metric b{display:block;margin-top:3px}.logicgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.logic{border:1px solid #31536a;background:#071824;border-radius:14px;padding:12px}.logic label{display:block;color:#a9bfce;font-size:11px;font-weight:800;margin:6px 0 4px}input,select{width:100%;border:1px solid #365970;background:#0a1e2a;color:#fff;border-radius:10px;padding:9px;font-weight:800}.status{border-radius:11px;padding:9px;margin-top:8px;font-weight:900}.status.on{background:#12351c;border:1px solid #428a55;color:#c7f6cf}.status.off{background:#351718;border:1px solid #8f4949;color:#ffd0d0}.status.wait{background:#302711;border:1px solid #7e682d;color:#ffe5a3}.stepnav{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin:10px 0}.stepbtn{border:1px solid #31536a;background:#071824;color:#fff;border-radius:10px;padding:8px;font-weight:900;cursor:pointer}.stepbtn.active{border-color:#e0a462;background:#3a2814}.actions{display:grid;gap:6px}.action{border:1px solid #2e4e63;background:#06141e;border-radius:10px;padding:9px;line-height:1.4}.roles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.role{border:1px solid #315169;background:#081923;border-radius:15px;padding:13px}.role ul{padding-left:19px;line-height:1.5}.scenario{border:1px solid #315169;background:#081923;border-radius:15px;padding:13px;margin:10px 0}.scenario h3{margin:0 0 6px}.states{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.states span{border:1px solid #29465a;background:#06111b;border-radius:10px;padding:8px;font-size:11px}.options{display:grid;gap:7px}.btn{border:1px solid #385b73;background:#102432;color:#fff;border-radius:11px;padding:10px;text-align:left;cursor:pointer;font-weight:800}.btn.correct{background:#153c20;border-color:#4b9758}.btn.incorrect{background:#3b1919;border-color:#a14b4b}.result{margin-top:8px;font-size:12px;color:#c7d9e7}.score{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;position:sticky;bottom:5px;background:#07131ee8;border:1px solid #31536a;border-radius:14px;padding:7px}.score div{text-align:center;border:1px solid #2d4d62;background:#06131b;border-radius:10px;padding:7px}.score b{display:block;font-size:19px}.badge{display:inline-block;border:1px solid #715c2d;background:#2b220e;color:#ffe0a0;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:950}.note{font-size:11px;color:var(--muted);line-height:1.45}.hidden{display:none}@media(max-width:1050px){.stategrid,.logicgrid{grid-template-columns:1fr 1fr}.metricgrid{grid-template-columns:1fr 1fr}}@media(max-width:800px){.hero,.grid2,.roles{grid-template-columns:1fr}.stepnav{grid-template-columns:repeat(4,1fr)}}@media(max-width:580px){.stategrid,.logicgrid,.metricgrid,.states,.score{grid-template-columns:1fr}.stepnav{grid-template-columns:repeat(2,1fr)}}
+</style><style id="lab-concept-css">
+#conceptLab {--lc:#7ed4ff;--lgreen:#89e9b0;--lorange:#f3c66d;--lred:#ff9d9d;font-size:15px}
+#conceptLab *,#conceptLab *::before,#conceptLab *::after{box-sizing:border-box}
+#conceptLab .lab-intro{color:#b4cbdc;line-height:1.55;max-width:900px}
+#conceptLab h2{margin:0 0 10px}#conceptLab h3{margin:0 0 10px;font-size:1.06rem}
+#conceptLab h4{margin:0 0 9px;font-size:.91rem;color:#e6f6ff}
+#conceptLab p{line-height:1.55}
+#conceptLab .labmodes{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+#conceptLab button{font:inherit;cursor:pointer;touch-action:manipulation}
+#conceptLab .labmodes button,#conceptLab .labbtn,#conceptLab .laboption,#conceptLab .labstage{color:#f1faff;border:1px solid #3f6680;background:#112b3d;border-radius:12px;padding:11px 14px;font-weight:650;text-align:left}
+#conceptLab .labmodes button[aria-pressed="true"],#conceptLab .labstage[aria-pressed="true"]{border-color:#80d8ff;background:#195276;color:white}
+#conceptLab .labbtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#136082;border-color:#3d9fcb;text-align:center}
+#conceptLab .labbtn.secondary{background:#152e3e}
+#conceptLab .labbtn:disabled{opacity:.46;cursor:default}
+#conceptLab .labpane[hidden]{display:none}
+#conceptLab .labgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#conceptLab .labpanel{background:#081a28;border:1px solid #31546b;border-radius:18px;padding:16px;min-width:0}
+#conceptLab .labpanel.wide{grid-column:1/-1}
+#conceptLab .labmuted{color:#a7bed0;font-size:.86rem;line-height:1.5}
+#conceptLab .lablegend{display:flex;gap:16px;flex-wrap:wrap;font-size:.83rem;color:#c7dce9}
+#conceptLab .labswatch{display:inline-block;width:11px;height:11px;border-radius:4px;margin-right:4px}
+#conceptLab .labline{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:12px 0 8px}
+#conceptLab input[type=range]{width:100%;accent-color:#7bd3fc;cursor:pointer}
+#conceptLab label{display:block;color:#d7ebf7;font-size:.88rem}
+#conceptLab select{background:#122e40;color:white;border:1px solid #4a7896;border-radius:10px;padding:10px;width:100%;font:inherit}
+#conceptLab .labtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0}
+#conceptLab .labtile{padding:10px;background:#10283a;border:1px solid #31546b;border-radius:11px;min-width:0}
+#conceptLab .labtile small{display:block;color:#a9bfce;font-size:.73rem;margin-bottom:5px}
+#conceptLab .labtile b{display:block;font-size:1.2rem;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+#conceptLab .labcall{border-left:3px solid #75cce8;background:#143146;padding:11px;border-radius:8px;line-height:1.55;margin-top:10px}
+#conceptLab .labwarn{border-left-color:#ecc275;background:#41331e}
+#conceptLab .labstagegrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:12px 0}
+#conceptLab .labstage{font-size:.82rem;text-align:center;padding:9px 5px}
+#conceptLab .labsvg{width:100%;height:auto;display:block;border:1px solid #254961;background:#051520;border-radius:12px}
+#conceptLab .labchart{width:100%;height:auto;display:block;background:#061520;border:1px solid #31546b;border-radius:12px}
+#conceptLab .laboptions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:15px 0}
+#conceptLab .laboption{width:100%;text-align:left;min-height:64px;line-height:1.4}
+#conceptLab .laboption:disabled{cursor:default}
+#conceptLab .laboption.good{border-color:#7ad7aa;background:#174736}
+#conceptLab .laboption.bad{border-color:#ea8e91;background:#562c35}
+#conceptLab .laboption.correct-hint{border-color:#8bd3f4;border-style:dashed}
+#conceptLab .labprog{height:9px;background:#0b2232;border:1px solid #2f536c;border-radius:99px;overflow:hidden}
+#conceptLab .labprog>span{display:block;background:#60bde0;height:100%;width:0;transition:width .2s}
+#conceptLab .labpill{border:1px solid #3f6d82;padding:5px 9px;border-radius:99px;display:inline-block;color:#a6dffc;font-size:.78rem;margin:0 6px 8px 0}
+#conceptLab .labfeedback{margin:10px 0;min-height:35px;line-height:1.6}
+#conceptLab .labnote{font-size:.75rem;color:#98b5c6;margin-top:13px}
+#conceptLab .labactions{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+#conceptLab .labpulse{animation:labflow 1.9s linear infinite}
+@keyframes labflow{to{stroke-dashoffset:-36}}
+
+#conceptLab .lab2grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;margin:14px 0}
+#conceptLab .labkv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}
+#conceptLab .labmeter{height:9px;background:#0b2232;border:1px solid #2f536c;border-radius:99px;overflow:hidden;margin-top:7px}
+#conceptLab .labmeter>span{display:block;height:100%;width:0;background:#67c4e6;transition:width .25s}
+#conceptLab .labjudge{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}
+#conceptLab .labjudge button{color:#f1faff;border:1px solid #3f6680;background:#112b3d;border-radius:12px;padding:11px 14px;font-weight:650;text-align:left;line-height:1.4}
+#conceptLab .labjudge button.good{border-color:#7ad7aa;background:#174736}
+#conceptLab .labjudge button.bad{border-color:#ea8e91;background:#562c35}
+#conceptLab .labsubtle{font-size:.79rem;color:#9ec5d8}
+#conceptLab .labfocus{margin-top:10px}
+@media(max-width:850px){#conceptLab .lab2grid,#conceptLab .labkv,#conceptLab .labjudge{grid-template-columns:1fr}}
+
+@media(max-width:850px){#conceptLab .labgrid{grid-template-columns:1fr}#conceptLab .laboptions{grid-template-columns:1fr}}
+@media(max-width:540px){#conceptLab .labstagegrid{grid-template-columns:repeat(2,1fr)}#conceptLab .labtiles{grid-template-columns:repeat(2,minmax(0,1fr))}#conceptLab .labpanel{padding:12px}#conceptLab .labmodes button{flex:1 1 130px;text-align:center}}
+@media(prefers-reduced-motion:reduce){#conceptLab .labpulse{animation:none}}
+</style>
+<style id="integral-content-style">
+/* CAMADA DE CONTEÚDO INTEGRAL — mantém intactos todos os módulos anteriores */
+#conceptIntegral{--b:#81d7ff;--f:#122b3b;line-height:1.66}
+#conceptIntegral *{box-sizing:border-box}
+#conceptIntegral .int-head{padding:23px;background:linear-gradient(110deg,#12334b,#0d2233);border:1px solid #436b82;border-radius:20px;margin-bottom:16px}
+#conceptIntegral h2{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 9px}
+#conceptIntegral .int-head p{color:#c7dce9;margin:8px 0}
+#conceptIntegral .int-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:16px;align-items:start}
+#conceptIntegral nav{position:sticky;top:77px;max-height:calc(100vh - 98px);overflow-y:auto;border:1px solid #325c72;background:#0a202d;padding:12px;border-radius:15px}
+#conceptIntegral nav a{display:block;color:#c1e2f7;border-bottom:1px solid #244557;padding:8px;text-decoration:none;font-size:.85rem;line-height:1.35;border-radius:5px}
+#conceptIntegral nav a:hover,#conceptIntegral nav a:focus-visible{color:#fff;background:#17465d}
+#conceptIntegral .int-sections{min-width:0;display:grid;gap:15px}
+#conceptIntegral article{scroll-margin-top:94px;padding:20px;background:#071b28;border:1px solid #31576e;border-radius:17px}
+#conceptIntegral h3{font-size:clamp(1.13rem,2vw,1.35rem);color:#dbf4ff;margin:0 0 12px}
+#conceptIntegral h4{font-size:1.02rem;color:#a8e5ff;margin:18px 0 7px}
+#conceptIntegral p{margin:9px 0;color:#d6e5ee}
+#conceptIntegral strong{color:#f4fbff}
+#conceptIntegral .int-focus{padding:12px 14px;border-left:4px solid #7dd9fb;border-radius:9px;background:#0e3046;margin:14px 0}
+#conceptIntegral .int-alert{padding:12px 14px;border-left:4px solid #f6c875;border-radius:9px;background:#302718;margin:14px 0}
+#conceptIntegral .int-critical{padding:12px 14px;border-left:4px solid #f39c9c;border-radius:9px;background:#331c21;margin:14px 0}
+#conceptIntegral .int-eq{background:#02131d;padding:13px;border-radius:11px;border:1px solid #285a6f;color:#d5f6ff;font-size:clamp(.94rem,1.7vw,1.1rem);text-align:center;overflow-wrap:anywhere;margin:13px 0}
+#conceptIntegral .int-eq small{display:block;font-size:.75rem;color:#a9c8d7;margin-top:6px}
+#conceptIntegral .int-table{width:100%;border-collapse:collapse;font-size:.91rem}
+#conceptIntegral .int-table th,#conceptIntegral .int-table td{border:1px solid #35566a;text-align:left;vertical-align:top;padding:11px 12px}
+#conceptIntegral .int-table th{background:#174054;color:#e1f8ff}
+#conceptIntegral .int-tablescroll{overflow-x:auto;margin:14px 0;border-radius:10px}
+#conceptIntegral .int-tablescroll table{min-width:570px}
+#conceptIntegral .int-tag{font-size:.74rem;font-weight:750;background:#103d54;border:1px solid #276984;border-radius:999px;padding:4px 9px;color:#c9f1ff;display:inline-block;margin-bottom:8px}
+#conceptIntegral .int-link{display:inline-flex;padding:10px 13px;border:1px solid #69c6f2;background:#155678;color:#fff;border-radius:10px;font-weight:700;text-decoration:none;cursor:pointer;margin:9px 7px 0 0}
+#conceptIntegral .int-link:hover{background:#1d709b}
+#conceptIntegral details{margin:12px 0;border:1px solid #386078;background:#0e2837;border-radius:10px;padding:10px 13px}
+#conceptIntegral details summary{cursor:pointer;font-weight:750;color:#d1efff;padding:4px}
+#conceptIntegral .int-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}
+#conceptIntegral .int-pair>div{border:1px solid #31566a;background:#092331;padding:13px;border-radius:12px}
+#conceptIntegral .int-pair b{color:#a3e3ff}
+#conceptIntegral .int-stagebtns{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+#conceptIntegral .int-stagebtns button{flex:1 1 130px;color:#fff;padding:10px 12px;background:#0c344b;border:1px solid #47728a;border-radius:10px;cursor:pointer;font-weight:700;text-align:center}
+#conceptIntegral .int-stagebtns button[aria-pressed=true]{background:#23678a;border-color:#8ee2ff}
+#conceptIntegral .int-dynamic{min-height:140px;border-radius:12px;border:1px solid #42738b;background:linear-gradient(115deg,#0a3249,#091e2c);padding:15px;margin:10px 0}
+#conceptIntegral .int-wheel-svg{width:100%;height:auto;border-radius:12px;border:1px solid #315b74;background:#041925}
+#conceptIntegral .int-quizchoices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}
+#conceptIntegral .int-quizchoices button{padding:10px;border-radius:10px;background:#103147;border:1px solid #456b83;color:#edfaff;text-align:left;cursor:pointer;font-weight:650}
+#conceptIntegral .int-quizchoices button:disabled{cursor:default}
+#conceptIntegral .int-quizchoices .selected-good{border-color:#67c99e;background:#164c3b}
+#conceptIntegral .int-quizchoices .selected-bad{border-color:#e49595;background:#512c34}
+#conceptIntegral .int-quizfeedback{min-height:22px;margin:10px 0;color:#dbecf5}
+#conceptIntegral .int-map{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:13px 0}
+#conceptIntegral .int-map span{padding:8px;border:1px solid #3b6275;border-radius:8px;background:#12364b;font-size:.81rem}
+@media(max-width:940px){#conceptIntegral .int-layout{grid-template-columns:1fr}#conceptIntegral nav{position:relative;top:0;max-height:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}}
+@media(max-width:620px){#conceptIntegral nav{grid-template-columns:1fr}#conceptIntegral article{padding:13px}#conceptIntegral .int-pair,#conceptIntegral .int-quizchoices{grid-template-columns:1fr}#conceptIntegral .int-head{padding:15px}}
+</style><style id="integral-mobile-v31">
+/* V3.1 — correção responsiva apenas da aba Conteúdo Integral.
+   A grade não pode herdar a largura mínima de equações/tabelas. */
+#conceptIntegral,
+#conceptIntegral .int-layout,
+#conceptIntegral .int-sections {
+  min-width:0;
+  max-width:100%;
+}
+#conceptIntegral .int-sections {
+  grid-template-columns:minmax(0,1fr);
+}
+#conceptIntegral article {
+  min-width:0;
+  max-width:100%;
+  overflow-wrap:break-word;
+}
+#conceptIntegral .int-head,
+#conceptIntegral nav,
+#conceptIntegral .int-pair,
+#conceptIntegral .int-quizchoices,
+#conceptIntegral .int-dynamic,
+#conceptIntegral details {
+  min-width:0;
+  max-width:100%;
+}
+/* Fórmulas compridas podem quebrar ou rolar no próprio painel,
+   sem deslocar todo o documento para a direita. */
+#conceptIntegral .int-eq {
+  min-width:0;
+  max-width:100%;
+  overflow-x:auto;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  -webkit-overflow-scrolling:touch;
+}
+/* Tabelas extensas continuam completas e roláveis somente dentro do quadro. */
+#conceptIntegral .int-tablescroll {
+  min-width:0;
+  max-width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+#conceptIntegral .int-indexhint { display:none; }
+@media(max-width:940px) {
+  #conceptIntegral .int-indexhint {
+    display:block;
+    margin:0 0 -7px;
+    font-size:.80rem;
+    color:#b5dbea;
+  }
+  #conceptIntegral nav {
+    position:relative;
+    top:0;
+    display:flex;
+    flex-wrap:nowrap;
+    gap:8px;
+    max-height:none;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x proximity;
+    scroll-padding-inline:12px;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+  #conceptIntegral nav a {
+    display:flex;
+    flex:0 0 190px;
+    max-width:190px;
+    align-items:center;
+    padding:10px 12px;
+    border:1px solid #315b74;
+    border-radius:10px;
+    scroll-snap-align:start;
+    line-height:1.4;
+  }
+}
+@media(max-width:620px) {
+  #conceptIntegral article { scroll-margin-top:214px; }
+  #conceptIntegral .int-head { padding:14px; }
+  #conceptIntegral .int-eq { padding:12px 9px; }
+  #conceptIntegral h3 { line-height:1.35; }
+}
+</style></head><body><div class="app">
+<section class="card hero"><div><span class="chip">V3 • CONTEÚDO INTEGRAL + MANOBRA J-3902</span><h1>Lavagem da Turbina J-3902 • Concept V3 — Conteúdo Integral</h1><p>Treinamento de fixação com visão de operador de painel. Este módulo contém somente a lógica da lavagem da turbina do J-3902.</p></div><div class="hero-side"><b>Modelo mental</b><div class="memory"><em>instrumentação</em> → 7.000 m³/d → 39–40 kgf/cm² + ≈5000 RPM → HBF 1 °C/min → margem ≥10 °C sobre saturação → 1ª roda estável → 1 h → amostragem 15 min desde 300 °C → reaquecimento 1 °C/min</div></div></section>
+<section class="card"><div class="tabs"><button class="tab active" data-tab="cic">1. Sala CIC</button><button class="tab" data-tab="gates">2. Gates térmicos</button><button class="tab" data-tab="wash">3. Lavagem / 1ª roda</button><button class="tab" data-tab="roles">4. Campo × CIC</button><button class="tab" data-tab="journey">5. Jornada 8 etapas</button><button class="tab" data-tab="eval">6. Avaliação CIC difícil</button><button class="tab" data-tab="integral">📚 Conteúdo integral</button><button class="tab" data-tab="laboratorio">🧪 Laboratório Concept</button></div>
+<div class="view active" data-view="cic"><div class="grid2"><div class="box"><div class="phase">ESTADO-ALVO DO J-3902</div><div class="stategrid">
+<div class="state"><small>Carga</small><b class="warn">7.000 m³/d</b></div><div class="state"><small>PI-393061A</small><b class="warn">39–40 kgf/cm²</b></div><div class="state"><small>SI-393056A</small><b class="warn">≈5000 RPM</b></div><div class="state"><small>TI-393058A</small><b class="info">redução 1 °C/min</b></div><div class="state"><small>Margem saturação</small><b class="warn">mín. +10 °C</b></div><div class="state"><small>PI-393062A</small><b class="info">1ª roda</b></div><div class="state"><small>Amostragem</small><b class="info">15 min desde 300 °C</b></div><div class="state"><small>Estabilização final</small><b class="info">1 h</b></div>
+</div></div><div class="box"><h3>Prioridade do operador de painel</h3><div class="gate">Instrumentação confiável → carga reduzida → pressão + rotação → HBF 1 °C/min → margem de saturação → pressão da 1ª roda → amostragem → reaquecimento.</div><div class="critical"><strong>Não usar a lógica do J-3901:</strong> aqui não existem os patamares fixos 250/240/235/...; o critério final depende da saturação e da estabilização da pressão na 1ª roda.</div></div></div></div>
+
+<div class="view" data-view="gates"><div class="box"><h2>Simulador térmico — J-3902</h2><div class="logicgrid">
+<div class="logic"><h3>Pressão + rotação</h3><label>PI-393061A (kgf/cm²)</label><input id="j2p" type="number" step="0.1"><label>SI-393056A (RPM)</label><input id="j2rpm" type="number"><div id="j2prStatus" class="status wait">AGUARDANDO</div><p class="note">A fonte diz rotação “mais próxima possível de 5000 RPM”; não foi criada tolerância automática.</p></div>
+<div class="logic"><h3>Margem sobre saturação</h3><label>T vapor atual (°C)</label><input id="j2tv" type="number"><label>T saturação consultada (°C)</label><input id="j2ts" type="number"><div id="j2satStatus" class="status wait">AGUARDANDO</div></div>
+<div class="logic"><h3>Amostragem</h3><label>TI-393058A atual (°C)</label><input id="j2temp" type="number"><label>Min desde última amostra</label><input id="j2sample" type="number"><label>Reaquecimento já iniciou?</label><select id="j2reheat"><option value="no">NÃO</option><option value="yes">SIM</option></select><div id="j2sampleStatus" class="status wait">AGUARDANDO</div></div>
+</div></div></div>
+
+<div class="view" data-view="wash"><div class="box"><h2>Decisão pela pressão da 1ª roda</h2><div class="logicgrid"><div class="logic"><label>Pressão ainda varia?</label><select id="wheelVar"><option value="yes">SIM</option><option value="no">NÃO</option></select><label>Tempo sem nova variação (min)</label><input id="wheelTime" type="number"><div id="wheelStatus" class="status wait">AGUARDANDO</div></div><div class="logic"><label>Vibração próxima do alarme?</label><select id="vibNear"><option value="no">NÃO</option><option value="yes">SIM</option></select><label>Deslocamento axial próximo do alarme?</label><select id="axNear"><option value="no">NÃO</option><option value="yes">SIM</option></select><div id="vibStatus" class="status on">HBF PODE SEGUIR, CONFORME DEMAIS GATES</div></div><div class="logic"><h3>Nota documental</h3><p class="note">Na etapa de lavagem, a fonte usa <strong>PI-393062A</strong> para pressão da 1ª roda. Na etapa de restabelecimento, registra <strong>TI-393062A</strong> para acompanhar a curva de temperatura. O treinamento preserva as duas redações e não corrige silenciosamente.</p></div></div></div></div>
+
+<div class="view" data-view="roles"><div class="roles"><div class="role"><h3>🧰 Campo</h3><ul><li>bloqueios de 6'' e válvula 14'';</li><li>drenagem/aquecimento HBF com pirômetro;</li><li>abertura lenta da HBF;</li><li>amostrador de vapor exausto;</li><li>retorno de vibração/condições locais.</li></ul></div><div class="role"><h3>🎛️ CIC</h3><ul><li>redução de carga e ajustes CENPES;</li><li>PI-393061A e SI-393056A;</li><li>TI-393058A e margem sobre saturação;</li><li>PI-393062A / pressão da 1ª roda;</li><li>coordenação de HBF conforme vibração/axial;</li><li>ritmo de amostragem e decisão de reaquecimento.</li></ul></div></div><div id="j2roles"></div></div>
+
+<div class="view" data-view="journey"><div class="box"><h2>Procedimento J-3902 — 8 etapas</h2><div class="stepnav" id="j2nav"></div><div id="j2step"></div></div></div>
+<div class="view" data-view="eval"><div class="box"><span class="badge">ALTERNATIVAS EMBARALHADAS • MESMO CONTEXTO</span><h2>Avaliação CIC difícil — J-3902</h2><div id="j2eval"></div><div id="j2score" class="score"></div></div></div>
+<section class="view" data-view="integral" id="conceptIntegral" data-turbine="J-3902">
+ <header class="int-head"><span class="int-tag">MATERIAL INTEGRAL · J-3902 · Engenharia + CIC</span>
+ <h2>Conteúdo técnico completo — Lavagem da turbina J-3902</h2>
+ <p>Esta seção incorpora, na íntegra conceitual e sem substituir por resumos, as explicações desenvolvidas sobre HBF, lavagem, palhetamento, termodinâmica, conversão de energia, mecânica dos fluidos, operações unitárias, pressão na primeira roda, diagnóstico e segurança. Os módulos preexistentes permanecem nas demais abas.</p>
+ <p><strong>Como estudar:</strong> leia cada capítulo integralmente e use os atalhos para experimentar no laboratório. Os painéis interativos não substituem nenhum dos parágrafos técnicos.</p>
+ </header>
+ <div class="int-layout"><p class="int-indexhint">📚 Índice de capítulos — deslize para os lados e toque para navegar →</p><nav aria-label="Índice técnico completo"><a href="#int-overview">01 • Objetivo e fundamentos</a><a href="#int-depositos">02 • Incrustações, palhetamento e perdas aerodinâmicas</a><a href="#int-mistura">03 • Termodinâmica da mistura HBF–vapor</a><a href="#int-saturacao">04 • Superaquecimento, saturação e expansão</a><a href="#int-energia">05 • Conversão de energia térmica em trabalho no eixo</a><a href="#int-fluidos">06 • Mecânica dos fluidos: continuidade, Reynolds e perdas</a><a href="#int-roda">07 • Pressão da primeira roda: interpretação aprofundada</a><a href="#int-operacoes">08 • Operações unitárias envolvidas</a><a href="#int-diagnostico">09 • Interpretação integrada das variáveis do CIC</a><a href="#int-seguranca">10 • Limitações, riscos e segurança do processo</a><a href="#int-procedimento">11 • Procedimento J-3902</a><a href="#int-avaliacao">12 • Fixação e avaliação aplicada</a><a href="#int-resumo">13 • Síntese técnica completa e glossário</a></nav>
+ <div class="int-sections"><article id="int-overview"><span class="int-tag">Fundamentos</span><h3>01 • Objetivo e fundamentos</h3>
+<p>A lavagem de uma turbina a vapor consiste em modificar de modo controlado as condições de admissão do vapor para favorecer a remoção de depósitos presentes nas passagens internas e recuperar parte da capacidade de escoamento e do rendimento. No caso dos equipamentos da U-39, o procedimento estudado identifica o <strong>HBF como água injetada na corrente de vapor superaquecido</strong> para reduzir a temperatura da mistura. Não há base para tratá-lo como detergente ou produto químico de limpeza.</p>
+<p>O tema exige conectar fenômenos que normalmente são estudados separadamente: transferência de calor entre HBF e vapor; aproximação da saturação; possível condensação durante a expansão; contato da umidade com os depósitos; remoção e transporte dos contaminantes; mudança de distribuição de pressão no palhetamento; e recuperação potencial da eficiência da máquina.</p>
+<div class="int-map" aria-label="Sequência física da lavagem"><span>HBF + vapor</span><strong>→</strong><span>dessuperaquecimento</span><strong>→</strong><span>expansão</span><strong>→</strong><span>umidade possível</span><strong>→</strong><span>remoção de depósitos</span><strong>→</strong><span>reavaliação da eficiência</span></div>
+<div class="int-focus"><strong>Ideia central:</strong> a lavagem não cria energia nem aumenta espontaneamente a entalpia do vapor. Ela busca remover perdas que dificultam a conversão da energia disponível em trabalho mecânico no eixo. O resultado deve ser comprovado por comparação em condições equivalentes.</div>
+<p>Um ponto fundamental: a água de HBF pode vaporizar totalmente antes de atingir as primeiras palhetas, e a umidade pode surgir mais adiante durante a expansão. Não se deve presumir que toda a água injetada permaneça na forma de gotas. Do mesmo modo, não é tecnicamente correto afirmar que toda incrustação será dissolvida ou que a pressão na primeira roda tem sempre um único sentido de variação.</p>
+</article><article id="int-depositos"><span class="int-tag">Mecânica dos fluidos</span><h3>02 • Incrustações, palhetamento e perdas aerodinâmicas</h3>
+<p>As palhetas fixas e os bocais conduzem o vapor para o rotor; as palhetas móveis extraem trabalho ao modificar seu momento angular. Os perfis são projetados para operar dentro de determinadas condições de ângulo, velocidade, pressão, vazão e número de Mach. Os canais e os perfis limpos não eliminam as perdas, mas oferecem a geometria prevista no projeto.</p>
+<p>Com o tempo podem ocorrer depósitos de sais, materiais contendo sílica ou silicatos e óxidos. A composição efetiva depende da qualidade do vapor, de possíveis arrastes de água de caldeira, da contaminação e das condições de condensação e deposição em cada estágio. Os depósitos podem se concentrar em regiões específicas, não necessariamente de forma uniforme ao longo da máquina.</p>
+<h4>Três mecanismos de redução de desempenho</h4>
+<p><strong>Redução da área efetiva:</strong> incrustações ocupam parte das passagens, afetando a capacidade de vazão, sobretudo em seções críticas de bocais e entre palhetas. Em um fluido compressível, a diminuição de seção pode alterar simultaneamente vazão, densidade, distribuição de pressão e velocidade.</p>
+<p><strong>Aumento de rugosidade:</strong> a superfície irregular modifica a camada limite, aumenta dissipação viscosa e pode antecipar separação do escoamento. Parte da energia do vapor se transforma em irreversibilidades, e não em trabalho útil.</p>
+<p><strong>Mudança no perfil e nos ângulos:</strong> a incrustação altera a direção e a intensidade do escoamento que chega ao rotor. Isso muda o triângulo de velocidades e pode reduzir a transferência de momento angular, isto é, o torque obtido com a mesma energia disponível.</p>
+<div class="int-pair"><div><b>Palhetamento relativamente limpo</b><p>Canal com área de passagem e perfil próximos do projeto; menores perdas adicionais por depósitos.</p></div><div><b>Palhetamento incrustado</b><p>Restrição local, perdas adicionais por atrito e possíveis desvios de velocidade e ângulo do jato.</p></div></div>
+<p>Na operação, a turbina pode exigir maior vazão de vapor ou maior abertura da governadora para produzir a mesma potência, desde que a lógica de controle permita essa compensação. Se a capacidade for insuficiente, poderá ocorrer perda de desempenho do equipamento acionado.</p>
+</article><article id="int-mistura"><span class="int-tag">Termodinâmica</span><h3>03 • Termodinâmica da mistura HBF–vapor</h3>
+<p>O HBF entra na mistura com entalpia específica menor que a do vapor superaquecido. O vapor cede parte de sua energia para aquecer e, eventualmente, vaporizar a água. O efeito sobre a <strong>temperatura</strong> depende da <strong>entalpia final e da pressão local</strong>, e não apenas da quantidade de água injetada. A mudança de temperatura não deve ser tratada como uma subtração fixa de graus Celsius.</p>
+<h4>Balanço de massa</h4><div class="int-eq">ṁ<sub>mistura</sub> = ṁ<sub>vapor</sub> + ṁ<sub>HBF</sub></div>
+<h4>Balanço de energia em mistura adiabática idealizada</h4><div class="int-eq">ṁ<sub>v</sub> h<sub>v</sub> + ṁ<sub>HBF</sub> h<sub>HBF</sub> = (ṁ<sub>v</sub> + ṁ<sub>HBF</sub>) h<sub>mistura</sub><small>Desprezam-se, apenas nesta aproximação, perdas de calor externas e variações de energias cinética e potencial.</small></div>
+<p>Se a vazão de HBF aumenta e as demais condições são mantidas, a entalpia específica da mistura tende a diminuir. Entretanto, o resfriamento real também é influenciado por perdas de carga, distribuição de gotículas, tempo de mistura, qualidade do vapor e localização do ponto de medição.</p>
+<p>É possível que uma parcela de HBF ainda esteja líquida em parte do trajeto, ou que a água vaporize completamente antes de alcançar o rotor. Essa diferença é crucial porque umidade excessiva pode produzir impactos, erosão, choques térmicos e outros riscos.</p>
+<div class="int-focus">No <strong>Laboratório Concept → Vapor e palhetas</strong>, altere a proporção de HBF e as entalpias para observar o balanço. O simulador calcula <em>entalpia</em>; ele não transforma essa entalpia automaticamente em temperatura sem tabelas de propriedades.</div>
+<button class="int-link" type="button" data-to-lab="fisica">Experimentar mistura no simulador →</button>
+</article><article id="int-saturacao"><span class="int-tag">Termodinâmica</span><h3>04 • Superaquecimento, saturação e expansão</h3>
+<p>O grau de superaquecimento é a diferença entre a temperatura real do vapor e a temperatura de saturação para a mesma pressão absoluta local. Ele ajuda a entender o quanto a condição termodinâmica está afastada da fronteira de condensação.</p>
+<div class="int-eq">ΔT<sub>sup</sub> = T<sub>vapor</sub> − T<sub>sat</sub>(P<sub>absoluta local</sub>)</div>
+<p>Uma redução de temperatura por HBF diminui a margem de superaquecimento, mas não significa automaticamente a formação de líquido no ponto de injeção. Na turbina, o vapor expande e a pressão muda de estágio para estágio. A trajetória no diagrama termodinâmico pode se aproximar ou cruzar a região de saturação em algum ponto interno, conforme o estado de entrada e a expansão real.</p>
+<p>Se surgir umidade, pequenas películas ou gotículas podem entrar em contato com depósitos. Parte do material solúvel poderá dissolver-se e parte de outros depósitos poderá se desprender. A composição e a aderência dos sólidos determinam o resultado. É fundamental evitar a interpretação de que mais líquido é sempre melhor.</p>
+<div class="int-alert"><strong>Pressão para tabelas de saturação:</strong> não usar indistintamente pressão manométrica e pressão absoluta. Também não se deve aplicar uma pressão medida antes de uma válvula à temperatura medida depois dela como se descrevessem o mesmo estado do vapor. As localizações dos instrumentos e perdas de pressão importam.</div>
+<p>Por exemplo, vapor a aproximadamente 40 bar <strong>absolutos</strong> apresenta temperatura de saturação ao redor de 250 °C. Uma leitura de 200 °C, àquela mesma pressão, não representa vapor seco superaquecido. Esse exemplo numérico ilustra por que a pressão deve ser associada ao ponto correto da medição, sem constituir um limite operacional.</p>
+<h4>Entalpia × entropia (diagrama h–s)</h4>
+<p>No diagrama h–s, o processo pode ser entendido em duas etapas: a mistura HBF–vapor leva o estado inicial a outra combinação de entalpia e entropia; a expansão na turbina reduz a entalpia enquanto produz trabalho. A expansão real aumenta entropia em comparação com uma expansão isentrópica, devido a perdas. O cruzamento da região de saturação depende da trajetória efetiva e das propriedades do vapor.</p>
+</article><article id="int-energia"><span class="int-tag">Máquinas térmicas</span><h3>05 • Conversão de energia térmica em trabalho no eixo</h3>
+<p>A turbina é uma máquina térmica motora. Nos bocais e canais das palhetas fixas, a expansão converte parte da variação de entalpia do vapor em energia cinética. Em seguida, a interação do escoamento com as palhetas móveis provoca mudança de momento angular e transmite torque ao rotor. Esse torque gera potência mecânica para a máquina acionada.</p>
+<h4>Expansão e aceleração do vapor</h4>
+<p>De maneira simplificada, quando a energia potencial e as trocas de calor podem ser desprezadas em um bocal, a queda de entalpia está associada ao aumento da energia cinética: h<sub>1</sub> + V<sub>1</sub>²/2 ≈ h<sub>2</sub> + V<sub>2</sub>²/2. Na máquina real existem perdas, e o comportamento depende do estágio de ação ou de reação.</p>
+<h4>Equação de Euler para turbomáquinas</h4>
+<div class="int-eq">w<sub>eixo</sub> = U<sub>1</sub>V<sub>θ1</sub> − U<sub>2</sub>V<sub>θ2</sub><small>U: velocidade periférica da palheta; V<sub>θ</sub>: componente tangencial da velocidade absoluta do vapor, com a convenção apropriada.</small></div>
+<p>A equação mostra por que as incrustações nas palhetas podem reduzir a potência: os depósitos modificam os ângulos e componentes de velocidade na entrada e saída do rotor. Mesmo com pressão elevada na admissão, a turbina pode aproveitar menos energia se o jato chegar com direção desfavorável ou com maiores perdas.</p>
+<h4>Potência e eficiência isentrópica</h4>
+<div class="int-eq">Ẇ<sub>eixo</sub> ≈ ṁ<sub>vapor</sub> (h<sub>entrada</sub> − h<sub>saída,isentrópica</sub>) × η<sub>is</sub> × η<sub>m</sub></div>
+<p>Essa expressão simplificada mostra a dependência da potência com a vazão de vapor, a queda de entalpia ideal e as eficiências isentrópica e mecânica. Se a incrustação reduz η<sub>is</sub>, parte do potencial de trabalho se perde em irreversibilidades.</p>
+<p><strong>Exemplo didático:</strong> para queda de entalpia isentrópica hipotética de 700 kJ/kg, uma eficiência isentrópica de 62% corresponderia a cerca de 434 kJ/kg de trabalho interno; aumentando a eficiência para 72%, seriam cerca de 504 kJ/kg. A comparação não representa dados dos J-3901/J-3902 e desconsidera eficiência mecânica.</p>
+<p>Durante a lavagem, o próprio HBF reduz a entalpia de admissão e pode diminuir temporariamente a potência específica disponível. Portanto, não se deve confundir a mudança transiente durante a injeção com uma recuperação permanente de eficiência avaliada depois da limpeza.</p>
+</article><article id="int-fluidos"><span class="int-tag">Mecânica dos fluidos</span><h3>06 • Mecânica dos fluidos: continuidade, Reynolds e perdas</h3>
+<h4>Equação da continuidade para escoamento compressível</h4>
+<div class="int-eq">ṁ = ρ × A × V<small>ρ: densidade do vapor; A: seção livre; V: velocidade média na seção considerada.</small></div>
+<p>A incrustação reduz a área efetiva de algumas passagens e pode alterar a vazão e a velocidade. Para gás ou vapor, densidade e velocidade também variam com a pressão e a temperatura. Se a passagem entra em regime de escoamento crítico (estrangulado), uma redução adicional da pressão a jusante pode deixar de aumentar a vazão naquela garganta nas condições consideradas.</p>
+<h4>Rugosidade e camada limite</h4><div class="int-eq">Re = ρ V D<sub>h</sub> / μ<small>D<sub>h</sub>: dimensão hidráulica característica; μ: viscosidade dinâmica.</small></div>
+<p>A camada limite é a região do fluido próxima à superfície, onde o atrito viscoso exerce forte influência. Depósitos aumentam a rugosidade, modificam a camada limite e podem causar separação local do escoamento. O efeito sobre perdas de pressão, rendimento e capacidade de passagem depende do perfil e do local dos depósitos.</p>
+<h4>Pressão estática não é o mesmo que energia total disponível</h4>
+<p>O aumento de uma pressão local não demonstra, por si só, que a turbina recebeu mais energia útil ou que está mais eficiente. Para avaliar a conversão energética deve-se considerar vazão, entalpia, velocidade, distribuição das pressões e potência no eixo. Uma pressão local maior pode decorrer de restrição a jusante, aumento de vazão ou mudança das condições de admissão.</p>
+</article><article id="int-roda"><span class="int-tag">Diagnóstico CIC</span><h3>07 • Pressão da primeira roda: interpretação aprofundada</h3>
+<p><strong>A pressão da primeira roda</strong> é uma medição de pressão em uma região do início do palhetamento, associada ao primeiro estágio de expansão. O ponto exato de tomada determina se a leitura representa uma câmara, trecho intermediário ou espaço após um conjunto de bocais; por isso, a interpretação deve respeitar o desenho do equipamento e o posicionamento real do instrumento.</p>
+<p>A pressão nesse ponto é resultado de um balanço entre a <strong>massa que chega</strong>, a <strong>capacidade de escoamento do trecho seguinte</strong> e a <strong>condição de admissão e exaustão</strong>. Em regime estacionário, não há acúmulo líquido de massa importante no volume de controle: a vazão que entra deve corresponder à vazão que sai, e a pressão se ajusta para permitir o balanço.</p>
+<div class="int-wheel-visual">
+<svg class="int-wheel-svg" viewBox="0 0 880 270" role="img" aria-label="Esquema de pressão da primeira roda: reguladora, bocais iniciais, ponto de pressão, estágios seguintes e exaustão">
+<defs><linearGradient id="intSteamGrad" x1="0" x2="1"><stop stop-color="#2a769a"/><stop offset="1" stop-color="#8fe8f8"/></linearGradient></defs>
+<path d="M18 128 H850" stroke="url(#intSteamGrad)" stroke-width="44" stroke-linecap="round" opacity=".25"/>
+<path d="M18 128 H850" stroke="#94e1ff" stroke-width="3" stroke-dasharray="12 8"/>
+<rect x="55" y="94" width="112" height="68" rx="11" fill="#185472" stroke="#8ed5f7" stroke-width="2"/>
+<text x="111" y="121" text-anchor="middle" font-size="17" fill="white">Válvula</text><text x="111" y="145" text-anchor="middle" font-size="17" fill="white">governadora</text>
+<rect x="240" y="78" width="68" height="98" rx="12" fill="#1c5371" stroke="#89cde8" stroke-width="2"/><path d="M252 92 Q295 128 252 163 M269 91 Q304 128 269 165" stroke="#c1eaff" stroke-width="6" fill="none"/>
+<text x="275" y="64" text-anchor="middle" fill="#e3faff" font-size="18">Bocais</text>
+<circle cx="385" cy="128" r="38" fill="#0b324b" stroke="#ffdc87" stroke-width="4"/><text x="385" y="118" text-anchor="middle" fill="#fff" font-size="18">P</text><text x="385" y="143" text-anchor="middle" fill="#ffdc87" font-size="16">1ª roda</text>
+<path d="M385 89 V35" stroke="#ffdc87" stroke-width="3"/>
+<text x="385" y="24" text-anchor="middle" fill="#fff1b4" font-size="16">ponto de medição</text>
+<rect x="525" y="80" width="220" height="96" rx="12" fill="#194a67" stroke="#86cced" stroke-width="2"/>
+<path d="M560 91 Q602 128 560 165 M600 91 Q642 128 600 165 M640 91 Q682 128 640 165 M680 91 Q722 128 680 165" stroke="#9cdff1" stroke-width="7" fill="none"/>
+<text x="635" y="65" text-anchor="middle" font-size="18" fill="#e3faff">Estágios seguintes</text>
+<text x="22" y="209" fill="#cbe2f3" font-size="16">Admissão →</text><text x="741" y="209" fill="#cbe2f3" font-size="16">→ Exaustão</text>
+<text x="440" y="246" text-anchor="middle" fill="#a9d9f5" font-size="16">Esquema conceitual • não representa a geometria nem a tomada real do equipamento</text>
+</svg>
+</div>
+<h4>Qual restrição pode aumentar a pressão medida?</h4>
+<p>Se a principal restrição estiver <strong>depois do ponto de tomada</strong>, os estágios seguintes podem oferecer maior resistência à passagem. Para um conjunto de condições comparáveis, pode ser necessário um aumento da pressão no trecho anterior para sustentar a vazão exigida. A pressão da primeira roda <em>pode</em> subir. Isso é uma hipótese física, e não uma regra universal.</p>
+<h4>Qual restrição pode diminuir a pressão medida?</h4>
+<p>Se houver restrição importante <strong>antes do ponto de tomada</strong>, por exemplo na admissão ou nos canais iniciais, pode chegar menos massa e energia ao trecho medido. A pressão ali <em>pode</em> cair, dependendo da atuação da governadora, do regime de vazão e das condições a jusante. Em alguns casos o controle mascara parte desse comportamento.</p>
+<h4>Por que a pressão muda durante a remoção dos depósitos?</h4>
+<p>Na lavagem, a geometria efetiva e as perdas internas podem se modificar progressivamente. Ao mesmo tempo, a injeção de HBF altera a entalpia de entrada e o estado do vapor. A governadora pode mudar a abertura para tentar manter a rotação ou outra variável controlada, e o compressor acionado pode ter mudanças de carga. A pressão observada resulta de <strong>todos esses efeitos somados</strong>, não apenas da desagregação de sílica.</p>
+<h4>O que significa estabilização da pressão?</h4>
+<p>Quando a pressão da primeira roda deixa de apresentar alteração significativa ao longo de um intervalo relevante, em condições de avaliação controladas, isso pode ser compatível com menor evolução do processo de remoção ou com uma nova condição de equilíbrio. Entretanto, estabilização <strong>não comprova isoladamente limpeza completa</strong>. O procedimento da J-3902 utiliza esse comportamento no critério de definição do patamar final, enquanto a J-3901 considera um conjunto mais amplo de parâmetros.</p>
+<div class="int-critical"><strong>Erro conceitual a evitar:</strong> “Pressão da primeira roda caiu, portanto a lavagem funcionou” e “pressão subiu, portanto a turbina está pior” são conclusões insuficientes. Sem conhecer o local dos depósitos e sem comparar estados equivalentes de vazão, pressão, temperatura e carga, a pressão isolada não fecha diagnóstico.</div>
+<div class="int-stagebtns" role="group" aria-label="Explore os mecanismos de variação da pressão da primeira roda">
+<button type="button" data-wheel-case="upstream" aria-pressed="true">Restrição antes da tomada</button>
+<button type="button" data-wheel-case="downstream" aria-pressed="false">Restrição depois da tomada</button>
+<button type="button" data-wheel-case="load" aria-pressed="false">Variação de carga</button>
+<button type="button" data-wheel-case="wash" aria-pressed="false">Durante a lavagem</button>
+</div>
+<div class="int-dynamic" data-wheel-explain aria-live="polite"><strong>Restrição antes da tomada:</strong> pode reduzir a massa que alcança a região medida, com pressão possivelmente menor. A resposta real depende do controle e da rede de passagens.</div>
+<button class="int-link" type="button" data-to-lab="tendencias">Abrir tendências e pressão da primeira roda →</button>
+</article><article id="int-operacoes"><span class="int-tag">Operações unitárias</span><h3>08 • Operações unitárias envolvidas</h3>
+<div class="int-tablescroll"><table class="int-table"><thead><tr><th>Operação unitária</th><th>Fenômeno e aplicação na lavagem</th></tr></thead><tbody>
+<tr><td>Mistura de fluidos</td><td>Contato da água HBF com o vapor superaquecido, formando mistura com nova entalpia e vazão mássica.</td></tr>
+<tr><td>Transferência de calor</td><td>Transferência de energia do vapor para HBF, reduzindo o superaquecimento.</td></tr>
+<tr><td>Vaporização</td><td>Parte ou a totalidade do HBF pode vaporizar ao receber calor do vapor.</td></tr>
+<tr><td>Expansão/condensação</td><td>Queda de pressão e mudança de fase possíveis nos estágios conforme trajetória termodinâmica.</td></tr>
+<tr><td>Transferência de massa</td><td>Componentes solúveis dos depósitos podem migrar do sólido para uma película de água.</td></tr>
+<tr><td>Arraste e transporte</td><td>O escoamento pode transportar material removido para as regiões de exaustão e condensado.</td></tr>
+</tbody></table></div>
+<h4>Dissolução e transferência de massa</h4>
+<p>Quando um líquido encontra um depósito solúvel, uma diferença entre a concentração junto à interface sólido-líquido e a concentração no líquido adjacente pode impulsionar a transferência de matéria.</p>
+<div class="int-eq">N<sub>A</sub> = k<sub>L</sub> (C<sub>As</sub> − C<sub>Ab</sub>)<small>Expressão simplificada: fluxo de soluto proporcional à diferença de concentração entre interface e líquido.</small></div>
+<p>O mecanismo depende da solubilidade, temperatura, tempo de contato, renovação da fase líquida, área molhada, turbulência e estrutura química do depósito. Um filme muito fino pode ter contato diferente daquele de gotículas isoladas, e o escoamento pode favorecer ou inibir a permanência do líquido na superfície.</p>
+<h4>Sílica e sais não são equivalentes</h4>
+<p>Sais bastante solúveis podem ser removidos com maior facilidade por dissolução. Depósitos ricos em sílica ou silicatos podem ser menos solúveis e apresentar forte aderência: a limpeza pode depender também de desagregação, mudanças térmicas e cisalhamento do escoamento. Não é correto concluir que a injeção de água dissolverá integralmente qualquer incrustação de sílica.</p>
+<h4>Condutividade não é análise específica de sílica</h4>
+<p>A condutividade do condensado indica, sobretudo, a presença de espécies capazes de transportar carga elétrica na solução. Um aumento transitório pode ser compatível com remoção de contaminantes iônicos, mas não determina sozinho a massa removida, sua origem nem a concentração de sílica. Quantificar sílica requer metodologia analítica específica.</p>
+<p>O procedimento da U-39 usa condutividade como item crítico de acompanhamento, devendo ser interpretada como <strong>evidência complementar</strong>, juntamente com a resposta de pressão, governadora, vibração, deslocamento e condições térmicas.</p>
+</article><article id="int-diagnostico"><span class="int-tag">Operação e diagnóstico</span><h3>09 • Interpretação integrada das variáveis do CIC</h3>
+<p>Uma avaliação consistente necessita identificar primeiro o estado operacional. A mesma pressão da primeira roda pode ocorrer com temperaturas, vazões, cargas e posições da governadora diferentes, sem que o rendimento seja necessariamente igual. Por isso, diagnóstico deve ser baseado em <strong>tendências correlacionadas e comparações equivalentes</strong>.</p>
+<div class="int-tablescroll"><table class="int-table"><thead><tr><th>Variável</th><th>O que ajuda a verificar</th><th>Armadilha de interpretação</th></tr></thead><tbody>
+<tr><td>Pressão da primeira roda</td><td>Redistribuição de pressões e capacidade de passagem dos estágios.</td><td>Considerá-la prova isolada de limpeza.</td></tr>
+<tr><td>Abertura da governadora</td><td>Esforço do controlador para suprir a energia necessária ao eixo.</td><td>Associar fechamento diretamente a menor potência sem examinar controle/carga.</td></tr>
+<tr><td>Temperatura e pressão de admissão</td><td>Entalpia, superaquecimento, alterações causadas pelo HBF.</td><td>Comparar leituras sem verificar o ponto físico ou pressão absoluta.</td></tr>
+<tr><td>Vazão mássica de vapor</td><td>Consumo específico e capacidade da turbina.</td><td>Inferir eficiência sem considerar o trabalho produzido.</td></tr>
+<tr><td>Condutividade do condensado</td><td>Possíveis solutos transportados após remoção de depósitos.</td><td>Tratá-la como medição direta de sílica.</td></tr>
+<tr><td>Vibração e deslocamento axial/radial</td><td>Resposta dinâmica, folgas, dilatação e esforços durante transientes.</td><td>Priorizar desempenho quando integridade está se deteriorando.</td></tr>
+<tr><td>Rotação e carga da máquina acionada</td><td>Capacidade de manter serviço requerido; alterações de demanda.</td><td>Atribuir toda oscilação ao processo de lavagem.</td></tr>
+</tbody></table></div>
+<h4>Diagnóstico antes × durante × depois</h4>
+<div class="int-pair"><div><b>Antes</b><p>Registrar condições estáveis: pressão/temperatura de entrada, rotação, carga, governadora, primeira roda e sinais mecânicos.</p></div><div><b>Durante</b><p>Monitorar HBF, trajetória térmica, pressão da primeira roda, condutividade e integridade; evitar conclusões em plena transição.</p></div><div><b>Depois</b><p>Retornar às condições normais conforme o procedimento, estabilizar e comparar vazão/consumo específico e desempenho em condição equivalente.</p></div><div><b>Limite da evidência</b><p>Uma única variável favorável não demonstra recuperação completa: procurar coerência entre indicadores termodinâmicos, mecânicos e operacionais.</p></div></div>
+<h4>Por que vibração e deslocamento podem aumentar?</h4>
+<p>A injeção de HBF cria gradientes térmicos. Rotor, carcaça e componentes fixos podem contrair-se em velocidades diferentes; as folgas variam e o alinhamento relativo muda. A presença inadequada de umidade, impactos de gotículas e desprendimento de material também pode contribuir para alterações dinâmicas. O risco é mecânico, não apenas de eficiência, motivo pelo qual o procedimento exige atenção especial à vibração e ao deslocamento axial/radial.</p>
+<div class="int-focus">Exercício de interpretação: queda gradual de governadora, carga e condições de admissão comparáveis, condutividade temporariamente mais alta e vibração estável formam um conjunto <em>compatível</em> com remoção de depósitos. Não comprovam dissolução total de sílica nem recuperação de eficiência sem análise adicional.</div>
+<button class="int-link" type="button" data-to-lab="tendencias">Investigar tendências no simulador →</button>
+</article><article id="int-seguranca"><span class="int-tag">Segurança de processo</span><h3>10 • Limitações, riscos e segurança do processo</h3>
+<p>A lavagem é um transiente térmico planejado, não uma condição de máxima eficiência instantânea. A mistura altera o estado do vapor e o balanço energético, enquanto a turbina precisa continuar respondendo às exigências da máquina acionada. A redução de temperatura pode ser acompanhada de alterações de esforço axial, vibração, dilatação diferencial, folgas internas e capacidade mecânica.</p>
+<p><strong>Riscos relevantes:</strong> transientes térmicos excessivos; distribuição inadequada de umidade; erosão por gotículas; mudança de folgas e contato entre partes; perda de rotação/torque; instabilidade da carga acionada; interpretação equivocada da pressão da primeira roda; e falhas de comunicação entre CIC, campo e áreas técnicas.</p>
+<p>O procedimento usado como fonte define verificações de instrumentação, responsabilidades, ritmos térmicos e parâmetros específicos para cada turbina. O treinamento não deve substituir documentos aprovados, autorizações técnicas nem a análise operacional em tempo real.</p>
+<div class="int-critical"><strong>Regra:</strong> dados de simuladores são hipotéticos. Nenhum controle nesta página atua no SDCD, nem seus índices servem como setpoint, intertravamento, limite de segurança ou critério automático de liberação operacional.</div>
+</article><article id="int-procedimento"><span class="int-tag">Referência específica</span><h3>11 • Particularidades operacionais da J-3902</h3>
+<p>Para a <strong>J-3902</strong>, o padrão consultado PE.REF.OPE.CCF.047, revisão 01 (2022), registra conferência de PI-393061A, TI-3057A, TI-393058A, PI-393062A, PIC-39908, TI-39587 e TI-393059A, além da redução da carga da unidade à referência de 7.000 m³/dia, com ajustes compatíveis com a tabela CENPES.</p>
+<p>Na transferência para a configuração de alimentação de vapor prevista, o procedimento acompanha <strong>PI-393061A entre 39 e 40 kgf/cm²</strong> e solicita rotação da máquina o mais próximo possível de <strong>5.000 rpm</strong> pelo SI-393056A, sem definir tolerância numérica inventada. A introdução do HBF deve levar a uma redução térmica controlada de cerca de <strong>1 °C/min</strong>, acompanhada pelo TI-393058A, mantendo o vapor pelo menos <strong>10 °C acima da temperatura de saturação</strong> aplicável às condições de medição.</p>
+<p>O destaque da J-3902 é a <strong>estabilização da pressão na primeira roda</strong>. O PI-393062A é citado para acompanhar essa pressão, e o procedimento define a temperatura final de lavagem segundo a condição em que deixe de ser observada variação da primeira roda, mantendo então a condição por <strong>1 hora</strong> e avaliando o comportamento térmico e mecânico. A fonte prevê análise do condensado a cada <strong>15 minutos</strong> desde que o TI-393058A atinge 300 °C até o início do reaquecimento, com coleta no amostrador do vapor exausto.</p>
+<p>A restauração da temperatura nominal é descrita com redução de HBF e aquecimento de <strong>1 °C/min</strong>, acompanhando a integridade. Há uma <strong>divergência documental de identificação</strong>: o texto da lavagem usa PI-393062A como pressão da primeira roda e, na etapa de reaquecimento, menciona TI-393062A para a curva térmica. A divergência deve ser conferida no documento aprovado/instrumentação; não é correto corrigir uma tag por suposição.</p>
+<div class="int-alert"><strong>Distinção essencial:</strong> os patamares fixos de 250/240/235/... da J-3901 não foram transplantados para a J-3902. A J-3902 usa seus próprios critérios térmicos, de saturação e de primeira roda, conforme padrão documentado.</div>
+<p>O ciclo em 8 etapas, os gates, as conferências de instrumentação, os papéis CIC × campo e a avaliação operacional existentes nesta página foram preservados integralmente nas abas originais.</p></article><article id="int-avaliacao"><span class="int-tag">Avaliação CIC</span><h3>12 • Fixação e avaliação aplicada</h3>
+<p>Um treinamento completo deve exigir primeiro a interpretação do fenômeno físico, depois a correlação entre variáveis e, finalmente, a decisão operacional. Cenários encadeados devem incorporar consequências de decisões anteriores, com opções plausíveis de tamanho parecido e sem padrões repetitivos de letras corretas.</p>
+<p>Experimente os quatro microcasos abaixo e leia a justificativa. Em seguida, acesse os módulos <strong>Laboratório Concept</strong> e <strong>Avaliação CIC difícil</strong>, que continuam disponíveis nesta página.</p>
+<div id="intQuizHolder"></div>
+<button class="int-link" type="button" data-to-lab="decisoes">Abrir missão CIC encadeada →</button>
+</article><article id="int-resumo"><span class="int-tag">Consolidação</span><h3>13 • Síntese técnica completa e glossário</h3>
+<p>O HBF promove dessuperaquecimento porque a água recebe energia do vapor. Essa mudança afeta a entalpia e a trajetória de expansão, podendo criar condições favoráveis à presença de umidade em locais internos da turbina. O contato líquido-depósitos pode permitir dissolução de certos sais e desprendimento de alguns materiais, com transporte de contaminantes para as correntes a jusante.</p>
+<p>A recuperação potencial decorre da redução de restrições e perdas aerodinâmicas, aproximando os canais e perfis da condição de projeto. A melhora deve ser demonstrada por análise coerente de vazão, trabalho produzido, condições termodinâmicas, governadora, primeira roda e integridade. A pressão da primeira roda é indicador indireto, influenciado pela localização dos depósitos e pelas condições de operação, não prova isolada.</p>
+<div class="int-tablescroll"><table class="int-table"><thead><tr><th>Termo</th><th>Significado neste treinamento</th></tr></thead><tbody>
+<tr><td>HBF</td><td>Água utilizada no sistema de redução da temperatura do vapor superaquecido, conforme procedimento estudado.</td></tr>
+<tr><td>Entalpia</td><td>Propriedade que, em conjunto com vazão e estados termodinâmicos, permite representar a energia transportada pelo vapor.</td></tr>
+<tr><td>Superaquecimento</td><td>Diferença T vapor − T de saturação à mesma pressão absoluta.</td></tr>
+<tr><td>Palhetas fixas/bocais</td><td>Conduzem e aceleram vapor ao promover expansão.</td></tr>
+<tr><td>Palhetas móveis</td><td>Extraem trabalho pela variação de momento angular do vapor.</td></tr>
+<tr><td>Governadora</td><td>Elemento de controle de admissão de vapor que influencia a energia fornecida ao rotor.</td></tr>
+<tr><td>Pressão da primeira roda</td><td>Pressão em ponto de medição associado ao primeiro estágio, dependente de rede de escoamento, condições e posição da tomada.</td></tr>
+<tr><td>Condutividade</td><td>Resposta elétrica a espécies iônicas dissolvidas; não é dosagem específica de sílica.</td></tr>
+<tr><td>Eficiência isentrópica</td><td>Relação entre queda de entalpia real e ideal de referência para as condições de entrada e pressão final.</td></tr>
+</tbody></table></div>
+<div class="int-focus"><strong>Mensagem para o operador CIC:</strong> a lavagem só pode ser julgada pela coerência do conjunto de variáveis e pelo atendimento às condições e avaliações prescritas para o equipamento específico, não por um único valor de pressão, governadora ou condutividade.</div>
+</article>
+ <article id="int-referencias"><h3>Referências e limites de utilização</h3><p><strong>Base documental:</strong> procedimento interno “Lavagem das Turbinas J-01 e 02”, PE.REF.OPE.CCF.047, rev. 01, datado de 08/10/2022, disponibilizado na conversa, e explicações de engenharia desenvolvidas aqui. Identificar a revisão vigente antes de qualquer utilização operacional.</p><p>Equações, interpretações condicionais e exemplos são explicações didáticas de engenharia. Na operação real, utilizar documentos e análises aprovados pela unidade. Esta página não envia comandos a equipamentos e não utiliza dados de processo em tempo real.</p></article></div>
+ </div>
+</section>
+<div class="view" data-view="laboratorio" id="conceptLab" data-turbine="J-3902">
+ <h2>Laboratório interativo — Lavagem da turbina J-3902</h2>
+ <p class="lab-intro">Aprenda experimentando: altere parâmetros, acompanhe o vapor no palhetamento, interprete tendências sintéticas e tome decisões CIC encadeadas. O laboratório é didático, não fornece comandos para a operação real.</p>
+ <div class="labmodes" role="group" aria-label="Laboratórios de aprendizagem">
+  <button type="button" aria-pressed="true" data-lab="fisica">⚙️ Vapor e palhetas</button>
+  <button type="button" aria-pressed="false" data-lab="tendencias">📈 Tendências CIC</button>
+  <button type="button" aria-pressed="false" data-lab="decisoes">🎛️ Decisões encadeadas</button>
+ </div>
+ <section class="labpane" data-lab-pane="fisica">
+  <div class="labgrid">
+   <div class="labpanel">
+    <h3>1 · Explore as condições do escoamento</h3>
+    <div class="labline"><label for="labFouling">Índice de incrustação <small>(ilustrativo)</small></label><strong id="labFoulingOut">50%</strong></div>
+    <input id="labFouling" type="range" min="0" max="100" step="5" value="50"/>
+    <svg class="labsvg" viewBox="0 0 540 240" role="img" aria-label="Canal de palhetamento e escoamento do vapor">
+     <defs><linearGradient id="labGrad" x1="0" x2="1"><stop stop-color="#2c7b9f"/><stop offset="1" stop-color="#86e1ff"/></linearGradient></defs>
+     <path d="M18 58 Q115 48 200 72 T370 65 T525 59 M18 196 Q118 188 200 178 T375 182 T525 191" fill="none" stroke="#95abc3" stroke-width="7"/>
+     <g fill="#1d597a" stroke="#86d7ed" stroke-width="3"><path d="M180 75 C210 95 224 118 195 178 L230 176 C263 120 246 95 216 73Z"/><path d="M345 70 C369 96 375 121 345 180 L379 182 C408 123 394 90 376 67Z"/></g>
+     <path id="labDeposit1" d="M180 76 Q228 92 229 139 L211 137 Q214 101 180 76Z" fill="#b38b58" opacity=".8"/>
+     <path id="labDeposit2" d="M345 70 Q395 88 390 132 L374 133 Q378 100 345 70Z" fill="#b38b58" opacity=".8"/>
+     <g fill="none" stroke="url(#labGrad)" stroke-width="4" stroke-dasharray="15 12" class="labpulse">
+      <path d="M20 120 C80 118 117 118 162 112"/><path d="M252 148 C288 153 302 150 334 143"/><path d="M417 138 L520 136"/>
+     </g>
+     <text x="24" y="37" fill="#a8deff" font-size="17">Vapor →</text>
+     <text x="348" y="224" fill="#e2c79e" font-size="14">Depósitos em marrom</text>
+    </svg>
+    <div class="labtiles"><div class="labtile"><small>Área livre relativa*</small><b id="labArea">78%</b></div><div class="labtile"><small>Obstrução ilustrativa*</small><b id="labBlock">22%</b></div><div class="labtile"><small>Condição</small><b id="labCond">Moderada</b></div></div>
+    <div class="labcall" id="labFoulInfo"></div>
+   </div>
+   <div class="labpanel">
+    <h3>2 · Faça o balanço de entalpia da mistura</h3>
+    <p class="labmuted">Simulação de mistura adiabática com 1 kg/s de vapor; a entalpia resultante <b>não</b> fornece diretamente temperatura ou título sem propriedades de vapor.</p>
+    <div class="labline"><label for="labWater">Água HBF / vapor (% em massa)</label><strong id="labWaterOut">5%</strong></div>
+    <input id="labWater" type="range" min="0" max="15" step="1" value="5"/>
+    <div class="labline"><label for="labHv">Entalpia do vapor (kJ/kg)</label><strong id="labHvOut">3200</strong></div>
+    <input id="labHv" type="range" min="2800" max="3400" step="50" value="3200"/>
+    <div class="labline"><label for="labHbf">Entalpia da água HBF (kJ/kg)</label><strong id="labHbfOut">420</strong></div>
+    <input id="labHbf" type="range" min="300" max="800" step="20" value="420"/>
+    <div class="labtiles"><div class="labtile"><small>Entalpia da mistura</small><b id="labHout">—</b></div><div class="labtile"><small>Vazão da mistura</small><b id="labMout">—</b></div><div class="labtile"><small>Redução de entalpia</small><b id="labDh">—</b></div></div>
+    <div class="labcall" id="labHeatInfo"></div>
+   </div>
+   <div class="labpanel wide">
+    <h3>3 · Toque em cada etapa da lavagem</h3>
+    <div class="labstagegrid" role="group" aria-label="Etapas físicas">
+     <button type="button" class="labstage" data-stage="0" aria-pressed="true">Admissão</button>
+     <button type="button" class="labstage" data-stage="1" aria-pressed="false">Mistura HBF</button>
+     <button type="button" class="labstage" data-stage="2" aria-pressed="false">Palhetamento</button>
+     <button type="button" class="labstage" data-stage="3" aria-pressed="false">Exaustão</button>
+    </div>
+    <div class="labcall" id="labStageText"></div>
+    <p class="labnote">* Área e obstrução são índices de visualização sem calibração geométrica. Não devem ser usados para prever vazão, potência ou limites de lavagem.</p>
+   </div>
+  </div>
+ </section>
+ <section class="labpane" data-lab-pane="tendencias" hidden>
+  <div class="labgrid"><div class="labpanel wide">
+   
+   <div class="labpanel" id="labWheelBox">
+    <h3>4 · Pressão na 1ª roda — monte o cenário</h3>
+    <p class="labmuted">Mova os controles e observe como <b>o mesmo valor de pressão</b> pode ter leituras operacionais diferentes. O simulador usa <b>índices didáticos</b>, servindo apenas para treinar raciocínio sobre causa e efeito.</p>
+    <div class="lab2grid">
+     <div>
+      <label for="labPsame">A comparação está em condição equivalente de carga?</label>
+      <select id="labPsame"><option value="yes">Sim, estou comparando em carga equivalente</option><option value="no">Não, a carga mudou / não sei se é equivalente</option></select>
+      <div class="labline"><label for="labPload">Variação de carga / vazão de vapor (índice)</label><strong id="labPloadOut">0</strong></div>
+      <input type="range" id="labPload" min="-20" max="20" value="0" step="1"/>
+      <div class="labline"><label for="labPfoul">Índice de incrustação residual</label><strong id="labPfoulOut">50%</strong></div>
+      <input type="range" id="labPfoul" min="0" max="100" value="50" step="5"/>
+      <div class="labline"><label for="labPwash">Avanço da lavagem / remoção de depósitos</label><strong id="labPwashOut">35%</strong></div>
+      <input type="range" id="labPwash" min="0" max="100" value="35" step="5"/>
+      <div class="labline"><label for="labPsteam">Condição de admissão do vapor (energia/pressão)</label><strong id="labPsteamOut">0</strong></div>
+      <input type="range" id="labPsteam" min="-15" max="15" value="0" step="1"/>
+      <div class="labline"><label for="labPmech">Indícios de perturbação mecânica</label><strong id="labPmechOut">15%</strong></div>
+      <input type="range" id="labPmech" min="0" max="100" value="15" step="5"/>
+      <div class="labcall labwarn">Use este bloco para responder à pergunta central do treinamento: <b>"o que pode estar por trás da variação da pressão na 1ª roda?"</b> A resposta nunca deve sair de uma variável isolada.</div>
+     </div>
+     <div>
+      <svg class="labsvg" viewBox="0 0 520 215" role="img" aria-label="Esquema didático da pressão na primeira roda">
+       <defs><linearGradient id="pwheelGrad" x1="0" x2="1"><stop stop-color="#2a7597"/><stop offset="1" stop-color="#84dfff"/></linearGradient></defs>
+       <text x="18" y="30" fill="#b5ddf3" font-size="16">Admissão do vapor</text>
+       <path id="labPflow" d="M18 112 C95 104 120 104 175 108" fill="none" stroke="url(#pwheelGrad)" stroke-width="10" stroke-linecap="round"/>
+       <g fill="#1d597a" stroke="#85d6ee" stroke-width="3"><path d="M195 62 C222 80 233 108 208 170 L238 169 C262 112 253 84 227 60Z"/><path d="M270 67 C295 86 305 112 281 171 L311 170 C336 116 327 88 302 64Z"/></g>
+       <circle cx="216" cy="48" r="24" fill="#10344a" stroke="#85d6ee"/>
+       <text x="216" y="44" fill="#dff8ff" text-anchor="middle" font-size="11">P 1ª</text>
+       <text id="labPwheelSvg" x="216" y="58" fill="#ffd88d" text-anchor="middle" font-size="13" font-weight="700">50</text>
+       <text x="178" y="197" fill="#b8cfe0" font-size="13">Primeira roda / 1º estágio</text>
+       <text id="labPsvgMsg" x="338" y="56" fill="#ffd88d" font-size="14" font-weight="700">Leitura conjunta</text>
+       <text id="labPsvgMsg2" x="338" y="76" fill="#d9eaf5" font-size="12">P sozinha não fecha diagnóstico</text>
+       <path id="labPwashGlow" d="M324 106 C375 88 432 88 493 102" fill="none" stroke="#8ce8af" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+       <text x="335" y="125" fill="#cce4f5" font-size="13">A leitura depende de:</text>
+       <text x="335" y="145" fill="#cce4f5" font-size="13">• carga / vazão</text>
+       <text x="335" y="163" fill="#cce4f5" font-size="13">• condição do vapor</text>
+       <text x="335" y="181" fill="#cce4f5" font-size="13">• incrustação / lavagem</text>
+       <text x="335" y="199" fill="#cce4f5" font-size="13">• integridade mecânica</text>
+      </svg>
+      <div class="labkv">
+       <div class="labtile"><small>Índice sintético da P na 1ª roda</small><b id="labPwheel">—</b><div class="labmeter"><span id="labPwheelBar"></span></div></div>
+       <div class="labtile"><small>Tendência da governadora</small><b id="labPgov">—</b><div class="labmeter"><span id="labPgovBar"></span></div></div>
+       <div class="labtile"><small>Confiança do diagnóstico</small><b id="labPconf">—</b><div class="labmeter"><span id="labPconfBar"></span></div></div>
+       <div class="labtile"><small>Foco prioritário do CIC</small><b id="labPfocus">—</b></div>
+      </div>
+      <div class="labcall labfocus" id="labPdiag"></div>
+      <div class="labcall" id="labPtip"></div>
+      <h4 style="margin-top:14px">Escolha a leitura com maior prioridade</h4>
+      <div id="labPanswers" class="labjudge"></div>
+      <div id="labPfeedback" class="labfeedback" aria-live="polite"></div>
+     </div>
+    </div>
+    <p class="labnote">Neste simulador, a direção das tendências foi organizada apenas para ensinar interpretação. Em campo, a leitura correta depende do contexto do equipamento e do procedimento vigente.</p>
+   </div>
+
+   <h3>5 · Interprete tendências, não apenas números isolados</h3>
+   <p class="labmuted">Selecione um cenário sintético, percorra os instantes e examine a combinação de sinais. Valores são índices normalizados (0–100), não tags nem limites reais.</p>
+   <label for="labScenario">Situação de treinamento</label><select id="labScenario">
+    <option value="recovery">Indícios de remoção de depósitos</option><option value="load">Mudança simultânea da carga</option><option value="mechanical">Alteração térmica com risco mecânico</option>
+   </select>
+   <svg id="labChart" class="labchart" viewBox="0 0 680 275" role="img" aria-label="Gráfico de tendências normalizadas com indicador temporal"></svg>
+   <div class="lablegend"><span><i class="labswatch" style="background:#6dcef4"></i>Governadora</span><span><i class="labswatch" style="background:#f2cc79"></i>Pressão 1ª roda*</span><span><i class="labswatch" style="background:#92e3ab"></i>Condutividade*</span><span><i class="labswatch" style="background:#f093a2"></i>Vibração*</span></div>
+   <div class="labline"><label for="labTime">Instante analisado</label><b id="labTimeOut">0 / 8</b></div>
+   <input type="range" id="labTime" min="0" max="8" value="0" step="1" />
+   <div class="labtiles"><div class="labtile"><small>Governadora (índice)</small><b id="labKgov">—</b></div><div class="labtile"><small>1ª roda (índice)</small><b id="labKp">—</b></div><div class="labtile"><small>Condutividade (índice)</small><b id="labKc">—</b></div></div>
+   <div class="labcall" id="labDiagnosis"></div>
+   <label for="labInterpret" style="margin-top:14px">Qual a melhor interpretação?</label>
+   <select id="labInterpret"><option value="">Selecione uma interpretação</option><option value="recovery">Possível recuperação, verificar condições comparáveis</option><option value="load">Carga variou; não isolar efeito da lavagem</option><option value="mechanical">Priorizar avaliação da alteração mecânica</option></select>
+   <div class="labactions"><button type="button" id="labCheckTrend" class="labbtn">Conferir diagnóstico</button></div>
+   <div class="labfeedback" id="labTrendAnswer" aria-live="polite"></div>
+   <p class="labnote">* Pressão de primeira roda, condutividade e vibração representadas por índices arbitrários, exclusivamente para ensino de interpretação conjunta. A direção de uma tendência real não é universal.</p>
+  </div></div>
+ </section>
+ <section class="labpane" data-lab-pane="decisoes" hidden>
+  <div class="labgrid"><div class="labpanel wide">
+    <h3>6 · Missão CIC — escolhas com consequências</h3>
+    <p class="labmuted">Cinco decisões encadeadas. A escolha modifica a condição mostrada no próximo estágio. Após cada resposta, receba uma explicação técnica; as alternativas mudam de ordem ao reiniciar.</p>
+    <div class="labline"><b id="labQcount">Decisão 1 de 5</b><span class="labpill" id="labRisk">Desvios simulados: 0</span></div>
+    <div class="labprog"><span id="labProgress" style="width:0"></span></div>
+    <div class="labcall" id="labCarry">Início do caso. Condições preparatórias sob conferência.</div>
+    <h3 id="labQuestion" style="margin-top:15px"></h3>
+    <div id="labChoices" class="laboptions"></div>
+    <div id="labResult" class="labfeedback" aria-live="polite"></div>
+    <div class="labactions"><button id="labNext" type="button" class="labbtn" disabled>Próxima decisão →</button><button id="labRestart" type="button" class="labbtn secondary">Reiniciar caso</button></div>
+    <div id="labReport" class="labcall" hidden></div>
+   </div></div>
+ </section>
+ <div class="labpanel" style="margin-top:15px"><div class="labline"><b>Seu progresso neste navegador</b><span id="labCompletion" class="labpill">0 de 3 atividades</span></div>
+  <div class="labprog"><span id="labOverall" style="width:0"></span></div>
+  <div class="labactions"><button type="button" id="labExport" class="labbtn secondary">↧ Exportar relatório TXT</button><button type="button" id="labClear" class="labbtn secondary">Limpar progresso</button></div>
+  <p class="labnote">O progresso é salvo apenas no dispositivo/navegador usado. Não é compartilhado com outros usuários. Nenhum comando desta tela atua no SDCD.</p>
+ </div>
+</div>
+</section></div><script>
+const STEPS=[{"n": 1, "t": "Avisar áreas envolvidas", "a": ["Avisar SUPERVISOR, OP, TEU-TM e MA/ED por rádio e/ou telefone."], "cic": "Formalizar o início antes dos ajustes do compressor/turbina."}, {"n": 2, "t": "Verificar instrumentação", "a": ["Confirmar PI-393061A, TI-3057A, TI-393058A, PI-393062A, PIC-39908, TI-39587 e TI-393059A confiáveis."], "cic": "Preservar exatamente a lista do procedimento; não substituir tags por analogia com J-3901."}, {"n": 3, "t": "Reduzir carga para 7.000 m³/d", "a": ["Reduzir carga e realizar ajustes necessários conforme tabela CENPES.", "Se houver folga, consultar MA/ED e EST/OT para menor redução de carga."], "cic": "Preparar a unidade para a lavagem sem importar os limites específicos do J-3901."}, {"n": 4, "t": "Condicionar SS / HBF e executar lavagem", "a": ["Certificar bloqueios de 6'' do by-pass de vapor ativo fechados.", "Drenar HBF pelo dreno de 6'' até aquecimento, acompanhando com pirômetro.", "Bloquear novamente HBF após aquecimento.", "Alinhar by-pass de admissão abrindo bloqueios de 6''.", "Fechar lentamente a válvula de 14'' mantendo 39–40 kgf/cm² no PI-393061A e rotação o mais próximo possível de 5000 RPM no SI-393056A.", "Abrir HBF lenta/gradualmente, reduzindo temperatura a 1 °C/min pelo TI-393058A.", "Manter temperatura do vapor no mínimo 10 °C acima da temperatura de saturação.", "Definir temperatura final quando não houver mais variação de pressão na 1ª roda; manter essa condição por 1 hora.", "Monitorar pressão da 1ª roda pelo PI-393062A.", "Se vibração/deslocamento axial se aproximarem do alarme: reduzir HBF, aguardar estabilização e reiniciar injeção."], "cic": "O gate térmico é margem sobre saturação + comportamento da 1ª roda, não uma sequência de patamares fixos."}, {"n": 5, "t": "Coletar condensado / condutividade", "a": ["A cada 15 min, a partir de 300 °C no TI-393058A até o início do reaquecimento.", "Retirar amostras do amostrador de vapor exausto do J-3902."], "cic": "A periodicidade e o marco de início são próprios do J-3902."}, {"n": 6, "t": "Restabelecer condições normais", "a": ["Reduzir HBF para restabelecer temperatura nominal do J-3902 à taxa de aquecimento de 1 °C/min.", "A fonte registra acompanhamento da curva pelo TI-393062A.", "Solicitar preditiva para vibração/deslocamento axial/radial.", "Monitorar condições do J-3902 e condutividade; avaliar com MA/ED novo ciclo."], "cic": "Preservar a redação da fonte, inclusive a identificação TI-393062A no reaquecimento."}, {"n": 7, "t": "Repetir lavagem se necessário", "a": ["Repetir passos 4, 5 e 6."], "cic": "A decisão de novo ciclo vem após avaliar máquina e condutividade."}, {"n": 8, "t": "Concluir processo", "a": ["Concluir procedimento e avisar áreas envolvidas."], "cic": "Encerramento formal após avaliação."}],ROLES=[{"q": "A carga foi reduzida e o Campo vai iniciar o fechamento lento da válvula de 14''. Qual foco do CIC é correto?", "s": ["PI-393061A = acompanhar", "SI-393056A = acompanhar", "HBF = ainda bloqueada"], "o": ["Acompanhar 39–40 kgf/cm² e rotação próxima de 5000 RPM enquanto coordena a manobra local.", "Acompanhar somente 39–40 kgf/cm² e considerar a rotação irrelevante durante o condicionamento.", "Acompanhar somente a rotação e permitir que a pressão varie até o Campo terminar o fechamento.", "Solicitar HBF antes do fechamento para usar a água como principal controle de pressão da admissão."], "a": 0, "e": "No J-3902, pressão de vapor e rotação aparecem juntas nessa etapa."}, {"q": "A injeção de HBF iniciou. Qual informação o CIC precisa usar como gate térmico?", "s": ["TI-393058A = monitorando", "Taxa = 1 °C/min", "Saturação = consultar"], "o": ["Manter o vapor no mínimo 10 °C acima da saturação enquanto acompanha a redução de 1 °C/min.", "Usar 200 °C como limite fixo, independentemente da temperatura de saturação consultada.", "Aplicar os patamares 250→240→235 °C antes de observar a pressão da 1ª roda.", "Definir a temperatura final apenas pela condutividade, sem considerar margem sobre saturação."], "a": 0, "e": "A lógica específica do J-3902 usa margem mínima de 10 °C sobre saturação."}, {"q": "Vibração e deslocamento axial estão aumentando e próximos do alarme. Qual coordenação do CIC é prevista?", "s": ["HBF = em injeção", "Vibração = ↑", "Axial = próximo alarme"], "o": ["Solicitar redução da HBF, aguardar estabilização e só então coordenar o reinício da injeção.", "Manter a HBF constante até atingir a temperatura calculada e avaliar vibração somente após 1 hora.", "Solicitar aumento da HBF para reduzir mais rapidamente a temperatura da turbina e estabilizar vibração.", "Suspender permanentemente a lavagem e iniciar reaquecimento sem aguardar estabilização das indicações."], "a": 0, "e": "A observação 2 define reduzir HBF, estabilizar e reiniciar."}, {"q": "TI-393058A atingiu 300 °C e ainda não começou o reaquecimento. Qual ação deve ser coordenada?", "s": ["T = 300 °C", "Reaquecimento = NÃO", "Última amostra = nenhuma"], "o": ["Iniciar a rotina de amostragem de condutividade a cada 15 minutos.", "Iniciar amostragem a cada 10 minutos, seguindo a mesma periodicidade do J-3901.", "Aguardar a temperatura final da lavagem para iniciar a primeira amostra.", "Iniciar amostragem somente depois de uma hora na condição final."], "a": 0, "e": "No J-3902 as amostras começam em 300 °C e repetem a cada 15 min até o reaquecimento."}],EVALS=[{"s": ["PI-393061A", "39,4 kgf/cm²"], "s2": ["SI-393056A", "4980 RPM"], "s3": ["HBF", "bloqueada"], "q": "Qual leitura é coerente durante o condicionamento antes da injeção de HBF?", "o": ["Pressão está na faixa e rotação está próxima de 5000 RPM; manter as demais confirmações da etapa.", "Pressão está adequada, mas a rotação deveria ser exatamente 5000 RPM para permitir qualquer avanço.", "Rotação está adequada, porém a pressão deveria ser mantida em 37–38 kgf/cm² para iniciar HBF.", "A etapa já exige temperatura final de lavagem calculada antes de abrir o by-pass de vapor."], "a": 0}, {"s": ["T vapor", "310 °C"], "s2": ["T saturação consultada", "302 °C"], "s3": ["Margem", "8 °C"], "q": "Qual é a interpretação correta?", "o": ["A margem é menor que os 10 °C mínimos informados; a condição térmica não atende o procedimento.", "A margem atende porque qualquer valor positivo acima da saturação é suficiente.", "A condição atende se a rotação estiver próxima de 5000 RPM, mesmo com margem de 8 °C.", "A margem só é verificada após a temperatura final estabilizar por 1 hora."], "a": 0}, {"s": ["PI-393062A", "estável"], "s2": ["Pressão 1ª roda", "sem nova variação"], "s3": ["Tempo estável", "15 min"], "q": "Qual gate ainda falta para encerrar a estabilização da lavagem?", "o": ["Manter a condição final até completar 1 hora.", "Iniciar imediatamente o reaquecimento porque a pressão já estabilizou.", "Esperar 10 minutos e coletar uma única amostra final antes do reaquecimento.", "Reduzir novamente a temperatura até 200 °C antes de iniciar a contagem."], "a": 0}, {"s": ["TI-393058A", "300 °C"], "s2": ["Reaquecimento", "ainda não iniciou"], "s3": ["Última amostra", "15 min"], "q": "Qual ação é devida?", "o": ["Realizar nova análise/amostra de condutividade.", "Aguardar 10 minutos porque a periodicidade é a mesma do J-3901.", "Encerrar amostragens ao atingir 300 °C e iniciar o reaquecimento.", "Aguardar completar 1 hora para então iniciar a primeira amostragem."], "a": 0}, {"s": ["Vibração", "próxima do alarme"], "s2": ["Axial", "subindo"], "s3": ["HBF", "em injeção"], "q": "Qual resposta está prevista?", "o": ["Reduzir HBF, aguardar estabilização e reiniciar a injeção depois.", "Manter HBF e reduzir a rotação para 4500 RPM até as indicações caírem.", "Aumentar HBF para acelerar a lavagem e diminuir o tempo de exposição.", "Iniciar o reaquecimento a 9 °C/min e encerrar o ciclo."], "a": 0}, {"s": ["Reaquecimento", "em curso"], "s2": ["Taxa", "1 °C/min"], "s3": ["Fonte", "TI-393062A"], "q": "Como o treinamento deve tratar a identificação do instrumento?", "o": ["Preservar TI-393062A como escrito na etapa 5.2.2.6 e sinalizar a diferença em relação ao PI-393062A citado antes.", "Corrigir silenciosamente para TI-393058A porque esse instrumento aparece na fase de resfriamento.", "Corrigir para PI-393062A e tratar a pressão da 1ª roda como se fosse temperatura.", "Omitir a tag para evitar registrar a divergência documental."], "a": 0}];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+$$('.tab').forEach(t=>t.onclick=()=>{$$('.tab').forEach(x=>x.classList.toggle('active',x===t));$$('.view').forEach(v=>v.classList.toggle('active',v.dataset.view===t.dataset.tab))});
+function st(el,k,txt){el.className='status '+k;el.textContent=txt} function num(id){const v=parseFloat(document.getElementById(id).value);return Number.isFinite(v)?v:null}
+function evalJ2(){
+ const p=num('j2p'),rpm=num('j2rpm'),tv=num('j2tv'),ts=num('j2ts'),temp=num('j2temp'),sm=num('j2sample');
+ if(p!==null&&rpm!==null){const pOk=p>=39&&p<=40;st(j2prStatus,pOk?'wait':'off',`${pOk?'PRESSÃO 39–40 OK':'PRESSÃO FORA DA FAIXA'} • RPM=${rpm} (ref. ≈5000)`)}else st(j2prStatus,'wait','AGUARDANDO');
+ if(tv!==null&&ts!==null){const d=tv-ts;st(j2satStatus,d>=10?'on':'off',`MARGEM = ${d.toFixed(1)} °C • mínimo 10 °C`)}else st(j2satStatus,'wait','AGUARDANDO');
+ if(temp!==null&&sm!==null){if(j2reheat.value==='yes')st(j2sampleStatus,'on','REAQUECIMENTO INICIADO — ENCERRA ROTINA DE AMOSTRAGEM');else if(temp>=300)st(j2sampleStatus,sm>=15?'off':'on',sm>=15?'NOVA AMOSTRA DEVIDA':'INTERVALO <15 min');else st(j2sampleStatus,'wait','AGUARDAR 300 °C PARA INICIAR AMOSTRAGENS')}else st(j2sampleStatus,'wait','AGUARDANDO');
+ const v=vibNear.value==='yes'||axNear.value==='yes';st(vibStatus,v?'off':'on',v?'REDUZIR HBF → ESTABILIZAR → REINICIAR':'HBF PODE SEGUIR, CONFORME DEMAIS GATES');
+ const wt=num('wheelTime');if(wheelVar.value==='yes')st(wheelStatus,'wait','PRESSÃO DA 1ª RODA AINDA VARIA');else if(wt!==null)st(wheelStatus,wt>=60?'on':'wait',wt>=60?'1 h SEM NOVA VARIAÇÃO — GATE CUMPRIDO':'MANTER CONDIÇÃO ATÉ 1 h');else st(wheelStatus,'wait','INFORMAR TEMPO ESTÁVEL');
+}
+['j2p','j2rpm','j2tv','j2ts','j2temp','j2sample','j2reheat','wheelVar','wheelTime','vibNear','axNear'].forEach(id=>document.getElementById(id).addEventListener('input',evalJ2));evalJ2();
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+function renderQuiz(container,data,scoreEl){
+ let ans=0,ok=0;container.innerHTML=data.map((q,i)=>{const opts=shuffle(q.o.map((t,j)=>({t,c:j===q.a})));return `<div class="scenario" data-i="${i}"><h3>${i+1}. ${q.q}</h3><div class="states">${(q.s||[]).map(x=>`<span>${x}</span>`).join('')}</div><div class="options">${opts.map(o=>`<button class="btn" data-c="${o.c?'1':'0'}">${o.t}</button>`).join('')}</div><div class="result"></div></div>`}).join('');
+ if(scoreEl)scoreEl.innerHTML='<div><b>0</b><small>acertos</small></div><div><b>0</b><small>erros</small></div><div><b>0/'+data.length+'</b><small>respondidas</small></div><div><b>0%</b><small>precisão</small></div>';
+ container.querySelectorAll('.options button').forEach(b=>b.onclick=()=>{const sc=b.closest('.scenario');if(sc.dataset.done)return;sc.dataset.done='1';ans++;const good=b.dataset.c==='1';if(good)ok++;b.classList.add(good?'correct':'incorrect');sc.querySelectorAll('button').forEach(x=>x.disabled=true);const q=data[+sc.dataset.i];sc.querySelector('.result').textContent=(good?'✓ ':'✕ ')+(q.e||'Reavalie o gate específico do J-3902.');if(scoreEl){const pct=Math.round(ok/ans*100);scoreEl.innerHTML=`<div><b>${ok}</b><small>acertos</small></div><div><b>${ans-ok}</b><small>erros</small></div><div><b>${ans}/${data.length}</b><small>respondidas</small></div><div><b>${pct}%</b><small>precisão</small></div>`}});}
+renderQuiz(j2roles,ROLES,null);
+let cur=0;function renderStep(){j2nav.innerHTML=STEPS.map((s,i)=>`<button class="stepbtn ${i===cur?'active':''}" data-i="${i}">${s.n}</button>`).join('');j2nav.querySelectorAll('button').forEach(b=>b.onclick=()=>{cur=+b.dataset.i;renderStep()});const s=STEPS[cur];j2step.innerHTML=`<div class="box"><div class="phase">ETAPA ${s.n}</div><h2>${s.t}</h2><div class="actions">${s.a.map(a=>`<div class="action">${a}</div>`).join('')}</div><div class="gate"><strong>Leitura CIC:</strong> ${s.cic}</div></div>`}renderStep();
+const evalNormalized=EVALS.map(x=>({q:x.q,s:[`${x.s[0]} = ${x.s[1]}`,`${x.s2[0]} = ${x.s2[1]}`,`${x.s3[0]} = ${x.s3[1]}`],o:x.o,a:x.a}));renderQuiz(j2eval,evalNormalized,j2score);
+</script><script id="lab-concept-js">
+(()=>{'use strict';
+const root=document.getElementById('conceptLab');if(!root)return;
+const turb=root.dataset.turbine;
+const el=id=>root.querySelector('#'+id), all=s=>Array.from(root.querySelectorAll(s));
+const storageKey='concept-lavagem-lab-'+turb+'-v1';
+const store={physics:false,trends:false,case:false,score:0,lastDate:''};
+try{Object.assign(store,JSON.parse(localStorage.getItem(storageKey)||'{}'))}catch(_){ }
+function persist(){try{localStorage.setItem(storageKey,JSON.stringify(store))}catch(_){ }paintProgress()}
+function paintProgress(){const n=['physics','trends','case'].filter(k=>store[k]).length;el('labCompletion').textContent=n+' de 3 atividades';el('labOverall').style.width=(n/3*100)+'%'}
+function showPane(which){all('[data-lab-pane]').forEach(x=>x.hidden=x.dataset.labPane!==which);all('button[data-lab]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.lab===which)))}
+all('button[data-lab]').forEach(x=>x.addEventListener('click',()=>showPane(x.dataset.lab)));
+
+function physics(markCompleted=false){const f=+el('labFouling').value,water=+el('labWater').value,hv=+el('labHv').value,hbf=+el('labHbf').value;
+ const obstruction=.44*f/100, free=100*(1-obstruction),m=1+water/100,h=(hv+(water/100)*hbf)/m;
+ el('labFoulingOut').textContent=f+'%';el('labArea').textContent=free.toFixed(0)+'%';el('labBlock').textContent=(100-free).toFixed(0)+'%';el('labCond').textContent=f<20?'Leve':f<65?'Moderada':'Elevada';
+ el('labDeposit1').style.opacity=(.05+f/110).toString();el('labDeposit2').style.opacity=(.05+f/110).toString();
+ el('labFoulInfo').textContent=f<20?'Canais relativamente desobstruídos no modelo. Ainda existem perdas aerodinâmicas.':f<65?'O material depositado altera a seção efetiva e a rugosidade. A influência real sobre vazão e potência depende da turbina.':'A obstrução ilustrativa cresceu. A perda de capacidade pode exigir mais abertura da governadora, mas não existe resposta universal para a pressão da primeira roda.';
+ el('labWaterOut').textContent=water+'%';el('labHvOut').textContent=hv;el('labHbfOut').textContent=hbf;
+ el('labHout').textContent=h.toFixed(0)+' kJ/kg';el('labMout').textContent=m.toFixed(2)+' kg/s';el('labDh').textContent=(hv-h).toFixed(0)+' kJ/kg';
+ el('labHeatInfo').textContent=water===0?'Sem HBF, a entalpia de entrada permanece igual à do vapor.':'A mistura possui menor entalpia específica porque a água HBF entra com entalpia inferior à do vapor. Para estimar temperatura e título, é necessário usar tabelas de vapor à pressão local.';
+ if(markCompleted){store.physics=true;persist()}}
+['labFouling','labWater','labHv','labHbf'].forEach(id=>el(id).addEventListener('input',()=>physics(true)));
+const stages=[
+ 'Admissão: o vapor superaquecido contém energia térmica capaz de produzir trabalho na expansão. O ponto de partida é definido por pressão, temperatura e vazão.',
+ 'Mistura HBF: a água recebe energia do vapor; parte pode vaporizar. O resultado depende das entalpias e pressões, não apenas da quantidade de água injetada.',
+ 'Palhetamento: a expansão altera pressão, velocidade e temperatura. Pode ocorrer umidade em regiões internas, favorecendo remoção de alguns depósitos; excesso de líquido é indesejável.',
+ 'Exaustão e condensado: contaminantes removidos podem ser transportados à jusante. Condutividade detecta espécies iônicas, mas não determina sozinha o teor de sílica.'
+];
+all('[data-stage]').forEach(x=>x.addEventListener('click',()=>{all('[data-stage]').forEach(y=>y.setAttribute('aria-pressed',String(y===x)));el('labStageText').textContent=stages[+x.dataset.stage];store.physics=true;persist()}));
+el('labStageText').textContent=stages[0];physics(false);
+
+
+const pChoiceTexts={
+ wash:'Possível efeito da lavagem; comparar antes/depois em condição equivalente.',
+ load:'Mudança de carga / vazão distorce a leitura; não concluir só pela 1ª roda.',
+ mechanical:'Priorizar integridade mecânica: vibração e deslocamento vêm antes da performance.',
+ steam:'Checar condição de admissão do vapor; energia/pressão deslocam a leitura.',
+ insufficient:'Ainda não há evidência dominante; manter avaliação conjunta.'
+};
+function clamp(n,min,max){return Math.max(min,Math.min(max,n))}
+function renderPressureAnswers(correct){
+ const ids=['wash','load','mechanical','steam','insufficient'];
+ const mixed=shuffle(ids.map(k=>({key:k,text:pChoiceTexts[k]})));
+ el('labPanswers').innerHTML=mixed.map(item=>`<button type="button" data-panswer="${item.key}">${item.text}</button>`).join('');
+ all('[data-panswer]').forEach(btn=>btn.addEventListener('click',()=>{
+   const key=btn.dataset.panswer, ok=key===correct;
+   all('[data-panswer]').forEach(x=>{x.disabled=true; if(x.dataset.panswer===correct)x.classList.add('good'); else if(x===btn)x.classList.add('bad')});
+   const msg = ok
+    ? 'Boa leitura. Você priorizou a interpretação mais consistente para o cenário montado.'
+    : 'Ainda não. A prioridade muda quando a carga não é equivalente, quando há sinais mecânicos fortes ou quando a admissão do vapor domina a resposta.';
+   el('labPfeedback').innerHTML='<b>'+(ok?'Correto. ':'Reveja. ')+'</b>'+msg;
+   store.trends=true; persist();
+ }))
+}
+function updatePressureLab(resetAnswers=true){
+ const same=el('labPsame').value, load=+el('labPload').value, foul=+el('labPfoul').value, wash=+el('labPwash').value, steam=+el('labPsteam').value, mech=+el('labPmech').value;
+ el('labPloadOut').textContent=(load>0?'+':'')+load;
+ el('labPfoulOut').textContent=foul+'%';
+ el('labPwashOut').textContent=wash+'%';
+ el('labPsteamOut').textContent=(steam>0?'+':'')+steam;
+ el('labPmechOut').textContent=mech+'%';
+ const wheel=clamp(50 + load*1.05 + steam*0.95 + foul*0.10 - wash*0.08 + mech*0.04,0,100);
+ const gov=clamp(52 + load*1.25 + foul*0.13 - wash*0.18 + steam*0.10,0,100);
+ const confBase = same==='yes' ? 84 : 42;
+ const conf=clamp(confBase - Math.abs(load)*1.2 - mech*0.18 + (wash>45 && same==='yes' ? 8:0),8,96);
+ let focus='insufficient', focusShort='Leitura conjunta';
+ if(mech>=60){focus='mechanical'; focusShort='Integridade mecânica';}
+ else if(same==='no' || Math.abs(load)>=10){focus='load'; focusShort='Comparar carga';}
+ else if(Math.abs(steam)>=10 && wash<35){focus='steam'; focusShort='Admissão do vapor';}
+ else if(wash>=45 && Math.abs(load)<8 && mech<45){focus='wash'; focusShort='Possível recuperação';}
+ 
+ el('labPwheel').textContent=wheel.toFixed(0)+' / 100';
+ el('labPgov').textContent=gov.toFixed(0)+' / 100';
+ el('labPconf').textContent=conf.toFixed(0)+'%';
+ el('labPfocus').textContent=focusShort;
+ el('labPwheelBar').style.width=wheel+'%';
+ el('labPgovBar').style.width=gov+'%';
+ el('labPconfBar').style.width=conf+'%';
+ el('labPwheelSvg').textContent=wheel.toFixed(0);
+ el('labPflow').setAttribute('stroke-width', String(6 + Math.max(0,load+10)/5));
+ el('labPwashGlow').setAttribute('opacity', String(clamp(0.2 + wash/140,0.2,0.92)));
+ const turbineMsg = turb==='J-3902'
+  ? 'Na lógica didática da J-3902, a estabilização da pressão da 1ª roda ajuda a definir o patamar final da lavagem.'
+  : 'Na lógica didática da J-3901, a 1ª roda deve ser lida junto com governadora, condutividade e deslocamento axial.';
+ let diag='';
+ if(focus==='mechanical') diag='Os sinais mecânicos ganharam prioridade. Mesmo que a pressão da 1ª roda mude, a primeira leitura operacional deve ser proteger a integridade da máquina e correlacionar com vibração/deslocamento.';
+ else if(focus==='load') diag='A mudança de carga/vazão contaminou a comparação. Neste cenário, a pressão da 1ª roda perdeu força como evidência isolada de limpeza ou de piora do palhetamento.';
+ else if(focus==='steam') diag='A condição de admissão do vapor está dominando a resposta. Antes de concluir sobre lavagem, compare energia/pressão do vapor, abertura da governadora e condição equivalente de processo.';
+ else if(focus==='wash') diag='Há indícios didáticos compatíveis com remoção de depósitos sob condição comparável. Ainda assim, a leitura só ganha valor quando combinada com governadora, estabilidade da máquina e demais variáveis do procedimento.';
+ else diag='Nenhum fator isolado domina. A melhor leitura é continuar a avaliação conjunta e evitar conclusões baseadas apenas na pressão da 1ª roda.';
+ el('labPdiag').innerHTML='<b>Diagnóstico guiado:</b> '+diag;
+ el('labPtip').innerHTML='<b>Dica de interpretação:</b> '+turbineMsg+' <span class="labsubtle">Confiança diagnóstica maior exige comparação em condição equivalente.</span>';
+ const msg1 = focus==='load' ? 'Carga mudou' : focus==='mechanical' ? 'Atenção mecânica' : focus==='steam' ? 'Vapor domina' : focus==='wash' ? 'Lavagem possível' : 'Avaliação conjunta';
+ const msg2 = same==='yes' ? 'Condição comparável' : 'Sem equivalência de carga';
+ el('labPsvgMsg').textContent=msg1;
+ el('labPsvgMsg2').textContent=msg2;
+ if(resetAnswers){el('labPfeedback').textContent=''; renderPressureAnswers(focus)}
+}
+['labPsame','labPload','labPfoul','labPwash','labPsteam','labPmech'].forEach(id=>{el(id).addEventListener('input',()=>updatePressureLab(true));el(id).addEventListener('change',()=>updatePressureLab(true));});
+updatePressureLab(true);
+
+const situations={
+ recovery:{gov:[76,75,74,72,69,67,66,65,65],p:[54,54,53,52,50,48,47,47,47],c:[18,20,31,53,59,40,27,19,18],v:[30,30,32,31,31,30,30,29,29],description:'Queda gradual da abertura da governadora com condição estável é compatível com recuperação aerodinâmica. Ainda é necessário comparar vazão, pressão, temperatura e potência.',correct:'recovery'},
+ load:{gov:[69,71,73,77,81,84,85,85,85],p:[42,44,48,53,58,61,62,63,63],c:[18,18,18,19,19,18,19,18,18],v:[29,29,30,32,32,33,33,32,32],description:'A carga variou simultaneamente. As alterações de governadora e pressão da primeira roda não permitem concluir que houve recuperação ou piora por incrustação.',correct:'load'},
+ mechanical:{gov:[74,74,73,73,72,72,73,76,78],p:[50,50,51,50,50,52,54,55,56],c:[18,18,21,29,35,40,36,29,24],v:[28,28,29,34,46,62,76,81,84],description:'Aumento expressivo do índice de vibração durante o transiente de temperatura é uma indicação prioritária de atenção mecânica e aplicação do procedimento apropriado.',correct:'mechanical'}
+};
+const color={gov:'#6dcef4',p:'#f2cc79',c:'#92e3ab',v:'#f093a2'};
+function chart(){const scen=situations[el('labScenario').value],t=+el('labTime').value;
+ let out='<rect x="47" y="20" width="609" height="214" fill="#071e2c" stroke="#355c73"/>';
+ for(let i=0;i<=4;i++){const y=20+i*53.5;out+=`<line x1="47" x2="656" y1="${y}" y2="${y}" stroke="#335469" opacity=".6"/><text x="37" y="${y+4}" font-size="11" fill="#a8c0d1" text-anchor="end">${100-i*25}</text>`}
+ for(let i=0;i<=8;i++){const x=47+i*609/8;out+=`<text x="${x}" y="254" text-anchor="middle" fill="#a8c0d1" font-size="11">${i}</text>`}
+ for(const k of ['gov','p','c','v']){const points=scen[k].map((v,i)=>(47+i*609/8).toFixed(1)+','+(20+(100-v)*214/100).toFixed(1)).join(' ');out+=`<polyline points="${points}" fill="none" stroke="${color[k]}" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>`}
+ const x=47+t*609/8;out+=`<line x1="${x}" x2="${x}" y1="20" y2="234" stroke="#fff" stroke-dasharray="4 4" opacity=".9"/>`;
+ for(const k of ['gov','p','c','v']){const y=20+(100-scen[k][t])*214/100;out+=`<circle cx="${x}" cy="${y}" r="5.2" stroke="#06131f" stroke-width="2" fill="${color[k]}"/>`}
+ out+='<text x="353" y="272" fill="#aac3d3" text-anchor="middle" font-size="12">Instante simulado</text>';
+ el('labChart').innerHTML=out;el('labTimeOut').textContent=t+' / 8';el('labKgov').textContent=scen.gov[t];el('labKp').textContent=scen.p[t];el('labKc').textContent=scen.c[t];el('labDiagnosis').textContent=scen.description}
+ ['labScenario','labTime'].forEach(id=>el(id).addEventListener('input',()=>{chart();el('labTrendAnswer').textContent=''}));
+ el('labCheckTrend').addEventListener('click',()=>{const answer=el('labInterpret').value;const scenario=el('labScenario').value;
+  if(!answer){el('labTrendAnswer').textContent='Escolha uma interpretação antes de conferir.';return}
+  const ok=answer===situations[scenario].correct;el('labTrendAnswer').textContent=ok?'✓ Interpretação consistente. '+situations[scenario].description:'✕ Reavalie as tendências em conjunto. '+situations[scenario].description;
+  if(ok){store.trends=true;persist()}
+ });chart();
+
+const cases={
+ 'J-3901':[
+ {q:'O CI-39001 apresenta leitura não confiável antes da lavagem. Qual a conduta de partida do treinamento?',opts:['Manter o início e observar apenas a governadora.','Adiar a etapa até validar a instrumentação.','Acompanhar pressão e dispensar condutividade.','Iniciar lavagem e coletar somente ao final.'],a:1,why:'O procedimento exige conferência das indicações confiáveis dos instrumentos definidos para a lavagem.',effect:'A confiabilidade instrumental ainda precisa ser assegurada.'},
+ {q:'A curva alcançou 250 °C com redução próxima de 1 °C/min. Ainda não ocorreu a avaliação técnica. Qual a decisão?',opts:['Manter o patamar e solicitar avaliação.','Reduzir até 240 °C e depois confirmar.','Prosseguir até 235 °C mantendo a taxa.','Seguir à próxima etapa pelo tempo decorrido.'],a:0,why:'Para o J-3901, cada avanço de patamar depende de avaliação da EST/OT e MA/ED; não é uma redução contínua automática.',effect:'Avanço sem autorização gera desvio simulado de gate.'},
+ {q:'A condutividade aumenta e a governadora reduz a abertura. Como interpretar a combinação?',opts:['Confirmar remoção total de sílica do rotor.','Concluir que a potência mecânica diminuiu.','Considerar indício e avaliar demais variáveis.','Concluir que a vazão de vapor permaneceu igual.'],a:2,why:'Condutividade sinaliza espécies iônicas, não quantifica especificamente sílica. Eficiência requer análise conjunta e comparação equivalente.',effect:'Uma conclusão isolada pode distorcer o diagnóstico.'},
+ {q:'Durante a lavagem ocorre desaceleração da turbina. Qual orientação consta do procedimento?',opts:['Elevar HBF até a rotação estabilizar.','Manter a carga e aumentar a temperatura.','Ajustar apenas a posição da governadora.','Reduzir carga e adequar ar à tabela CENPES.'],a:3,why:'No J-3901, o procedimento prevê reduzir a carga e manter vazão de ar compatível com a tabela CENPES em caso de desaceleração.',effect:'Desaceleração exige resposta de processo coordenada.'},
+ {q:'O primeiro ciclo terminou, mas o ganho de desempenho não é conclusivo. O que vem a seguir?',opts:['Repetir de imediato até surgir uma melhora.','Avaliar com MA/ED antes de novo ciclo.','Alterar arbitrariamente os próximos patamares.','Concluir a lavagem apenas pela condutividade.'],a:1,why:'Após monitorar máquina e condensado, a eventual repetição deve ser avaliada com MA/ED.',effect:'Novo ciclo sem avaliação não faz parte do gate documentado.'}
+ ],
+ 'J-3902':[
+ {q:'A pressão de admissão está entre 39 e 40 kgf/cm². Que critério térmico deve acompanhar a lavagem?',opts:['Garantir 10 °C acima da saturação.','Usar os patamares fixos da J-3901.','Fixar 200 °C na admissão de vapor.','Controlar apenas a rotação nominal.'],a:0,why:'No J-3902, o procedimento prevê manter margem mínima de 10 °C acima da temperatura de saturação e resfriamento controlado.',effect:'O gate de saturação deve ser verificado.'},
+ {q:'A pressão da primeira roda ainda varia durante a lavagem. Qual interpretação operacional é adequada?',opts:['Encerrar, pois a pressão variou ao menos uma vez.','Manter a avaliação até estabilizar a primeira roda.','Ignorar a pressão e usar somente a rotação.','Adotar os patamares de 240 e 235 °C.'],a:1,why:'A estabilidade da pressão da primeira roda integra o critério de definição da condição final da lavagem.',effect:'A primeira roda ainda não apresentou estabilidade.'},
+ {q:'Vibração e deslocamento axial se aproximam dos alarmes. Qual conduta consta do procedimento?',opts:['Aumentar HBF para antecipar a remoção.','Prosseguir se a condutividade estiver alta.','Reduzir HBF e aguardar estabilização.','Antecipar o reaquecimento sem avaliação.'],a:2,why:'O procedimento da J-3902 orienta reduzir a injeção de HBF quando vibração/deslocamento se aproximam dos alarmes, estabilizar e só então reavaliar a injeção.',effect:'Foi introduzida uma condição de risco mecânico no caso.'},
+ {q:'A temperatura indicada atingiu 300 °C. Qual rotina de coleta corresponde ao J-3902?',opts:['Coletar a cada 10 minutos pela J-3947.','Coletar uma vez, ao final da lavagem.','Coletar a cada 30 minutos até o retorno.','Coletar a cada 15 minutos no amostrador.'],a:3,why:'O procedimento estabelece amostras a cada 15 minutos desde 300 °C no TI-393058A até o início do reaquecimento, pelo amostrador do vapor exausto.',effect:'Amostragem fora do intervalo pode prejudicar o acompanhamento.'},
+ {q:'A lavagem estabilizou e iniciou o retorno térmico. Qual é a taxa de reaquecimento documentada?',opts:['Até 9 °C/min, como na J-3901.','1 °C/min, específica do J-3902.','A taxa não precisa ser controlada.','A mesma vazão de HBF será mantida.'],a:1,why:'O procedimento da J-3902 especifica taxa de aquecimento de 1 °C/min no retorno, não o limite do J-3901.',effect:'Reaquecimento exige observar o critério específico da J-3902.'}
+ ]};
+let step=0,correct=0,risks=0,history=[],needsNext=false,order=[];
+function shuffled(a){const arr=a.map((v,i)=>({text:v,index:i}));for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+function escape(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderDecision(){const s=cases[turb][step];el('labQcount').textContent=`Decisão ${step+1} de ${cases[turb].length}`;el('labRisk').textContent=`Desvios simulados: ${risks}`;el('labProgress').style.width=(step/cases[turb].length*100)+'%';
+ el('labCarry').textContent=step===0?'Início do caso: analise a condição antes de decidir.':risks>0?'Consequência acumulada: '+risks+' decisão(ões) anterior(es) geraram desvios simulados. A avaliação continua com pendências que precisam ser reconhecidas.':'Consequência acumulada: decisões anteriores mantiveram os gates documentados. Continue acompanhando as tendências.';
+ el('labQuestion').textContent=s.q;el('labResult').textContent='';el('labNext').disabled=true;el('labNext').textContent='Próxima decisão →';el('labReport').hidden=true;needsNext=false;
+ order=shuffled(s.opts);el('labChoices').innerHTML=order.map(o=>`<button type="button" class="laboption" data-index="${o.index}">${escape(o.text)}</button>`).join('');
+ all('.laboption').forEach(btn=>btn.addEventListener('click',()=>selectChoice(+btn.dataset.index,btn)));
+}
+function selectChoice(selected,btn){if(needsNext)return;needsNext=true;const s=cases[turb][step],ok=selected===s.a;if(ok)correct++;else risks++;
+ history.push({q:s.q,answer:s.opts[selected],ok,explanation:s.why});el('labRisk').textContent=`Desvios simulados: ${risks}`;
+ all('.laboption').forEach(b=>{b.disabled=true;if(+b.dataset.index===s.a)b.classList.add(ok?'good':'correct-hint')});if(!ok)btn.classList.add('bad');
+ el('labResult').textContent=(ok?'✓ Decisão fundamentada. ':'✕ Decisão requer revisão. ')+s.why+(ok?'':' Consequência: '+s.effect);
+ el('labNext').disabled=false;el('labNext').textContent=step===cases[turb].length-1?'Concluir avaliação':'Próxima decisão →';
+}
+function finish(){el('labProgress').style.width='100%';el('labQuestion').textContent='Missão concluída';el('labChoices').innerHTML='';el('labNext').disabled=true;
+ const pct=Math.round(correct/cases[turb].length*100);el('labResult').textContent=`Resultado: ${correct}/${cases[turb].length} decisões consistentes (${pct}%). Desvios simulados acumulados: ${risks}.`;
+ const report=el('labReport');report.hidden=false;report.textContent=risks===0?'Os gates documentados foram respeitados no cenário. Compare as tendências e mantenha análise crítica dos sinais.':'A simulação terminou com desvios. Analise os registros de cada decisão e refaça o cenário; as consequências mostram por que cada gate é importante.';
+ store.case=true;store.score=pct;store.lastDate=new Date().toISOString();persist()}
+ el('labNext').addEventListener('click',()=>{if(!needsNext)return;if(step===cases[turb].length-1)finish();else{step++;renderDecision()}});
+ function restart(){step=0;correct=0;risks=0;history=[];renderDecision()}
+ el('labRestart').addEventListener('click',restart);restart();
+ el('labExport').addEventListener('click',()=>{const out=[`Lavagem da turbina ${turb} — Relatório de estudo`, 'Laboratório didático / sem validade operacional',`Data: ${new Date().toLocaleString('pt-BR')}`,`Atividades: ${['physics','trends','case'].filter(k=>store[k]).length}/3`,`Última avaliação CIC: ${store.score}%`,'',...history.flatMap((v,i)=>[`${i+1}. ${v.q}`,`Resposta: ${v.answer}`,`Avaliação: ${v.ok?'Consistente':'Revisão necessária'}`,v.explanation,''])].join('\n');
+  const blob=new Blob([out],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='relatorio-lavagem-'+turb+'.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500)
+ });
+ el('labClear').addEventListener('click',()=>{if(!confirm('Limpar somente o progresso deste laboratório neste navegador?'))return;Object.assign(store,{physics:false,trends:false,case:false,score:0,lastDate:''});persist();restart();el('labTrendAnswer').textContent='' });
+ paintProgress();
+})();
+</script>
+
+<script id="integral-content-interactions">
+(()=>{
+const root=document.getElementById('conceptIntegral');if(!root)return;
+const wheel={
+ upstream:'<strong>Restrição antes da tomada:</strong> pode reduzir o fluxo que alcança o trecho medido, levando a pressão possivelmente menor. A governadora e as condições a jusante podem modificar ou mascarar essa resposta. A conclusão é condicional, não universal.',
+ downstream:'<strong>Restrição depois da tomada:</strong> pode aumentar a contrapressão local exigida para transportar a vazão por passagens posteriores. Uma elevação da pressão na primeira roda é possível, mas depende da carga, da admissão e de como o fluxo se redistribui.',
+ load:'<strong>Variação de carga:</strong> a necessidade de vapor da turbina pode mudar; a governadora reage, alterando vazão e pressão na primeira roda mesmo com geometria interna inalterada. Primeiro iguale as condições de comparação.',
+ wash:'<strong>Durante a lavagem:</strong> misturam-se alterações de entalpia por HBF, mudança de vazão/controle e remoção progressiva de depósitos. A estabilização pode ser relevante na J-3902, mas não comprova, isoladamente, a limpeza completa.'
+};
+root.querySelectorAll('[data-wheel-case]').forEach(b=>b.addEventListener('click',()=>{
+ root.querySelectorAll('[data-wheel-case]').forEach(o=>o.setAttribute('aria-pressed',String(b===o)));
+ const panel=root.querySelector('[data-wheel-explain]');
+ if(panel)panel.innerHTML=wheel[b.dataset.wheelCase]||'';
+}));
+root.querySelectorAll('[data-to-lab]').forEach(b=>b.addEventListener('click',()=>{
+ const tab=document.querySelector('.tab[data-tab="laboratorio"]');if(tab)tab.click();
+ const pane=b.dataset.toLab;
+ const mode=document.querySelector('#conceptLab button[data-lab="'+pane+'"]');if(mode)mode.click();
+ if(pane==='tendencias'){document.getElementById('labWheelBox')?.scrollIntoView({behavior:'smooth',block:'start'})}
+ else document.getElementById('conceptLab')?.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+const questions=[{"q": "A pressão da primeira roda diminuiu durante uma lavagem. Qual conclusão é mais defensável?", "o": ["A queda pode envolver vazão, admissão e localização dos depósitos; avaliar sinais associados.", "A queda comprova que os depósitos dos estágios seguintes foram totalmente removidos.", "A queda demonstra que o vapor perdeu a capacidade de produzir trabalho no rotor.", "A queda dispensa comparar condição da governadora e carga do equipamento."], "a": 0, "why": "A pressão é resultado de toda a rede de escoamento e do estado de controle. Uma queda isolada não demonstra êxito nem falha."}, {"q": "Após a injeção de HBF, a temperatura diminui. Qual fenômeno é corretamente descrito?", "o": ["A água diminui necessariamente a pressão absoluta em todos os estágios da turbina.", "A mistura reduz entalpia específica; a umidade depende da trajetória termodinâmica.", "O vapor se transforma integralmente em água ao atravessar o primeiro conjunto de bocais.", "A mistura eleva o superaquecimento e aumenta o trabalho específico de eixo."], "a": 1, "why": "A mistura reduz a entalpia específica devido à entrada de água mais fria. A fase resultante depende da pressão e das propriedades do vapor."}, {"q": "Condutividade do condensado aumentou, com sinais mecânicos estáveis. O que é razoável?", "o": ["É uma medição direta de quanto depósito de sílica foi removido da palheta.", "Confirma automaticamente limpeza completa dos estágios e retorno de eficiência.", "Pode indicar solutos iônicos transportados, exigindo correlação com outros sinais.", "É sempre consequência exclusiva da redução da temperatura de admissão."], "a": 2, "why": "Condutividade responde a íons na água; não substitui análise específica de sílica nem análise global de desempenho."}, {"q": "Após retornar a condição equivalente de carga, a governadora abre menos. O que isso sugere?", "o": ["A potência do eixo caiu necessariamente, mesmo que a carga esteja estável.", "A pressão da primeira roda sempre deverá aumentar na mesma proporção.", "A vazão mássica permaneceu rigorosamente constante independentemente do controle.", "Pode ser compatível com melhora do aproveitamento do vapor, a confirmar por balanço."], "a": 3, "why": "A menor abertura é evidência compatível, não confirmação isolada: eficiência depende de vazão, quedas de entalpia, potência e demais condições."}];
+const holder=root.querySelector('#intQuizHolder');
+const seed=(new Date()).getTime();
+function shuffleQ(a){const arr=[...a];for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+questions.forEach((q,index)=>{
+ const wrap=document.createElement('div');wrap.className='labpanel';wrap.style.margin='13px 0';
+ const title=document.createElement('p');title.innerHTML='<strong>Questão '+(index+1)+'.</strong> '+q.q;wrap.appendChild(title);
+ const choices=document.createElement('div');choices.className='int-quizchoices';
+ const feedback=document.createElement('div');feedback.className='int-quizfeedback';feedback.setAttribute('aria-live','polite');
+ const options=shuffleQ(q.o.map((text,i)=>({text,correct:i===q.a})));
+ options.forEach(o=>{
+  const b=document.createElement('button');b.type='button';b.textContent=o.text;
+  b.onclick=()=>{
+   choices.querySelectorAll('button').forEach(x=>x.disabled=true);
+   b.classList.add(o.correct?'selected-good':'selected-bad');
+   feedback.textContent=(o.correct?'Correto. ':'Reveja. ')+q.why;
+  };
+  choices.appendChild(b);
+ });
+ wrap.appendChild(choices);wrap.appendChild(feedback);holder.appendChild(wrap);
+});
+})();
+</script>
+</body></html>
